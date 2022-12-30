@@ -145,13 +145,7 @@ header{
 
 
 /* MAIN */
- img{
-    margin-top: 45%;
-    margin-bottom: 5px;
-    border-radius: 50%;
-    max-width: 20%;
-    max-height: 20%;
-}
+
 main{
     display: flex;
     justify-content: center;
@@ -173,6 +167,14 @@ main{
     font-size: 13px;
     font-weight: bolder;
     color: #7C7C7C;
+}
+
+img{
+    margin-top: 35%;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    max-width: 20%;
+    max-height: 20%;
 }
 
 .resume{
