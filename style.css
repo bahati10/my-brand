@@ -15,7 +15,7 @@
 
 body{
     /* NOT FFINISHED YET */
-    min-width: 766px; 
+    min-width: 480px; 
     min-height: 100vh;
     background: #000D11;
 }
@@ -60,7 +60,7 @@ header{
     transition: all .50s ease;
 }
 .navbar a:hover{
-    color: #7C7C7C;;
+    color: #7C7C7C;
 }
 
 .navbar a.active{
@@ -143,3 +143,50 @@ header{
     }
 }
 
+
+/* MAIN */
+ img{
+    margin-top: 45%;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    max-width: 20%;
+    max-height: 20%;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center !important;
+    text-align: center;
+    font-family: var(--FF);
+    color: var(--FONT-COLOR);
+    font-size: 27px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+.name{
+    color: #86A0AA;
+}
+
+.address{
+    margin-top: -10px;
+    font-size: 13px;
+    font-weight: bolder;
+    color: #7C7C7C;
+}
+
+.resume{
+    margin-top: 15px;
+    color: #000D11;
+    background: #86A0AA;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 7px;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+.resume a{
+    text-decoration: none;
+    color: #000D11;
+}
