@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -22,7 +24,6 @@ body{
 header{
     position: fixed;
     width: 100%;
-    /* border: 2px solid red; */
     top: 0;
     right: 0;
     z-index: 1000;
@@ -98,15 +99,15 @@ header{
 /* ABOUT */
 
 .container{
-    border: 2px solid red;
     display: block;
     width: 60%;
     height: auto;
     padding:0 7%;
-    margin-top: 20%;
+    margin-top: 15%;
     margin-left: 20%;
     color: var(--FONT-COLOR);
     letter-spacing: -0.5px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .container p{
