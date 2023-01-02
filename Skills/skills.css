@@ -16,7 +16,7 @@
 }
 
 body{
-    min-width: 500px; 
+    min-width: 700px; 
     max-height: 100vh;
     background: #000D11;
 }
@@ -96,10 +96,9 @@ header{
     display: none;
 }
 
-/* ABOUT */
+/* SKILLS */
 
 .container{
-    display: block;
     width: 60%;
     height: auto;
     padding:0 7%;
@@ -111,12 +110,16 @@ header{
 }
 
 .container p{
-    font-size: 27px;
+    font-size: 23px;
 }
 
 .heading{
     color: #88DBFB;
     font-weight: 600;
+}
+
+.title{
+    font-size: 1.8rem;
 }
 
 @media (max-width: 1280px) {
@@ -129,6 +132,18 @@ header{
         margin: 0px 20px;
     }
 }
+
+@media (max-width: 600px){
+    .container{
+        margin-top: 60%;
+    }
+}
+
+/* @media (max-width: 800px){
+    .container{
+        margin-top: 40%;
+    }
+} */
 
 @media (max-width: 1090px){
     #menu-icon{
