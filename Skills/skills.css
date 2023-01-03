@@ -17,7 +17,7 @@
 
 body{
     min-width: 700px; 
-    max-height: 100vh;
+    max-height: 100vh !important;
     background: #000D11;
 }
 
@@ -102,7 +102,7 @@ header{
     width: 60%;
     height: auto;
     padding:0 7%;
-    margin-top: 15%;
+    margin-top: 13%;
     margin-left: 20%;
     color: var(--FONT-COLOR);
     letter-spacing: -0.5px;
@@ -133,11 +133,11 @@ header{
     }
 }
 
-/* @media (max-width: 600px){
+@media (max-width: 600px){
     .container{
         margin-top: 60%;
     }
-} */
+}
 
 @media (max-width: 1090px){
     #menu-icon{
