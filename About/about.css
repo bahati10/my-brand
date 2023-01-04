@@ -126,7 +126,7 @@ header{
     font-size: 1.5rem;
 }
 
-button{
+#btn{
     border: none;
     margin-top: 10px;
     font-family: 'Poppins', sans-serif;
@@ -139,11 +139,11 @@ button{
     transition: 0.6s;
 }
 
-button:hover{
+#btn:hover{
     box-shadow: none;
 }
 
-button a {
+#btn a {
     color: #000D11;
 }
 
