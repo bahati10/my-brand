@@ -107,6 +107,12 @@ header{
     }
 }
 
+@media (max-width: 600px){
+    .content{
+        margin-top: 50%;
+    }
+}
+
 @media (max-width: 1090px){
     #menu-icon{
         display: block;
@@ -153,7 +159,7 @@ main{
     text-align: center;
     font-family: var(--FF);
     color: var(--FONT-COLOR);
-    font-size: 22px;
+    font-size: 21.5px;
     font-weight: bolder;
 }
 
@@ -162,18 +168,17 @@ main{
 }
 
 .address{
-    margin-top: -10px;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: bolder;
     color: #7C7C7C;
 }
 
 img{
-    margin-top: 35%;
+    margin-top: 33%;
     margin-bottom: 5px;
     border-radius: 50%;
-    max-width: 20%;
-    max-height: 20%;
+    max-width: 15%;
+    max-height: 25%;
 }
 
 .resume{
