@@ -43,8 +43,8 @@ header{
 
 .brand span{
     color: var(--FONT-COLOR);
-    font-size: 1.8em;
-    letter-spacing: 0.2px;
+    font-size: 1.4em;
+    letter-spacing: -0.5px;
 }
 
 .navbar{
@@ -54,7 +54,7 @@ header{
 .navbar a{
     color: #E5EDF0;
     font-family: var(--FF);
-    font-size: 1rem;
+    font-size: 13px;
     padding: 1px 0;
     margin: 0px 14px;
     font-weight: 600;
@@ -74,11 +74,11 @@ header{
 
 .signup{
     letter-spacing: 0.5px;
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
 .main a{
-    padding: 10px;
-    border-radius: 10px;
+    padding: 8px;
+    border-radius: 7px;
     background-color: #D9D9D9;
     color: var(--BGCOLOR);
     font-weight: 600;
@@ -99,22 +99,22 @@ header{
 
 .container{
     color: #7C7C7C;
-    width: 60%;
+    max-width: 30%;
+    min-width: 33%;
     height: auto;
-    padding:0 7%;
     margin-top: 18%;
-    margin-left: 20%;
+    margin-left: 30%;
     color: var(--FONT-COLOR);
     letter-spacing: -0.5px;
     font-family: 'Poppins', sans-serif;
 }
 
-p{
-    font-weight: bold;
+.bio{
+    font-weight: 500;
 }
 
-.container p{
-    font-size: 23px;
+.container .bio{
+    font-size: 16px;
 }
 
 .heading{
@@ -123,19 +123,26 @@ p{
 }
 
 .title{
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 
 button{
     border: none;
     margin-top: 10px;
     font-family: 'Poppins', sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bolder;
-    letter-spacing: 0.7px;
-    padding: 6px 17px;
+    letter-spacing: 0.4px;
+    padding: 6px 14px;
     border-radius: 6px;
+    box-shadow: 5px 7px #40AEDA;
+    transition: 0.6s;
 }
+
+button:hover{
+    box-shadow: none;
+}
+
 button a {
     color: #000D11;
 }
