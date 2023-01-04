@@ -42,8 +42,8 @@ header{
 
 .brand span{
     color: var(--FONT-COLOR);
-    font-size: 1.8em;
-    letter-spacing: 0.2px;
+    font-size: 1.4em;
+    letter-spacing: -0.5px;
 }
 
 .navbar{
@@ -53,7 +53,7 @@ header{
 .navbar a{
     color: var(--FONT-COLOR);
     font-family: var(--FF);
-    font-size: 1rem;
+    font-size: 13px;
     padding: 1px 0;
     margin: 0px 14px;
     font-weight: 600;
@@ -74,11 +74,11 @@ header{
 
 .signup{
     letter-spacing: 0.5px;
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
 .main a{
-    padding: 10px;
-    border-radius: 10px;
+    padding: 8px;
+    border-radius: 7px;
     background-color: #D9D9D9;
     color: var(--BGCOLOR);
     font-weight: 600;
@@ -153,9 +153,8 @@ main{
     text-align: center;
     font-family: var(--FF);
     color: var(--FONT-COLOR);
-    font-size: 27px;
+    font-size: 22px;
     font-weight: bolder;
-    letter-spacing: 1px;
 }
 
 .name{
@@ -164,7 +163,7 @@ main{
 
 .address{
     margin-top: -10px;
-    font-size: 13px;
+    font-size: 10px;
     font-weight: bolder;
     color: #7C7C7C;
 }
@@ -181,10 +180,10 @@ img{
     margin-top: 15px;
     color: #000D11;
     background: #86A0AA;
-    padding: 10px 20px;
+    padding: 9px 15px;
     border: none;
     border-radius: 7px;
-    font-size: 1rem;
+    font-size: 13px;
     font-weight: bolder;
 }
 
