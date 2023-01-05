@@ -70,7 +70,6 @@ header {
 .main {
     display: flex;
     align-items: center;
-    visibility: hidden;
 }
 
 .signup {
@@ -163,7 +162,7 @@ form .name {
     font-weight: 600;
     font-size: 12px;
     letter-spacing: -0.5px;
-    box-shadow: 5px 5px #40AEDA;
+    box-shadow: 6px 6px #40AEDA;
     transition: 0.6s;
     margin-bottom: -30px;
 }
