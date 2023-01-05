@@ -74,6 +74,7 @@ header {
 .main {
     display: flex;
     align-items: center;
+    visibility: hidden;
 }
 
 .signup {
