@@ -70,18 +70,17 @@ header {
 .main {
     display: flex;
     align-items: center;
-    visibility: hidden;
 }
 
 .signup {
     letter-spacing: 0.5px;
     font-size: 0.8em;
+    background: #D9D9D9;
 }
 
 .main a {
-    padding: 8px;
+    padding: 10px;
     border-radius: 7px;
-    background-color: #D9D9D9;
     color: var(--BGCOLOR);
     font-weight: 600;
     font-family: var(--FF);
@@ -163,7 +162,7 @@ form .name {
     font-weight: 600;
     font-size: 12px;
     letter-spacing: -0.5px;
-    box-shadow: 5px 5px #40AEDA;
+    box-shadow: 6.5px 6.5px #40AEDA;
     transition: 0.6s;
     margin-bottom: -30px;
 }
