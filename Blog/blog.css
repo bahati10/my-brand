@@ -168,10 +168,14 @@ ul {
 .box {
     text-align: center;
     border-radius: 10px;
-    margin-left: 40px;
     margin-bottom: 40px;
     width: 300px;
     background: #0B1824;
+}
+
+.middle{
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 h5 {
