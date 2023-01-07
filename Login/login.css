@@ -14,7 +14,7 @@
 }
 
 body{
-    min-width: 700px; 
+    min-width: 400px; 
     min-height: 100vh;
     background: #000D11;
 }
@@ -108,7 +108,7 @@ form {
     background: #0B1824;
     display: flex;
     flex-flow: column;
-    margin-top: 8%;
+    margin-top: 12%;
     min-width: 400px;
     min-height: auto;
     padding:  60px 60px;
