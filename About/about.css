@@ -16,7 +16,7 @@
 }
 
 body{
-    min-width: 700px; 
+    min-width: 33%; 
     max-height: 100vh;
     background: #000D11;
 }
@@ -124,7 +124,7 @@ header{
 }
 
 .title{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 #btn{
@@ -136,7 +136,7 @@ header{
     letter-spacing: 0.4px;
     padding: 6px 14px;
     border-radius: 6px;
-    box-shadow: 5px 7px #40AEDA;
+    box-shadow: 5px 5px #40AEDA;
     transition: 0.6s;
 }
 
