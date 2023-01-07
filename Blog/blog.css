@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -140,8 +142,6 @@ ul {
 .blog {
     height: 500px;
     margin-top: 6%;
-    position: sticky;
-    top: 90px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,6 +166,8 @@ ul {
 }
 
 .box {
+    margin-left: 40px;
+    margin-bottom: 40px;
     text-align: center;
     border-radius: 10px;
     margin-bottom: 40px;
@@ -173,10 +175,6 @@ ul {
     background: #0B1824;
 }
 
-.middle{
-    margin-left: 40px;
-    margin-right: 40px;
-}
 
 h5 {
     margin-bottom: 4px;
@@ -207,17 +205,20 @@ img {
 }
 
 .content h5 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
     color: #E5EDF0;
 }
 
 .content .content-details {
     color: #E5EDF0;
     font-weight: 600;
+    font-size: 13px;
 }
 
 .content .read {
     margin-top: 10px;
-    color: #E5EDF0;
+    color: #B5BBBD;
     font-size: 12px;
     text-align: center;
     font-weight: 600;
