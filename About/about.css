@@ -16,7 +16,7 @@
 }
 
 body{
-    min-width: 700px; 
+    min-width: 33%; 
     max-height: 100vh;
     background: #000D11;
 }
@@ -124,7 +124,7 @@ header{
 }
 
 .title{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 #btn{
