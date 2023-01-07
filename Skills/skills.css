@@ -12,14 +12,18 @@
     --BGCOLOR: #000D11;
     --FONT-COLOR: #EEE5E9;
     --FF: 'Poppins', sans-serif;
-    --FF-BRAND: 'Righteous', cursive;
+    --FF-BRAND: 'Righteous',cursive;
 }
 
 body{
-    min-width: 700px; 
+    min-width: 60%; 
     max-height: 100vh;
     background: #000D11;
 }
+
+body::-webkit-scrollbar{
+    display: none;
+  }
 
 header{
     position: fixed;
@@ -74,11 +78,12 @@ header{
 }
 
 .signup{
+    background: #D9D9D9;
     letter-spacing: 0.5px;
     font-size: 0.8em;
 }
 .main a{
-    padding: 8px;
+    padding: 10px;
     border-radius: 7px;
     background-color: #D9D9D9;
     color: var(--BGCOLOR);
@@ -139,11 +144,6 @@ header{
     }
 }
 
-/* @media (max-width: 800px){
-    .container{
-        margin-top: 40%;
-    }
-} */
 
 @media (max-width: 1090px){
     #menu-icon{
