@@ -16,10 +16,14 @@
 }
 
 body{
-    min-width: 700px; 
+    min-width: 60%; 
     max-height: 100vh;
     background: #000D11;
 }
+
+body::-webkit-scrollbar{
+    display: none;
+  }
 
 header{
     position: fixed;
