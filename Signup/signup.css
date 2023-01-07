@@ -14,11 +14,14 @@
 }
 
 body{
-    /* NOT FFINISHED YET */
-    min-width: 700px; 
+    min-width: 400px; 
     min-height: 100vh;
     background: #000D11;
 }
+
+body::-webkit-scrollbar{
+    display: none;
+  }
 
 header{
     position: fixed;
@@ -127,8 +130,6 @@ form input {
     border: none;
     background: transparent;
     border-bottom: 3px solid var(--FONT-COLOR);
-    /* width: 90%;
-    margin-left: 4.5%; */
     color: #319EC9;
     margin-top: -10px;
 }
@@ -170,7 +171,6 @@ form .name{
 }
 
 label {
-    /* margin-left: 4.5%; */
     font-size: 13px;
     font-weight: bold;
 }
