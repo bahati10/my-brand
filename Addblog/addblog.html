@@ -13,6 +13,7 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Portfolio</title>
 </head>
 
@@ -28,7 +29,7 @@
             <li><a href="/Contact/contact.html">Contact</a></li>
         </ul>
         <div class="main">
-            <a href="/Signup/signup.html" class="signup">Sign Up</a>
+            <a href="/Blog/blog.html" class="signup"><i class="fa-solid fa-user"></i> Sign Out</a>
             <div class="bx bx-menu" id="menu-icon"></div>
         </div>
     </header>
@@ -37,10 +38,12 @@
             <h2>Add Blog</h2>
             <label class="name" for="name">Title</label>
             <input type="name" required autocapitalize="word"><br>
+            <label class="subtitle" for="subtitle">Sub Title</label>
+            <textarea name="subtitle" id="subtitle" cols="30" rows="2"></textarea> <br>
             <label class="message" for="text">Content</label>
-            <textarea name="message" id="" cols="30" rows="18"></textarea> <br>
-            <input type="file" id="myFile" name="filename" value="choose"> <br>
-            <button class="send" type="submit">Send</button>
+            <textarea name="message" id="" cols="30" rows="8"></textarea> <br>
+            <input type="file" id="myFile" name="filename" value="choose"> 
+            <button class="send" type="submit">Add</button>
         </form>
     </div>
     <script src="index.js" defer></script>
