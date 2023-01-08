@@ -110,7 +110,7 @@ form {
     display: flex;
     flex-flow: column;
     margin-top: 8%;
-    min-width: 400px;
+    min-width: 40px;
     height: auto;
     padding: 60px 60px;
     color: var(--FONT-COLOR);
@@ -245,9 +245,10 @@ h2 {
         margin: 0px 20px;
     }
 }
-/* 
+
 @media (max-width: 600px) {
     form {
-        margin-top: 60%;
+        margin-top: 30%;
+        margin: 20px;
     }
-} */
+}
