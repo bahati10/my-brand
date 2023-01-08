@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&family=Roboto&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +17,6 @@
 
 body {
     min-width: 700px;
-    min-height: 100vh;
     background: #000D11;
 }
 
@@ -112,6 +113,7 @@ header {
 
 /* BLOG */
 
+
 * {
     margin: 0px;
     padding: 0px;
@@ -138,10 +140,7 @@ ul {
 }
 
 .blog {
-    height: 500px;
-    margin-top: 6%;
-    position: sticky;
-    top: 90px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -168,14 +167,17 @@ ul {
 .box {
     text-align: center;
     border-radius: 10px;
-    margin-bottom: 40px;
     width: 300px;
     background: #0B1824;
 }
 
+/* FOR NOW */
+
 .middle{
     margin-left: 40px;
+    margin-top: 40px;
     margin-right: 40px;
+    margin-bottom: 40px;
 }
 
 h5 {
@@ -207,17 +209,20 @@ img {
 }
 
 .content h5 {
-    color: #E5EDF0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    color: #40AEDA;
 }
 
 .content .content-details {
     color: #E5EDF0;
     font-weight: 600;
+    font-size: 13px;
 }
 
 .content .read {
     margin-top: 10px;
-    color: #E5EDF0;
+    color: #B5BBBD;
     font-size: 12px;
     text-align: center;
     font-weight: 600;
@@ -229,7 +234,7 @@ img {
     color: #40AEDA;
 }
 
-.add a{
+.add a {
     font-weight: 600;
     font-size: 13px;
     letter-spacing: -0.5px;
@@ -239,13 +244,13 @@ img {
     transition-duration: 1.5s;
 }
 
-.add a:hover{
+.add a:hover {
     color: #40AEDA;
 }
-.add{
+
+.add {
     margin-top: -40px;
 }
-
 
 
 
@@ -310,11 +315,5 @@ img {
     .navbar a {
         padding: 5px 0;
         margin: 0px 20px;
-    }
-}
-
-@media (max-width: 600px) {
-    form {
-        margin-top: 60%;
     }
 }
