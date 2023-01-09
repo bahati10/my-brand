@@ -99,12 +99,19 @@ header{
 /* ABOUT */
 
 .container{
+<<<<<<< HEAD:Skills/skills.css
+    width: 500px;
+    height: auto;
+    margin-top: 15%;
+    margin-left: 26%;
+=======
     color: #7C7C7C;
     max-width: 30%;
     min-width: 33%;
     height: auto;
     margin-top: 18%;
     margin-left: 30%;
+>>>>>>> mainhttp/127.0.0.15500/index.html:About/about.css
     color: var(--FONT-COLOR);
     letter-spacing: -0.5px;
     font-family: 'Poppins', sans-serif;
@@ -165,6 +172,16 @@ header{
     }
 }
 
+<<<<<<< HEAD:Skills/skills.css
+@media (max-width: 600px){
+    .container{
+        margin-top: 40%;
+    }
+}
+
+
+=======
+>>>>>>> mainhttp/127.0.0.15500/index.html:About/about.css
 @media (max-width: 1090px){
     #menu-icon{
         display: block;
