@@ -104,11 +104,10 @@ header{
 /* SKILLS */
 
 .container{
-    width: 60%;
+    width: 500px;
     height: auto;
-    padding:0 7%;
     margin-top: 15%;
-    margin-left: 20%;
+    margin-left: 26%;
     color: var(--FONT-COLOR);
     letter-spacing: -0.5px;
     font-family: 'Poppins', sans-serif;
@@ -140,7 +139,7 @@ header{
 
 @media (max-width: 600px){
     .container{
-        margin-top: 60%;
+        margin-top: 40%;
     }
 }
 
