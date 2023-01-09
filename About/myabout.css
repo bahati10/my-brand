@@ -100,7 +100,7 @@ header{
 
 .container{
     color: #7C7C7C;
-    min-width: 500px;
+    width: 400px;
     height: auto;
     margin-top: 18%;
     margin-left: 30%;
@@ -149,6 +149,7 @@ header{
 
 @media (max-width: 600px){
     .container{
+        margin-left: 18%;
         margin-top: 100% !important;
     }
     .container .bio{
