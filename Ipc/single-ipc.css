@@ -349,7 +349,7 @@ li {
 }
 
 @media (max-width: 600px) {
-    container {
-        margin-top: 40%;
+    .container {
+        margin-top: 40% !important;
     }
 }
