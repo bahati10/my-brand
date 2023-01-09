@@ -149,7 +149,19 @@ header{
 
 @media (max-width: 600px){
     .container{
-        margin-top: 90% !important;
+        margin-top: 100% !important;
+    }
+    .container .bio{
+        font-size: 19px;
+    }
+    #btn{
+        font-size: 17px;
+        padding: 7px 15px;
+        border-radius: 6px;
+        box-shadow: 5px 5px #40AEDA;
+    }
+    .title{
+        font-size: 1.4rem;
     }
 }
 
