@@ -100,6 +100,7 @@ header {
 /* SKILLS */
 
 .container {
+    border: 2px solid red;
     width: 600px;
     height: auto;
     margin-top: 13%;
@@ -138,7 +139,8 @@ header {
 
 @media (max-width: 600px) {
     .container {
-        margin-top: 80%;
+        margin-top: 70%;
+        margin-left: 25%;
     }
 
     .container p {
@@ -150,7 +152,11 @@ header {
     }
 
     .title {
-        font-size: 26px;
+        font-size: 27px;
+    }
+
+    .container p{
+        font-size: 17px;
     }
 }
 
