@@ -189,6 +189,7 @@ img {
     border: none;
 }
 
+
 .like {
     padding: 0 27px;
     margin-right: 5%;
@@ -203,12 +204,12 @@ img {
     margin-right: 3px;
 }
 .comment{
+>>>>>>> mainhttp/127.0.0.15500/index.html:Ipc/single-ipc.css
     padding: 0 12px;
     background: none;
 }
 
 .comment i{
-    font-size: 16px;
 }
 
 #comment {
