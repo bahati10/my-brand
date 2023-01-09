@@ -14,9 +14,12 @@
 }
 
 body {
-    min-width: 400px;
-    min-height: 100vh;
+    min-width: 600px;
     background: #000D11;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 header {
@@ -97,109 +100,86 @@ header {
 }
 
 
-/* CONTACT PAGE */
+/* WORK PAGE */
 
-.main-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-form {
-    background: #0B1824;
-    display: flex;
-    flex-flow: column;
-    margin-top: 8%;
-    min-width: 40px;
-    height: auto;
-    padding: 50px 60px;
-    color: var(--FONT-COLOR);
-    font-family: var(--FF);
-    border-radius: 20px;
-}
-
-.links{
-    margin-top: -20px;
-    margin-bottom: 50px;
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 26px;
-}
-
-.links a{
-    color: #D9D9D9;
-    transition: 0.7s;
-}
-
-.links a:hover{
-    color: #88DBFB;
-}
-
-form h2,
-h5 {
-    text-align: center;
-}
-
-form input,
-textarea {
-    padding: 10px;
-    color: #010818;
+img{
     border-radius: 6px;
+  }
+  .left{
+    float: left;
+    margin-right: 2.2rem;
+    margin-left: 2rem;
+    margin-top: 20px;
+  }
+  .right{
+    margin-right: 2rem;
+    float: right;
+    margin-left: 2rem;
+  }
+  .clear{
+    clear: both;
+  }
+  .all{
+    font-family: var(--FF);
+    width: 600px;
+    height: 425px;
+    margin: 140px auto 0 auto;
+  }
+  
+  .all a{
+    color: #000D11;
+    text-decoration: none;
+  }
+  
+  .all button{
+    padding: 6px 14px;
+    border-radius: 3px;
     border: none;
-    font-weight: 600;
-    letter-spacing: -0.5px;
-}
-
-form input,
-textarea:focus {
-    outline: none;
-}
-
-form a {
-    color: #88DBFB;
-}
-
-form a:hover {
-    text-decoration: underline;
-}
-
-form .name {
-    margin-top: -15%;
-}
-
-.send {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2px;
-    padding: 10px 20px;
-    border-radius: 7px;
-    border: none;
-    color: var(--BGCOLOR);
-    font-weight: 600;
     font-size: 12px;
-    letter-spacing: -0.5px;
-    box-shadow: 5px 5px #40AEDA;
-    transition: 0.6s;
-    margin-bottom: -30px;
-}
-
-.send:hover {
+    font-weight: 600;
+    color: #000D11;
+    box-shadow: 3px 3px #35C2FA;
+    transition: 1s;
+  }
+  
+  button:hover{
     box-shadow: none;
-}
-
-label {
-    font-size: 13px;
+  }
+  
+  .all span{
+    color: #35C2FA;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  
+  .one{
+    margin-left: 31px;
+    margin-top: -5px;
+    width: 200px;
+  }
+  
+  .two{
+    width: 400px;
+    margin-left: 200px;
+    margin-top: 60px;
+  }
+  p{
+    letter-spacing: -0.2px;
+    color: #B3C2C7;
     font-weight: bold;
-}
+    font-size: 14px;
+  }
+  
+  .title{
+    color: #E5EDF0;
+    margin-left: 30px;
+    margin-top: -40px;
+  }
 
-h2 {
-    color: #88DBFB;
-    font-size: 15px;
-    margin-top: -30px;
-    margin-bottom: 10px;
-    padding-bottom: 13px;
-}
+
+
+
+
 
 @media (max-width: 1280px) {
     header {
@@ -265,8 +245,97 @@ h2 {
 }
 
 @media (max-width: 600px) {
-    form {
+    .all {
         margin-top: 50%;
-        padding: 40px 40px;
     }
 }
+
+
+
+
+
+
+
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+
+  font-family: 'Poppins', sans-serif;
+  background: #000D11;
+}
+
+img{
+  border-radius: 6px;
+}
+.left{
+  float: left;
+  margin-right: 2.2rem;
+  margin-left: 2rem;
+  margin-top: 20px;
+}
+.right{
+  margin-right: 2rem;
+  float: right;
+  margin-left: 2rem;
+}
+.clear{
+  clear: both;
+}
+.all{
+  width: 600px;
+  height: 425px;
+  margin: 140px auto 0 auto;
+}
+
+.all a{
+  color: #000D11;
+  text-decoration: none;
+}
+
+.all button{
+  padding: 6px 14px;
+  border-radius: 3px;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  color: #000D11;
+  box-shadow: 3px 3px #35C2FA;
+  transition: 1s;
+}
+
+button:hover{
+  box-shadow: none;
+}
+
+.all span{
+  color: #35C2FA;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.one{
+  margin-left: 31px;
+  margin-top: -5px;
+  width: 200px;
+}
+
+.two{
+  width: 400px;
+  margin-left: 200px;
+  margin-top: 60px;
+}
+p{
+  letter-spacing: -0.2px;
+  color: #B3C2C7;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.title{
+  color: #E5EDF0;
+  margin-left: 30px;
+  margin-top: -70px;
+}
+ */
