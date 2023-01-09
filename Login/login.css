@@ -246,9 +246,9 @@ h5{
         margin: 0px 20px;
     }
 }
-
 @media (max-width: 600px){
     form{
+        min-width: 360px;
         margin-top: 40%;
         padding: 40px 40px;
     }
