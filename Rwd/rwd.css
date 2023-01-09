@@ -113,6 +113,7 @@ i{
 
 
 .container {
+    user-select: none;
     margin: 8% 0;
     display: grid;
     grid-template-columns: 300px 200px 400px;
@@ -186,21 +187,35 @@ img {
 .three button {
     font-weight: 600;
     border-radius: 3px;
+    border: none;
 }
 
 .like {
     padding: 0 27px;
     margin-right: 5%;
     margin-left: -2%;
-    color: #000D11;
-    background: #D9D9D9;
+    color: #fff;
+    background: #0B1824;
     border: none;
 }
-
-.comment {
+.like i{
+    text-align: center;
+    font-size: 19px;
+    margin-right: 3px;
+}
+.comment{
     padding: 0 12px;
+    background: none;
+}
+
+.comment i{
+    font-size: 16px;
+}
+
+#comment {
+    border-radius: 3px;
     color: #D9D9D9;
-    background: #F50202;
+    background: #D9D9D9;
     border: none;
 }
 
@@ -264,7 +279,6 @@ li {
 }
 
 #sub {
-    /* font-family: 'Nunito', sans-serif; */
     text-align: center;
     font-weight: bolder;
     font-size: 22px;
