@@ -150,7 +150,7 @@ header{
 @media (max-width: 600px){
     .container{
         margin-left: 18%;
-        margin-top: 100% !important;
+        margin-top: 80% !important;
     }
     .container .bio{
         font-size: 19px;
