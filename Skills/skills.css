@@ -141,19 +141,19 @@ header {
     .container {
         width: 600px;
         margin-top: 70%;
-        margin-left: 11%;
+        margin-left: 5%;
     }
 
     .container p {
-        font-size: 19px;
+        font-size: 23px;
     }
 
     .heading {
-        font-size: 21px;
+        font-size: 25px;
     }
 
     .title {
-        font-size: 27px;
+        font-size: 28px;
     }
 
     .container p{
