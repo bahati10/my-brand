@@ -159,6 +159,23 @@ header {
     .container p{
         font-size: 19px;
     }
+
+    .brand span {
+        font-size: 26px;
+        letter-spacing: 0.4px;
+    }
+    
+    .navbar {
+        display: flex;
+    }
+    
+    .navbar a {
+        font-size: 21px;
+    }
+
+    #menu-icon {
+        font-size: 38px;
+    }
 }
 
 @media (max-width: 1090px) {
