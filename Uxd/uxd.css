@@ -113,6 +113,7 @@ i{
 
 
 .container {
+    user-select: none;
     margin: 8% 0;
     display: grid;
     grid-template-columns: 300px 200px 400px;
@@ -160,14 +161,10 @@ i{
 }
 
 /* General */
-p {
-    user-select: none;
-}
 
 h5 {
     color: #40AEDA;
     font-size: 16px;
-    margin-bottom: 5px;
 }
 
 img {
@@ -179,7 +176,7 @@ img {
 /* Box three */
 
 .three {
-    margin-top: -60px;
+    margin-top: -40px;
     display: flex;
 }
 
@@ -264,7 +261,6 @@ li {
 }
 
 #sub {
-    /* font-family: 'Nunito', sans-serif; */
     text-align: center;
     font-weight: bolder;
     font-size: 22px;
@@ -338,12 +334,5 @@ li {
     .navbar a {
         padding: 5px 0;
         margin: 0px 20px;
-    }
-}
-
-@media (max-width: 600px) {
-    form {
-        margin-top: 30%;
-        margin: 20px;
     }
 }
