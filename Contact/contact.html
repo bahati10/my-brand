@@ -13,6 +13,9 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Contact Us</title>
 </head>
 
@@ -34,13 +37,17 @@
     </header>
     <div class="main-container">
         <form action="" class="form" autocomplete="on" spellcheck="false">
-            <h2>Contact Us</h2>
-            <label class="name" for="name">Name</label>
+            <div class="links">
+                <a href="https://github.com/bahati10" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+                <a href="https://twitter.com/Bahati____" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/bahati-yves-439aab1a2/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <label class="name" for="name">Names</label>
             <input type="name" required autocapitalize="word"><br>
             <label class="email" for="email">Email</label>
-            <input type="email" required=""  oninvalid="this.setCustomValidity('Please Enter your email')"><br>
+            <input type="email" required="" oninvalid="this.setCustomValidity('Please Enter your email')"><br>
             <label class="message" for="text">Message</label>
-             <textarea name="message" id="" cols="30" rows="7"></textarea> <br>
+            <textarea name="message" id="" cols="30" rows="7"></textarea> <br>
             <button class="send" type="submit">Send</button>
         </form>
     </div>
