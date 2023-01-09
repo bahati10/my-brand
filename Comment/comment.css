@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -10,13 +8,14 @@
 
 :root {
     --BGCOLOR: #000D11;
-    --FONT-COLOR: #EEE5E9;
+    --FONT-COLOR: #E5EDF0;
     --FF: 'Poppins', sans-serif;
     --FF-BRAND: 'Righteous', cursive;
 }
 
 body {
-    min-width: 600px;
+    min-width: 400px;
+    min-height: 100vh;
     background: #000D11;
 }
 
@@ -42,8 +41,8 @@ header {
 
 .brand span {
     color: var(--FONT-COLOR);
-    font-size: 22px;
-    letter-spacing: 0.2px;
+    font-size: 1.4em;
+    letter-spacing: -0.5px;
 }
 
 .navbar {
@@ -51,7 +50,7 @@ header {
 }
 
 .navbar a {
-    color: #E5EDF0;
+    color: var(--FONT-COLOR);
     font-family: var(--FF);
     font-size: 13px;
     padding: 1px 0;
@@ -75,13 +74,13 @@ header {
 
 .signup {
     letter-spacing: 0.5px;
-    font-size: 13px;
+    font-size: 0.8em;
+    background: #D9D9D9;
 }
 
 .main a {
-    padding: 7px 8px;
-    border-radius: 5px;
-    background-color: #D9D9D9;
+    padding: 10px;
+    border-radius: 7px;
     color: var(--BGCOLOR);
     font-weight: 600;
     font-family: var(--FF);
@@ -97,31 +96,92 @@ header {
     display: none;
 }
 
-/* SKILLS */
 
-.container {
-    width: 600px;
+/* CONTACT PAGE */
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    background: #0B1824;
+    display: flex;
+    flex-flow: column;
+    margin-top: 8%;
+    min-width: 40px;
     height: auto;
-    margin-top: 13%;
-    margin-left: 25%;
+    padding: 60px 60px;
     color: var(--FONT-COLOR);
+    font-family: var(--FF);
+    border-radius: 25px;
+}
+
+form h2,
+h5 {
+    text-align: center;
+}
+
+form input,
+textarea {
+    padding: 10px;
+    color: #010818;
+    border-radius: 6px;
+    border: none;
+    font-weight: 600;
     letter-spacing: -0.5px;
-    font-family: 'Poppins', sans-serif;
 }
 
-.container p {
-    color: var(--FONT-COLOR);
-    font-size: 15px;
+form input,
+textarea:focus {
+    outline: none;
 }
 
-.heading {
+form a {
+    color: #88DBFB;
+}
+
+form a:hover {
+    text-decoration: underline;
+}
+
+form .name {
+    margin-top: -15%;
+}
+
+.send {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2px;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: none;
+    color: var(--BGCOLOR);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: -0.5px;
+    box-shadow: 5px 5px #40AEDA;
+    transition: 0.6s;
+    margin-bottom: -30px;
+}
+
+.send:hover {
+    box-shadow: none;
+}
+
+label {
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+h2 {
     color: #88DBFB;
     font-size: 17px;
-    font-weight: 600;
-}
-
-.title {
-    font-size: 25px;
+    margin-bottom: 10px;
+    padding-bottom: 13px;
 }
 
 @media (max-width: 1280px) {
@@ -133,24 +193,6 @@ header {
     .navbar a {
         padding: 5px 0;
         margin: 0px 20px;
-    }
-}
-
-@media (max-width: 600px) {
-    .container {
-        margin-top: 80%;
-    }
-
-    .container p {
-        font-size: 16px;
-    }
-
-    .heading {
-        font-size: 18px;
-    }
-
-    .title {
-        font-size: 26px;
     }
 }
 
@@ -188,5 +230,26 @@ header {
 
     .navbar.open {
         right: 0 !important;
+    }
+}
+
+
+
+@media (max-width: 1280px) {
+    header {
+        padding: 14px 2%;
+        transition: .2s;
+    }
+
+    .navbar a {
+        padding: 5px 0;
+        margin: 0px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    form {
+        margin-top: 50%;
+        padding: 40px 40px;
     }
 }
