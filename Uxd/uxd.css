@@ -166,7 +166,7 @@ h5 {
 }
 
 img {
-    margin-left: -7px;
+    margin-left: 1px;
     border-radius: 5px;
 }
 
@@ -175,6 +175,7 @@ img {
 .three {
     margin-top: -40px;
     display: flex;
+    margin-left: 8px;
 }
 
 .three button {
