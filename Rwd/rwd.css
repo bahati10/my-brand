@@ -166,15 +166,16 @@ h5 {
 }
 
 img {
-    margin-left: -7px;
+    margin-left: 1px;
     border-radius: 5px;
 }
 
 /* Box three */
 
 .three {
-    margin-top: -40px;
+    margin-top: -60px;
     display: flex;
+    margin-left: 8px;
 }
 
 .three button {
@@ -278,6 +279,10 @@ li {
 @media (max-width: 980px) {
     body {
         min-width: 80%;
+    }
+
+    .content p {
+        font-size: 20px;
     }
 
     img{
