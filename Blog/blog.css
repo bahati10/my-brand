@@ -113,9 +113,6 @@ header {
 }
 
 body {
-    margin: 0px;
-    padding: 0px;
-    background: #000D11;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -132,12 +129,12 @@ ul {
 }
 
 .blog {
-    margin-top: 12px;
+    margin-top: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 40px;
+
 }
 
 .blog-head {
@@ -285,12 +282,17 @@ img {
         font-size: 18px;
     }
 
+    .blog {
+        margin-top: 25px;
+        margin-bottom: -10px;
+    }
+
 
     /* HEADER */
 
     .brand span {
         color: var(--FONT-COLOR);
-        font-size: 1.4em;
+        font-size: 1.8em;
         letter-spacing: -0.5px;
     }
 
@@ -299,23 +301,23 @@ img {
     }
 
     .navbar a {
-        font-size: 15px;
+        font-size: 20px;
         padding: 3px 0;
     }
 
     .signup {
-        font-size: 1.1em;
+        font-size: 1.3em;
     }
 
     .main a {
-        padding: 16px;
-        border-radius: 8px;
-        margin-right: 27px;
+        padding: 19px;
+        border-radius: 9px;
+        margin-right: 32px;
     }
 
 
     #menu-icon {
-        font-size: 40px;
+        font-size: 4px;
     }
 }
 
