@@ -280,11 +280,7 @@ li {
     body {
         min-width: 80%;
     }
-
-    .content p {
-        font-size: 20px;
-    }
-
+    
     img{
         margin-left: 0.5px;
         width: 400px;
