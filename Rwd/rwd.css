@@ -206,6 +206,7 @@ img {
     margin-top: 2px;
 }
 
+
 .four {
     color: #D9DDDE;
     font-weight: 600;
@@ -263,6 +264,12 @@ li {
 .one a {
     text-decoration: underline;
     color: #D9DDDE;
+}
+
+.one span{
+    color: #A6A6A6;
+    font-size: 12px;
+    font-weight: bolder;
 }
 
 #sub {
