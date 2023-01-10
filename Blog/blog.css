@@ -298,6 +298,10 @@ img {
         font-size: 2em;
     }
 
+    .navbar a{
+        font-size: 19px;
+    }
+
     .main a {
         padding: 18px;
         margin-right: 26px;
