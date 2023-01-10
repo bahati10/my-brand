@@ -256,32 +256,41 @@ img {
 
 @media (max-width: 1100px) {
     .box {
-        width: 500px;
+        width: 600px;
     }
 
     img{
-        width: 500px;
-        height: 400px;
+        width: 600px;
+        height: 450px;
     }
 
     .content .content-details {
-        font-size: 17px;
+        font-size: 24px;
         letter-spacing: 0.4px;
-        padding:  0 18px;
+        padding:  0 30px;
+        margin: 10px 0;
     }
 
     .content h5{
-        font-size: 25px;
+        font-size: 29px;
     }
     .content span {
-        font-size: 13px;
+        font-size: 17px;
         margin-top: 7px;
         margin-bottom: 8px;
     }
+
+    .content .read {
+        font-size: 20px;
+    }
+
     .add {
         margin-top: -6px;
     }
     
+    .add a{
+        font-size: 18px;
+    }
 }
 
 
