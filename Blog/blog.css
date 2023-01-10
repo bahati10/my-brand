@@ -103,6 +103,8 @@ header {
 }
 
 
+
+
 /* BLOG */
 
 
@@ -113,6 +115,9 @@ header {
 }
 
 body {
+    margin: 0px;
+    padding: 0px;
+    background: #000D11;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -129,12 +134,12 @@ ul {
 }
 
 .blog {
-    margin-top: 15px;
+    margin-top: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+    padding: 40px;
 }
 
 .blog-head {
@@ -162,7 +167,7 @@ ul {
 
 /* TO BE CHANGED LATER */
 
-.middle {
+.middle{
     margin-left: 60px;
     margin-top: 60px;
     margin-right: 60px;
@@ -248,7 +253,7 @@ img {
         width: 600px;
     }
 
-    img {
+    img{
         width: 600px;
         height: 450px;
     }
@@ -256,14 +261,13 @@ img {
     .content .content-details {
         font-size: 24px;
         letter-spacing: 0.4px;
-        padding: 0 30px;
+        padding:  0 30px;
         margin: 10px 0;
     }
 
-    .content h5 {
+    .content h5{
         font-size: 29px;
     }
-
     .content span {
         font-size: 17px;
         margin-top: 7px;
@@ -277,47 +281,35 @@ img {
     .add {
         margin-top: -6px;
     }
-
-    .add a {
+    
+    .add a{
         font-size: 18px;
     }
 
     .blog {
         margin-top: 25px;
-        margin-bottom: -10px;
-    }
-
-
-    /* HEADER */
-
-    .brand span {
-        color: var(--FONT-COLOR);
-        font-size: 1.8em;
-        letter-spacing: -0.5px;
-    }
-
-    .navbar {
-        display: flex;
-    }
-
-    .navbar a {
-        font-size: 20px;
-        padding: 3px 0;
     }
 
     .signup {
         font-size: 1.3em;
     }
 
-    .main a {
-        padding: 19px;
-        border-radius: 9px;
-        margin-right: 32px;
+    .brand span{
+        font-size: 1.7em;
     }
 
+    .navbar a{
+        font-size: 19px;
+    }
 
+    .main a {
+        padding: 180px;
+        margin-right: 23px;
+    }
+    
+    
     #menu-icon {
-        font-size: 4px;
+        font-size: 40px;
     }
 }
 
