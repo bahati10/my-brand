@@ -16,7 +16,7 @@
 }
 
 body {
-    min-width: 600px;
+    min-width: 450px;
     background: #000D11;
 }
 
@@ -102,8 +102,8 @@ header {
 .container {
     width: 450px;
     height: auto;
-    margin-top: 13%;
-    margin-left: 25%;
+    margin: auto;
+    margin-top: 240px;
     color: var(--FONT-COLOR);
     letter-spacing: -0.5px;
     font-family: 'Poppins', sans-serif;
@@ -136,15 +136,15 @@ header {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 520px) {
     .container {
         width: 600px;
-        margin-top: 70%;
+        margin-top: 430px;
         margin-left: 5%;
     }
 
     .container p {
-        font-size: 25px;
+        font-size: 23px;
     }
 
     .heading {
@@ -153,10 +153,6 @@ header {
 
     .title {
         font-size: 28px;
-    }
-
-    .container p{
-        font-size: 19px;
     }
 
     .brand span {
