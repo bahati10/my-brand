@@ -140,7 +140,7 @@ ul {
 }
 
 .blog {
-    margin-top: 10px;
+    margin-top: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,16 +167,16 @@ ul {
 .box {
     text-align: center;
     border-radius: 10px;
-    width: 300px;
+    width: 350px;
     background: #0B1824;
 }
 
-/* FOR NOW */
+/* TO BE CHANGED LATER */
 
 .middle{
-    margin-left: 40px;
+    margin-left: 60px;
     margin-top: 40px;
-    margin-right: 40px;
+    margin-right: 60px;
     margin-bottom: 40px;
 }
 
@@ -204,29 +204,30 @@ img {
 
 .content span {
     color: #A6A6A6;
-    font-size: 10px;
+    font-size: 11px;
     margin-bottom: 4px;
 }
 
 .content h5 {
     font-family: 'Roboto', sans-serif;
-    font-size: 17px;
+    font-size: 20px;
     color: #40AEDA;
 }
 
 .content .content-details {
     color: #E5EDF0;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 15px;
+    letter-spacing: 0.4px;
 }
 
 .content .read {
     margin-top: 10px;
     color: #B5BBBD;
-    font-size: 12px;
+    font-size: 14px;
     text-align: center;
     font-weight: 600;
-    transition: 1.5s;
+    transition: 1.3s;
 }
 
 .content .read:hover {
@@ -236,12 +237,12 @@ img {
 
 .add a {
     font-weight: 600;
-    font-size: 13px;
+    font-size: 15px;
     letter-spacing: -0.5px;
     margin-bottom: 30%;
     text-decoration: underline;
     color: #E5EDF0;
-    transition-duration: 1.5s;
+    transition-duration: 1.3s;
 }
 
 .add a:hover {
@@ -250,6 +251,37 @@ img {
 
 .add {
     margin-top: -40px;
+}
+
+
+@media (max-width: 1100px) {
+    .box {
+        width: 500px;
+    }
+
+    img{
+        width: 500px;
+        height: 400px;
+    }
+
+    .content .content-details {
+        font-size: 17px;
+        letter-spacing: 0.4px;
+        padding:  0 18px;
+    }
+
+    .content h5{
+        font-size: 25px;
+    }
+    .content span {
+        font-size: 13px;
+        margin-top: 7px;
+        margin-bottom: 8px;
+    }
+    .add {
+        margin-top: -6px;
+    }
+    
 }
 
 
@@ -316,4 +348,5 @@ img {
         padding: 5px 0;
         margin: 0px 20px;
     }
+
 }
