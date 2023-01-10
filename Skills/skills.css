@@ -139,7 +139,7 @@ header {
 @media (max-width: 520px) {
     .container {
         width: 600px;
-        margin-top: 400px;
+        margin-top: 380px;
         margin-left: 5%;
     }
 
