@@ -26,6 +26,7 @@ body::-webkit-scrollbar {
 
 
 header {
+    backdrop-filter: blur(3px);
     position: fixed;
     width: 100%;
     top: 0;
@@ -287,7 +288,7 @@ img {
     }
 
     .blog {
-        margin-top: 40px;
+        margin-top: 80px;
     }
 
     .signup {
@@ -298,18 +299,13 @@ img {
         font-size: 2em;
     }
 
-    .navbar a{
-        font-size: 19px;
-    }
-
     .main a {
         padding: 18px;
         margin-right: 26px;
     }
     
-    
     #menu-icon {
-        font-size: 40px;
+        font-size: 50px !important;
     }
 }
 
