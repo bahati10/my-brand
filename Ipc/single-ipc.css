@@ -173,9 +173,9 @@ img {
 /* Box three */
 
 .three {
-    margin-top: -40px;
-    display: flex;
     margin-left: 8px;
+    margin-top: 6px;
+    display: flex;
 }
 
 .three button {
@@ -198,8 +198,8 @@ img {
 }
 
 .comment{
-    padding: 12px 10px;
     border: none;
+    padding: 12px 10px;
 }
 
 #comment{
@@ -367,3 +367,5 @@ li {
         margin: 0px 20px;
     }
 }
+
+
