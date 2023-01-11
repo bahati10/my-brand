@@ -100,7 +100,7 @@ header{
 
 .container{
     color: #7C7C7C;
-    min-width: 500px;
+    width: 400px;
     height: auto;
     margin-top: 18%;
     margin-left: 30%;
@@ -149,7 +149,20 @@ header{
 
 @media (max-width: 600px){
     .container{
-        margin-top: 40%;
+        margin-left: 18%;
+        margin-top: 80% !important;
+    }
+    .container .bio{
+        font-size: 19px;
+    }
+    #btn{
+        font-size: 17px;
+        padding: 7px 15px;
+        border-radius: 6px;
+        box-shadow: 5px 5px #40AEDA;
+    }
+    .title{
+        font-size: 1.4rem;
     }
 }
 
@@ -198,4 +211,5 @@ header{
     .navbar.open{
         right: 0 !important;
     }
+    
 }
