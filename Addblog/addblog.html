@@ -28,25 +28,20 @@
             <li><a href="/Blog/blog.html" class="active">Blog</a></li>
             <li><a href="/Contact/contact.html">Contact</a></li>
         </ul>
-        <div class="main">
-            <a href="/Blog/blog.html" class="signup"><i class="fa-solid fa-user"></i> Sign Out</a>
-            <div class="bx bx-menu" id="menu-icon"></div>
-        </div>
     </header>
     <div class="main-container">
         <form action="" class="form" autocomplete="on" spellcheck="false">
             <h2>Add Blog</h2>
             <label class="name" for="name">Title</label>
-            <input type="name" required autocapitalize="word"><br>
+            <input type="name" required autocapitalize="word" maxlength="35"><br>
             <label class="subtitle" for="subtitle">Sub Title</label>
-            <textarea name="subtitle" id="subtitle" cols="30" rows="2"></textarea> <br>
+            <textarea name="subtitle" id="subtitle" cols="30" rows="2" maxlength="155"></textarea> <br>
             <label class="message" for="text">Content</label>
             <textarea name="message" id="" cols="30" rows="8"></textarea> <br>
             <input type="file" id="myFile" name="filename" value="choose"> 
             <button class="send" type="submit">Add</button>
         </form>
     </div>
-    <script src="index.js" defer></script>
+    <script src="/index.js" defer></script>
 </body>
-
 </html>
