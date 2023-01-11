@@ -291,25 +291,30 @@ li {
         padding: 30px;
     }
 
+    .one h5{
+        font-size: 22px;
+    }
+
     .one a {
-        font-size: 13px;
+        font-size: 14px;
     }
 
     img {
         margin-left: 0.5px;
-        width: 400px;
+        min-width: 100%;
+        height: auto;
     }
 
     .container {
-        max-width: 400px;
-        margin: 10% 24%;
+        min-width: 70%;
+        margin: 10% 7%;
         display: inline-block;
     }
 
     .container p {
-        line-height: 23px;
+        line-height: 25px;
         letter-spacing: 0.2px;
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .box {
@@ -322,14 +327,14 @@ li {
     }
 
     h5 {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .four,
     .five,
     .six {
         padding: 30px;
-        font-size: 14px;
+        font-size: 15px;
         letter-spacing: 0.1px;
     }
 
