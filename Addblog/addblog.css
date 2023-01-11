@@ -205,7 +205,7 @@ input::file-selector-button {
 
 @media (max-width: 600px) {
     form {
-        margin-top: 40%;
+        margin-top: 30%;
         padding: 40px 40px;
     }
 }
