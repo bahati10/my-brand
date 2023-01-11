@@ -16,7 +16,7 @@
 }
 
 body {
-    min-width: 600px;
+    min-width: 450px;
     background: #000D11;
 }
 
@@ -100,10 +100,10 @@ header {
 /* SKILLS */
 
 .container {
-    width: 600px;
+    width: 450px;
     height: auto;
-    margin-top: 13%;
-    margin-left: 25%;
+    margin: auto;
+    margin-top: 240px;
     color: var(--FONT-COLOR);
     letter-spacing: -0.5px;
     font-family: 'Poppins', sans-serif;
@@ -136,21 +136,40 @@ header {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 520px) {
     .container {
-        margin-top: 80%;
+        width: 600px;
+        margin-top: 340px;
+        margin-left: 5%;
     }
 
     .container p {
-        font-size: 16px;
+        font-size: 23px;
     }
 
     .heading {
-        font-size: 18px;
+        font-size: 25px;
     }
 
     .title {
+        font-size: 28px;
+    }
+
+    .brand span {
         font-size: 26px;
+        letter-spacing: 0.4px;
+    }
+    
+    .navbar {
+        display: flex;
+    }
+    
+    .navbar a {
+        font-size: 21px;
+    }
+
+    #menu-icon {
+        font-size: 38px;
     }
 }
 
@@ -189,4 +208,6 @@ header {
     .navbar.open {
         right: 0 !important;
     }
+
+    
 }
