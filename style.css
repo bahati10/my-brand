@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -14,13 +16,8 @@
 }
 
 body{
-<<<<<<< HEAD
-    min-width: 766px; 
-=======
-    /* NOT FFINISHED YET */
-    min-width: 480px; 
->>>>>>> mainhttp/127.0.0.15500/index.html
-    min-height: 100vh;
+    min-width: 33%; 
+    max-height: 100vh;
     background: #000D11;
 }
 
@@ -46,13 +43,8 @@ header{
 
 .brand span{
     color: var(--FONT-COLOR);
-<<<<<<< HEAD
-    font-size: 22px;
-    letter-spacing: 0.2px;
-=======
     font-size: 1.4em;
     letter-spacing: -0.5px;
->>>>>>> mainhttp/127.0.0.15500/index.html
 }
 
 .navbar{
@@ -60,22 +52,21 @@ header{
 }
 
 .navbar a{
-    color: var(--FONT-COLOR);
+    color: #E5EDF0;
     font-family: var(--FF);
     font-size: 13px;
     padding: 1px 0;
     margin: 0px 14px;
     font-weight: 600;
-    transition: all .30s ease;
+    transition: all .50s ease;
 }
 .navbar a:hover{
     color: #7C7C7C;
 }
 
 .navbar a.active{
-    color:#7C7C7C;
+    color: #7C7C7C;
 }
-
 .main{
     display: flex;
     align-items: center;
@@ -83,24 +74,17 @@ header{
 
 .signup{
     letter-spacing: 0.5px;
-<<<<<<< HEAD
-    font-size: 13px;
-}
-.main a{
-    padding: 7px 8px;
-    border-radius: 6px;
-=======
     font-size: 0.8em;
+    background: #D9D9D9;
 }
 .main a{
     padding: 8px;
-    border-radius: 7.1px;
->>>>>>> mainhttp/127.0.0.15500/index.html
+    border-radius: 7px;
     background-color: #D9D9D9;
     color: var(--BGCOLOR);
     font-weight: 600;
     font-family: var(--FF);
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 
@@ -110,6 +94,65 @@ header{
     cursor: pointer;
     z-index: 100001;
     display: none;
+}
+
+/* MAIN HOME*/
+
+
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center !important;
+    text-align: center;
+    font-family: var(--FF);
+    color: var(--FONT-COLOR);
+    font-size: 21.5px;
+    font-weight: bolder;
+}
+
+.name{
+    color: #88DBFB;
+}
+
+.address{
+    font-size: 12px;
+    font-weight: bolder;
+    color: #7C7C7C;
+}
+
+img{
+    margin-top: 33%;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    max-width: 15%;
+    max-height: 25%;
+}
+
+.resume{
+    color: #000D11;
+    background: #E5EDF0;
+    padding: 9px 15px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: bolder;
+    box-shadow: 5px 5px #40AEDA;
+    transition: 0.6s;
+}
+
+.resume:hover{
+    box-shadow: none;
+}
+
+.resume a{
+    text-decoration: none;
+    color: #000D11;
+}
+
+.title p{
+    line-height: 1.5;
 }
 
 
@@ -126,7 +169,7 @@ header{
 
 @media (max-width: 600px){
     .content{
-        margin-top: 50%;
+        margin-top: 30%;
     }
 }
 
@@ -164,52 +207,4 @@ header{
     .navbar.open{
         right: 0 !important;
     }
-}
-
-
-/* MAIN HOME*/
-
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center !important;
-    text-align: center;
-    font-family: var(--FF);
-    color: var(--FONT-COLOR);
-    font-size: 21.5px;
-    font-weight: bolder;
-}
-
-.name{
-    color: #86A0AA;
-}
-
-.address{
-    font-size: 12px;
-    font-weight: bolder;
-    color: #7C7C7C;
-}
-
-img{
-    margin-top: 33%;
-    margin-bottom: 5px;
-    border-radius: 50%;
-    max-width: 15%;
-    max-height: 25%;
-}
-
-.resume{
-    margin-top: 15px;
-    color: #000D11;
-    background: #86A0AA;
-    padding: 9px 15px;
-    border: none;
-    border-radius: 7px;
-    font-size: 13px;
-    font-weight: bolder;
-}
-
-.resume a{
-    text-decoration: none;
-    color: #000D11;
 }
