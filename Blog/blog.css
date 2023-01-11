@@ -135,7 +135,7 @@ ul {
 }
 
 .blog {
-    margin-top: 12px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,14 +155,13 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0px;
     flex-wrap: wrap;
 }
 
 .box {
     text-align: center;
     border-radius: 10px;
-    width: 350px;
+    width: 310px;
     background: #0B1824;
 }
 
@@ -170,9 +169,9 @@ ul {
 
 .middle{
     margin-left: 60px;
-    margin-top: 60px;
+    margin-top: 40px;
     margin-right: 60px;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 h5 {
@@ -212,14 +211,14 @@ img {
 .content .content-details {
     color: #E5EDF0;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 14px;
     letter-spacing: 0.4px;
 }
 
 .content .read {
     margin-top: 10px;
     color: #B5BBBD;
-    font-size: 14px;
+    font-size: 13px;
     text-align: center;
     font-weight: 600;
     transition: 1.3s;
@@ -234,7 +233,6 @@ img {
     font-weight: 600;
     font-size: 15px;
     letter-spacing: -0.5px;
-    margin-bottom: 30%;
     text-decoration: underline;
     color: #E5EDF0;
     transition-duration: 1.3s;
@@ -260,7 +258,7 @@ img {
     }
 
     .content .content-details {
-        font-size: 24px;
+        font-size: 27px;
         letter-spacing: 0.4px;
         padding:  0 30px;
         margin: 10px 0;
@@ -280,7 +278,7 @@ img {
     }
 
     .add {
-        margin-top: -6px;
+        margin-top: 30px;
     }
     
     .add a{
