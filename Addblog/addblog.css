@@ -14,7 +14,7 @@
 }
 
 body {
-    min-width: 700px;
+    min-width: 400px;
     min-height: 100vh;
     background: #000D11;
 }
@@ -116,15 +116,13 @@ form {
     background: #0B1824;
     display: flex;
     flex-flow: column;
-    margin-top: 7%;
-    margin-bottom: 1%;
-    min-width: 450px;
+    margin-top: 80px;
+    min-width: 40px;
     height: auto;
-    padding: 20px 40px;
+    padding: 40px 50px;
     color: var(--FONT-COLOR);
     font-family: var(--FF);
-    border-radius: 25px;
-    margin-left: -40px;
+    border-radius: 20px;
     z-index: 11111;
 }
 
@@ -151,7 +149,7 @@ textarea:focus {
 
 
 form .name {
-    margin-top: -30px;
+    margin-top: -15px;
 }
 
 .send {
@@ -182,8 +180,9 @@ label {
 
 h2 {
     color: #40AEDA;
-    font-size: 17px;
-    margin-bottom: 30px;
+    font-size: 15px;
+    margin-top: -30px;
+    margin-bottom: 10px;
     padding-bottom: 13px;
 }
 
@@ -203,6 +202,13 @@ input::file-selector-button {
     color: var(--FONT-COLOR);
 }
 
+
+@media (max-width: 600px) {
+    form {
+        margin-top: 40%;
+        padding: 40px 40px;
+    }
+}
 
 
 @media (max-width: 1280px) {
@@ -265,12 +271,5 @@ input::file-selector-button {
     .navbar a {
         padding: 5px 0;
         margin: 0px 20px;
-    }
-}
-
-@media (max-width: 600px) {
-    form {
-        padding: 20px 60px;
-        margin-top: 50%;
     }
 }
