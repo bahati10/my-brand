@@ -85,7 +85,7 @@ header {
     background: #D9D9D9;
 }
 
-i{
+i {
     color: #0291C9;
 }
 
@@ -191,20 +191,22 @@ img {
     background: #0B1824;
     border: none;
 }
-.like i{
+
+.like i {
     text-align: center;
     font-size: 18px;
     margin-right: 3px;
 }
 
-.comment{
+.comment {
     border: none;
     padding: 12px 10px;
 }
 
-#comment{
+#comment {
     margin-top: 2px;
 }
+
 
 .four {
     color: #D9DDDE;
@@ -265,6 +267,10 @@ li {
     color: #D9DDDE;
 }
 
+.one a:hover{
+    color: #9E9E9E;
+}
+
 #sub {
     text-align: center;
     font-weight: bolder;
@@ -280,15 +286,35 @@ li {
     body {
         min-width: 80%;
     }
-    img{
+
+    .one {
+        padding: 30px;
+    }
+
+    .one h5{
+        font-size: 22px;
+    }
+
+    .one a {
+        font-size: 14px;
+    }
+
+    img {
         margin-left: 0.5px;
-        width: 400px;
+        min-width: 100%;
+        height: auto;
     }
 
     .container {
-        max-width: 400px;
-        margin: 10% 24%;
+        min-width: 70%;
+        margin: 10% 7%;
         display: inline-block;
+    }
+
+    .container p {
+        line-height: 25px;
+        letter-spacing: 0.2px;
+        font-size: 18px;
     }
 
     .box {
@@ -296,8 +322,30 @@ li {
         margin-bottom: 20px;
     }
 
-    .three{
+    .three {
         margin-left: 9px;
+    }
+
+    h5 {
+        font-size: 20px;
+    }
+
+    .four,
+    .five,
+    .six {
+        padding: 30px;
+        font-size: 15px;
+        letter-spacing: 0.1px;
+    }
+
+    .four, .six h5{
+        margin-bottom: 10px;
+    }
+    .five h5{
+        margin-bottom: 10px;
+    }
+    .four h5{
+        margin-bottom: 10px;
     }
 
 }
@@ -366,5 +414,3 @@ li {
         margin: 0px 20px;
     }
 }
-
-
