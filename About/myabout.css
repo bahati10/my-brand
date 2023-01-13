@@ -100,21 +100,27 @@ header{
 
 .container{
     color: #7C7C7C;
-    width: 400px;
+    border-radius: 6px;
+    padding: 4%  20px;
+    width: 380px;
     height: auto;
-    margin-top: 18%;
-    margin-left: 30%;
+    position: absolute;
+    left: 49.5%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     color: var(--FONT-COLOR);
     letter-spacing: -0.5px;
     font-family: 'Poppins', sans-serif;
+    background: #0B1824;
 }
 
 .bio{
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .container .bio{
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 28px;
 }
 
 .heading{
@@ -123,12 +129,16 @@ header{
 }
 
 .title{
-    font-size: 1.3rem;
+    color: #88DBFB;
+    margin-top: -10px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 #btn{
     border: none;
-    margin-top: 10px;
+    margin-top: 20px;
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     font-weight: bolder;
@@ -137,6 +147,7 @@ header{
     border-radius: 6px;
     box-shadow: 5px 5px #40AEDA;
     transition: 0.6s;
+    margin-left: 36%;
 }
 
 #btn:hover{
@@ -145,36 +156,6 @@ header{
 
 #btn a {
     color: #000D11;
-}
-
-@media (max-width: 600px){
-    .container{
-        margin-left: 18%;
-        margin-top: 80% !important;
-    }
-    .container .bio{
-        font-size: 19px;
-    }
-    #btn{
-        font-size: 17px;
-        padding: 7px 15px;
-        border-radius: 6px;
-        box-shadow: 5px 5px #40AEDA;
-    }
-    .title{
-        font-size: 1.4rem;
-    }
-}
-
-@media (max-width: 1280px) {
-    header{
-        padding: 14px 2%;
-        transition: .2s;
-    }
-    .navbar a{
-        padding: 5px 0;
-        margin: 0px 20px;
-    }
 }
 
 @media (max-width: 1090px){
@@ -191,22 +172,22 @@ header{
     .navbar{
         position: absolute;
         top: 0;
-        right: -100% !important;
-        width: 390px;
-        height: 50vh;
+        right: -110% !important;
+        width: 330px;
+        height: 55vh;
         background: #0b1824d0;
         display: flex;
         flex-flow: column;
         align-items: center;
         justify-content: space-around;
         border-radius: 12px;
-        transition: all  3s .10s ease;
+        transition: all  1s .0s ease;
     }
 
     .navbar a{
         display: block;
         margin: 12px 0;
-        padding: 0px 25px;
+        font-size: 14px;
     }
     .navbar.open{
         right: 0 !important;
