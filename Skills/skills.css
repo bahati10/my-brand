@@ -100,15 +100,16 @@ header {
 /* SKILLS */
 
 .container {
+    margin-top: 25px;
     background: #0B1824;
     user-select: none;
-    width: 380px;
+    width: 500px;
     padding: 13px 30px; 
     border-radius: 6px;
     position: absolute;
-    left: 50%;
+    left: 49.5%;
     top: 50%;
-    transform: translate(-50%, -46%);
+    transform: translate(-50%, -50%);
     color: var(--FONT-COLOR);
     letter-spacing: 0.3px;
     font-weight: 600;
@@ -117,7 +118,7 @@ header {
 
 .container p {
     color: var(--FONT-COLOR);
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .heading {
@@ -128,7 +129,7 @@ header {
 
 img{
     margin-top: 10px;
-    width: 310px;
+    width: 450px;
     border-radius: 3px;
 }
 
@@ -136,6 +137,21 @@ img{
     font-size: 22px;
 }
 
+
+
+@media (max-width: 700px) {
+    .container{
+        width: 360px;
+    }
+
+    .container p {
+        font-size: 17px;
+    }
+
+    img{
+        width: 300px;
+    }
+}
 
 
 @media (max-width: 1280px) {
@@ -180,7 +196,7 @@ img{
         display: block;
         margin: 12px 0;
         padding: 0px 25px;
-        font-size: 18px;
+        font-size: 14px;
     }
 
     .navbar.open {
