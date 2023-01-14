@@ -20,6 +20,10 @@ body {
     background: #000D11;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 header {
     position: fixed;
     width: 100%;
@@ -105,9 +109,9 @@ header {
     user-select: none;
     width: 500px;
     padding: 13px 30px; 
-    border-radius: 6px;
+    border-radius: 9px;
     position: absolute;
-    left: 49.5%;
+    left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     color: var(--FONT-COLOR);
@@ -141,22 +145,22 @@ img{
 
 @media (max-width: 700px) {
     .container{
-        width: 360px;
+        width: 330px;
     }
 
     .container p {
-        font-size: 17px;
+        font-size: 13px;
     }
 
     img{
-        width: 300px;
+        width: 270px;
     }
 }
 
 
 @media (max-width: 1280px) {
     header {
-        padding: 14px 2%;
+        padding: 14px 4%;
         transition: .2s;
     }
 
