@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,20 +8,19 @@
     text-decoration: none;
 }
 
-:root{
+:root {
     --BGCOLOR: #000D11;
     --FONT-COLOR: #EEE5E9;
     --FF: 'Poppins', sans-serif;
     --FF-BRAND: 'Righteous', cursive;
 }
 
-body{
-    min-width: 33%; 
-    max-height: 100vh;
+body {
+    min-width: 400px;
     background: #000D11;
 }
 
-header{
+header {
     position: fixed;
     width: 100%;
     top: 0;
@@ -35,23 +34,23 @@ header{
     transition: all .50s ease-in-out;
 }
 
-.brand{
+.brand {
     display: flex;
     align-items: center;
-    font-family:var(--FF-BRAND) ;
+    font-family: var(--FF-BRAND);
 }
 
-.brand span{
+.brand span {
     color: var(--FONT-COLOR);
-    font-size: 1.4em;
-    letter-spacing: -0.5px;
+    font-size: 22px;
+    letter-spacing: 0.2px;
 }
 
-.navbar{
+.navbar {
     display: flex;
 }
 
-.navbar a{
+.navbar a {
     color: #E5EDF0;
     font-family: var(--FF);
     font-size: 13px;
@@ -60,35 +59,37 @@ header{
     font-weight: 600;
     transition: all .50s ease;
 }
-.navbar a:hover{
+
+.navbar a:hover {
     color: #7C7C7C;
 }
 
-.navbar a.active{
+.navbar a.active {
     color: #7C7C7C;
 }
-.main{
+
+.main {
     display: flex;
     align-items: center;
 }
 
-.signup{
+.signup {
     letter-spacing: 0.5px;
-    font-size: 0.8em;
-    background: #D9D9D9;
+    font-size: 13px;
 }
-.main a{
-    padding: 8px;
-    border-radius: 7px;
+
+.main a {
+    padding: 7px 8px;
+    border-radius: 5px;
     background-color: #D9D9D9;
     color: var(--BGCOLOR);
     font-weight: 600;
     font-family: var(--FF);
-    margin-right: 30px;
+    margin-right: 20px;
 }
 
 
-#menu-icon{
+#menu-icon {
     color: #7C7C7C;
     font-size: 35px;
     cursor: pointer;
@@ -96,115 +97,111 @@ header{
     display: none;
 }
 
-/* MAIN HOME*/
+/* SKILLS */
 
-
-
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center !important;
-    text-align: center;
-    font-family: var(--FF);
+.container {
+    margin-top: 25px;
+    background: #0B1824;
+    user-select: none;
+    width: 500px;
+    padding: 13px 30px; 
+    border-radius: 6px;
+    position: absolute;
+    left: 49.5%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     color: var(--FONT-COLOR);
-    font-size: 21.5px;
-    font-weight: bolder;
+    letter-spacing: 0.3px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
 }
 
-.name{
+.container p {
+    color: var(--FONT-COLOR);
+    font-size: 14px;
+}
+
+.heading {
     color: #88DBFB;
-}
-
-.address{
-    font-size: 12px;
-    font-weight: bolder;
-    color: #7C7C7C;
+    font-size: 17px;
+    font-weight: 600;
 }
 
 img{
-    margin-top: 33%;
-    margin-bottom: 5px;
-    border-radius: 50%;
-    max-width: 15%;
-    max-height: 25%;
+    margin-top: 10px;
+    width: 450px;
+    border-radius: 3px;
 }
 
-.resume{
-    color: #000D11;
-    background: #E5EDF0;
-    padding: 9px 15px;
-    margin-top: 15px;
-    border: none;
-    border-radius: 7px;
-    font-size: 13px;
-    font-weight: bolder;
-    box-shadow: 5px 5px #40AEDA;
-    transition: 0.6s;
+.title {
+    font-size: 22px;
 }
 
-.resume:hover{
-    box-shadow: none;
-}
 
-.resume a{
-    text-decoration: none;
-    color: #000D11;
-}
 
-.title p{
-    line-height: 1.5;
+@media (max-width: 700px) {
+    .container{
+        width: 360px;
+    }
+
+    .container p {
+        font-size: 17px;
+    }
+
+    img{
+        width: 300px;
+    }
 }
 
 
 @media (max-width: 1280px) {
-    header{
+    header {
         padding: 14px 2%;
         transition: .2s;
     }
-    .navbar a{
+
+    .navbar a {
         padding: 5px 0;
         margin: 0px 20px;
     }
 }
 
-@media (max-width: 600px){
-    .content{
-        margin-top: 30%;
-    }
-}
-
-@media (max-width: 1090px){
-    #menu-icon{
+@media (max-width: 1090px) {
+    #menu-icon {
         display: block;
         position: fixed;
         right: 1px;
     }
 
-    .signup{
+    .signup {
         z-index: 1;
     }
 
-    .navbar{
+    .navbar {
         position: absolute;
         top: 0;
-        right: -100% !important;
-        width: 300px;
-        height: 60vh;
+        right: -110% !important;
+        width: 270px;
+        height: 50vh;
         background: #0b1824d0;
         display: flex;
         flex-flow: column;
         align-items: center;
         justify-content: space-around;
         border-radius: 12px;
-        transition: all  3s .10s ease;
+        transition: all 0.9s .0s ease;
     }
 
-    .navbar a{
+    .navbar a {
         display: block;
         margin: 12px 0;
         padding: 0px 25px;
+        font-size: 14px;
     }
-    .navbar.open{
+
+    .navbar.open {
         right: 0 !important;
     }
+
+    
 }

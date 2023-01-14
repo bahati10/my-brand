@@ -84,7 +84,7 @@ header{
     color: var(--BGCOLOR);
     font-weight: 600;
     font-family: var(--FF);
-    margin-right: 30px;
+    margin-right: 20px;
 }
 
 
@@ -96,65 +96,70 @@ header{
     display: none;
 }
 
-/* MAIN HOME*/
+/* ABOUT */
 
-
-
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center !important;
-    text-align: center;
-    font-family: var(--FF);
-    color: var(--FONT-COLOR);
-    font-size: 21.5px;
-    font-weight: bolder;
-}
-
-.name{
-    color: #88DBFB;
-}
-
-.address{
-    font-size: 12px;
-    font-weight: bolder;
+.container{
+<<<<<<< HEAD:Skills/skills.css
+    width: 500px;
+    height: auto;
+    margin-top: 15%;
+    margin-left: 26%;
+=======
     color: #7C7C7C;
+    max-width: 30%;
+    min-width: 33%;
+    height: auto;
+    margin-top: 18%;
+    margin-left: 30%;
+>>>>>>> mainhttp/127.0.0.15500/index.html:About/about.css
+    color: var(--FONT-COLOR);
+    letter-spacing: -0.5px;
+    font-family: 'Poppins', sans-serif;
 }
 
-img{
-    margin-top: 33%;
-    margin-bottom: 5px;
-    border-radius: 50%;
-    max-width: 15%;
-    max-height: 25%;
+.bio{
+    font-weight: 500;
 }
 
-.resume{
-    color: #000D11;
-    background: #E5EDF0;
-    padding: 9px 15px;
-    margin-top: 15px;
+.container .bio{
+    font-size: 16px;
+}
+
+.heading{
+    color: #88DBFB;
+    font-weight: 600;
+}
+
+.title{
+    font-size: 1.3rem;
+}
+
+#btn{
     border: none;
-    border-radius: 7px;
-    font-size: 13px;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
     font-weight: bolder;
+    letter-spacing: 0.4px;
+    padding: 6px 14px;
+    border-radius: 6px;
     box-shadow: 5px 5px #40AEDA;
     transition: 0.6s;
 }
 
-.resume:hover{
+#btn:hover{
     box-shadow: none;
 }
 
-.resume a{
-    text-decoration: none;
+#btn a {
     color: #000D11;
 }
 
-.title p{
-    line-height: 1.5;
+@media (max-width: 600px){
+    .container{
+        margin-top: 70%;
+    }
 }
-
 
 @media (max-width: 1280px) {
     header{
@@ -167,12 +172,16 @@ img{
     }
 }
 
+<<<<<<< HEAD:Skills/skills.css
 @media (max-width: 600px){
-    .content{
-        margin-top: 30%;
+    .container{
+        margin-top: 40%;
     }
 }
 
+
+=======
+>>>>>>> mainhttp/127.0.0.15500/index.html:About/about.css
 @media (max-width: 1090px){
     #menu-icon{
         display: block;
@@ -188,8 +197,8 @@ img{
         position: absolute;
         top: 0;
         right: -100% !important;
-        width: 300px;
-        height: 60vh;
+        width: 390px;
+        height: 50vh;
         background: #0b1824d0;
         display: flex;
         flex-flow: column;
