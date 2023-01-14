@@ -200,11 +200,18 @@ img {
 
 @media (max-width: 700px) {
     .container {
-        width: 360px;
+        width: 330px;
+    }
+
+    .title{
+        font-size: 1.3em;
     }
 
     .container p {
-        font-size: 14px;
+        font-size: 13px;
+    }
+    #btn{
+        font-size: 13px;
     }
 }
 
@@ -243,3 +250,4 @@ img {
     .navbar.open {
         right: 0 !important;
     }
+}
