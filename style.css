@@ -21,6 +21,10 @@ body{
     background: #000D11;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 header{
     position: fixed;
     width: 100%;
@@ -188,15 +192,15 @@ img{
         position: absolute;
         top: 0;
         right: -100% !important;
-        width: 300px;
-        height: 60vh;
+        width: 270px;
+        height: 45vh;
         background: #0b1824d0;
         display: flex;
         flex-flow: column;
         align-items: center;
         justify-content: space-around;
         border-radius: 12px;
-        transition: all  3s .10s ease;
+        transition: all  1s .0s ease;
     }
 
     .navbar a{
