@@ -16,14 +16,15 @@
 }
 
 body {
-    min-width: 700px;
+    font-family: "Roboto", sans-serif;
+    min-width: 800px;
+    min-height: 100vh;
     background: #000D11;
 }
 
 body::-webkit-scrollbar {
     display: none;
 }
-
 
 header {
     backdrop-filter: blur(3px);
@@ -35,7 +36,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: transparent;
     padding: 28px 12%;
     transition: all .50s ease-in-out;
 }
@@ -85,6 +85,10 @@ header {
     background: #D9D9D9;
 }
 
+i {
+    color: #0291C9;
+}
+
 .main a {
     padding: 10px;
     border-radius: 7px;
@@ -104,213 +108,247 @@ header {
 }
 
 
+/* RESPONSIVE WEB DESIGN */
 
 
-/* BLOG */
 
-
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0px;
-    padding: 0px;
-    background: #000D11;
-    font-family: 'Poppins', sans-serif;
-}
-
-body::-webkit-scrollbar {
-    display: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
-}
-
-.blog {
-    margin-top: 20px;
-    display: flex;
+.container {
+    user-select: none;
+    margin: 8% 0;
+    display: grid;
+    grid-template-columns: 300px 200px 400px;
+    gap: 20px;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 40px;
-}
-
-.blog-head {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: #E5EDF0;
-}
-
-.blog-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
 }
 
 .box {
-    text-align: center;
-    border-radius: 10px;
-    width: 310px;
+    display: grid;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 2rem;
+}
+
+
+.box:first-child {
+    background: #0B1824;
+    grid-column: 1 / 3;
+    grid-row: 1 / 10;
+}
+
+.box:nth-child(2) {
+    grid-row: 1 / 6;
+}
+
+.box:nth-child(3) {
+    height: 45px;
+}
+
+.box:nth-child(4) {
+    height: 120px;
     background: #0B1824;
 }
 
-/* TO BE CHANGED LATER */
-
-.middle{
-    margin-left: 60px;
-    margin-top: 40px;
-    margin-right: 60px;
-    margin-bottom: 40px;
+.box:nth-child(5) {
+    height: 120px;
+    background: #0B1824;
 }
+
+.box:nth-child(6) {
+    height: 120px;
+    background: #0B1824;
+}
+
+/* General */
 
 h5 {
-    margin-bottom: 4px;
-}
-
-.blog-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    color: #40AEDA;
+    font-size: 16px;
 }
 
 img {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    margin-left: 1px;
+    border-radius: 5px;
 }
 
-.content {
-    padding: 30px;
+/* Box three */
+
+.three {
+    margin-top: -60px;
     display: flex;
-    flex-direction: column;
+    margin-left: 8px;
 }
 
-.content span {
-    color: #A6A6A6;
-    font-size: 11px;
-    margin-bottom: 4px;
+.three button {
+    font-weight: 600;
+    border-radius: 3px;
+}
+
+.like {
+    padding: 6px 27px;
+    margin-right: 5%;
+    margin-left: -2%;
+    color: #fff;
+    background: #0B1824;
+    border: none;
+}
+
+.like i {
+    text-align: center;
+    font-size: 18px;
+    margin-right: 3px;
+}
+
+.comment {
+    border: none;
+    padding: 12px 10px;
+}
+
+#comment {
+    margin-top: 2px;
+}
+
+
+.four {
+    color: #D9DDDE;
+    font-weight: 600;
+    padding: 20px;
+    font-size: 12px;
+}
+
+.five {
+    color: #D9DDDE;
+    font-weight: 600;
+    padding: 20px;
+    font-size: 12px;
+}
+
+.six {
+    color: #D9DDDE;
+    font-weight: 600;
+    padding: 20px;
+    font-size: 12px;
+}
+
+.box {
+    line-height: 16px;
+    letter-spacing: 0.1px;
+}
+
+.one {
+    padding: 55px;
+}
+
+.content p {
+    line-height: 21px;
+    color: #D9DDDE;
+    font-weight: 600;
+    font-size: 14px;
 }
 
 .content h5 {
-    font-family: 'Roboto', sans-serif;
     font-size: 20px;
-    color: #40AEDA;
-}
-
-.content .content-details {
-    color: #E5EDF0;
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: 0.4px;
-}
-
-.content .read {
-    margin-top: 10px;
-    color: #B5BBBD;
-    font-size: 13px;
     text-align: center;
-    font-weight: 600;
-    transition: 1.3s;
 }
 
-.content .read:hover {
+ul {
+    font-size: 12px;
+}
+
+li {
+    list-style: none;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    font-weight: 600;
+    color: #D9DDDE;
+}
+
+.one a {
     text-decoration: underline;
+    color: #D9DDDE;
+}
+
+.one a:hover{
+    color: #9E9E9E;
+}
+
+#sub {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 22px;
     color: #40AEDA;
 }
 
-.add a {
-    font-weight: 600;
-    font-size: 15px;
-    letter-spacing: -0.5px;
-    text-decoration: underline;
-    color: #E5EDF0;
-    transition-duration: 1.3s;
-}
-
-.add a:hover {
-    color: #40AEDA;
-}
-
-.add {
-    margin-top: -40px;
-}
 
 
-@media (max-width: 1100px) {
-    .box {
-        width: 600px;
+
+
+@media (max-width: 980px) {
+    body {
+        min-width: 80%;
     }
 
-    img{
-        width: 600px;
-        height: 450px;
+    .one {
+        padding: 30px;
     }
 
-    .content .content-details {
-        font-size: 27px;
-        letter-spacing: 0.4px;
-        padding:  0 30px;
-        margin: 10px 0;
+    .one h5{
+        font-size: 22px;
     }
 
-    .content h5{
-        font-size: 29px;
-    }
-    .content span {
-        font-size: 17px;
-        margin-top: 7px;
-        margin-bottom: 8px;
+    .one a {
+        font-size: 14px;
     }
 
-    .content .read {
-        font-size: 20px;
+    img {
+        margin-left: 0.5px;
+        min-width: 100%;
+        height: auto;
     }
 
-    .add {
-        margin-top: 30px;
+    .container {
+        min-width: 70%;
+        margin: 10% 7%;
+        display: inline-block;
     }
-    
-    .add a{
+
+    .container p {
+        line-height: 25px;
+        letter-spacing: 0.2px;
         font-size: 18px;
     }
 
-    .blog {
-        margin-top: 80px;
+    .box {
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
-    .signup {
-        font-size: 1.3em;
+    .three {
+        margin-left: 9px;
     }
 
-    .brand span{
-        font-size: 2em;
+    h5 {
+        font-size: 20px;
     }
 
-    .navbar a{
-        font-size: 19px;
+    .four,
+    .five,
+    .six {
+        padding: 30px;
+        font-size: 15px;
+        letter-spacing: 0.1px;
     }
 
-    .main a {
-        padding: 18px;
-        margin-right: 26px;
+    .four, .six h5{
+        margin-bottom: 10px;
     }
-    
-    #menu-icon {
-        font-size: 50px !important;
+    .five h5{
+        margin-bottom: 10px;
     }
+    .four h5{
+        margin-bottom: 10px;
+    }
+
 }
-
 
 
 
@@ -375,5 +413,4 @@ img {
         padding: 5px 0;
         margin: 0px 20px;
     }
-
 }
