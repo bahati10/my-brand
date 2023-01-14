@@ -254,7 +254,7 @@ img {
 
 @media (max-width: 1280px) {
     header {
-        padding: 14px 2%;
+        padding: 14px 4%;
         transition: .2s;
     }
 
