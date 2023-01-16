@@ -110,17 +110,17 @@ i{
     display: flex;
     justify-content: center;
     align-items: center;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -40%);
 }
 
 form {
     background: #0B1824;
     display: flex;
     flex-flow: column;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -48%);
-    min-width: 40px;
+    width: 500px;
     height: auto;
     padding: 40px 50px;
     color: var(--FONT-COLOR);
@@ -139,7 +139,7 @@ form input,
 textarea {
     padding: 10px;
     color: #010818;
-    border-radius: 6px;
+    border-radius: 4px;
     border: none;
     font-weight: 600;
     letter-spacing: -0.5px;
@@ -208,6 +208,7 @@ input::file-selector-button {
 
 @media (max-width: 600px) {
     form {
+        margin-top: -100px;
         min-width: 450px;
         padding: 60px 50px;
     }
