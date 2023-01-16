@@ -112,7 +112,10 @@ form {
     background: #0B1824;
     display: flex;
     flex-flow: column;
-    margin-top: 8%;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
     min-width: 400px;
     padding:  60px 60px;
     color: var(--FONT-COLOR);
@@ -211,15 +214,15 @@ h5{
         position: absolute;
         top: 0;
         right: -100% !important;
-        width: 390px;
-        height: 50vh;
+        width: 290px;
+        height: 45vh;
         background: #0b1824d0;
         display: flex;
         flex-flow: column;
         align-items: center;
         justify-content: space-around;
         border-radius: 12px;
-        transition: all  3s .10s ease;
+        transition: all  1s .0s ease;
     }
 
     .navbar a{
@@ -248,8 +251,15 @@ h5{
 
 @media (max-width: 600px){
     form{
-        min-width: 370px;
-        margin-top: 30%;
+        min-width: 500px;
+        height: 550px;
         padding: 40px 40px;
+    }
+
+    .sign{
+        margin-top: 60px;
+    }
+    label{
+        margin-top: 20px;
     }
 }
