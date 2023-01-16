@@ -14,7 +14,7 @@
 }
 
 body {
-  min-width: 600px;
+  min-width: 400px;
   background: #000D11;
 }
 
@@ -193,7 +193,7 @@ p {
 @media (max-width: 700px) {
 
   body {
-    min-width: 600px;
+    min-width: 400px;
   }
 
 
@@ -266,16 +266,16 @@ p {
   .navbar {
     position: absolute;
     top: 0;
-    right: -100% !important;
-    width: 390px;
-    height: 50vh;
+    right: -110% !important;
+    width: 260px;
+    height: 40vh;
     background: #0b1824d0;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: space-around;
     border-radius: 12px;
-    transition: all 3s .10s ease;
+    transition: all 0.8s .0s ease;
   }
 
   .navbar a {
