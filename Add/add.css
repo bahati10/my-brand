@@ -116,7 +116,10 @@ form {
     background: #0B1824;
     display: flex;
     flex-flow: column;
-    margin-top: 80px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
     min-width: 40px;
     height: auto;
     padding: 40px 50px;
@@ -205,8 +208,25 @@ input::file-selector-button {
 
 @media (max-width: 600px) {
     form {
-        margin-top: 30%;
-        padding: 40px 40px;
+        min-width: 500px;
+        padding: 60px 50px;
+    }
+
+    label{
+        font-size: 19px;
+        margin: 5px 0;
+    }
+
+    h2{
+        font-size: 25px;
+    }
+
+    .send{
+        font-size: 19px;
+    }
+    #myfile{
+        font-size: 22px;
+        padding: 40px;
     }
 }
 
@@ -238,15 +258,15 @@ input::file-selector-button {
         position: absolute;
         top: 0;
         right: -100% !important;
-        width: 390px;
-        height: 50vh;
+        width: 290px;
+        height: 45vh;
         background: #0b1824d0;
         display: flex;
         flex-flow: column;
         align-items: center;
         justify-content: space-around;
-        border-radius: 12px;
-        transition: all 3s .10s ease;
+        border-radius: 10px;
+        transition: all 1s .0s ease;
     }
 
     .navbar a {
@@ -264,7 +284,7 @@ input::file-selector-button {
 
 @media (max-width: 1280px) {
     header {
-        padding: 14px 2%;
+        padding: 14px 5%;
         transition: .2s;
     }
 
