@@ -377,8 +377,8 @@ li {
         position: absolute;
         top: 0;
         right: -100% !important;
-        width: 280px;
-        height: 45vh;
+        width: 300px;
+        height: 40vh;
         background: #0b1824d0;
         display: flex;
         flex-flow: column;
