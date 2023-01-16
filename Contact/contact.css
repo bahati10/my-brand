@@ -276,11 +276,16 @@ h2 {
 
 @media (max-width: 600px) {
     form {
-        width: 480px;
+        width: 470px;
         height: 40%;
         padding: 70px 40px;
     }
+
+    .links img{
+        padding: 0.1px;
+    }
     input,textarea{
+        padding: 20px;
         font-size: 18px;
     }
 
