@@ -162,6 +162,8 @@ img {
 }
 
 .user-info h3 {
+    margin-top: 20px;
+    margin-bottom: 15px;
     font-size: 22px;
     text-align: center;
     color: #40AEDA;
@@ -196,14 +198,9 @@ h4 {
     background: #D9D9D9;
 }
 
-.update {
-    text-align: center;
-}
 
 .user-info a {
-    color: #D9D9D9;
-    text-decoration: underline;
-    transition: 0.8s;
+    color: var(--BGCOLOR);
 }
 
 .user-info a:hover{
@@ -229,6 +226,10 @@ h4 {
     text-align: center;
 }
 
+i{
+    color: #0291C9;
+}
+
 @media (max-width: 1280px) {
     header {
         padding: 14px 2%;
@@ -238,12 +239,6 @@ h4 {
     .navbar a {
         padding: 5px 0;
         margin: 0px 20px;
-    }
-}
-
-@media (max-width: 600px) {
-    .content {
-        margin-top: 30%;
     }
 }
 
@@ -262,15 +257,15 @@ h4 {
         position: absolute;
         top: 0;
         right: -100% !important;
-        width: 290px;
-        height: 50vh;
+        width: 300px;
+        height: 45vh;
         background: #0b1824d0;
         display: flex;
         flex-flow: column;
         align-items: center;
         justify-content: space-around;
         border-radius: 12px;
-        transition: all 1s .0s ease;
+        transition: all 0.7s .0s ease;
     }
 
     .navbar a {
