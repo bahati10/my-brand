@@ -377,15 +377,15 @@ li {
         position: absolute;
         top: 0;
         right: -100% !important;
-        width: 390px;
-        height: 50vh;
+        width: 280px;
+        height: 45vh;
         background: #0b1824d0;
         display: flex;
         flex-flow: column;
         align-items: center;
         justify-content: space-around;
         border-radius: 12px;
-        transition: all 3s .10s ease;
+        transition: all 0.7s .0s ease;
     }
 
     .navbar a {
@@ -403,7 +403,7 @@ li {
 
 @media (max-width: 1280px) {
     header {
-        padding: 14px 2%;
+        padding: 14px 3%;
         transition: .2s;
     }
 
