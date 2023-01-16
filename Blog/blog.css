@@ -16,7 +16,7 @@
 }
 
 body {
-    min-width: 600px;
+    min-width: 310px;
     background: #000D11;
 }
 
@@ -248,7 +248,11 @@ img {
 
 
 @media (max-width: 700px) {
+    body {
+        min-width: 500px;
+    }
     .box {
+        margin: auto;
         width: 500px;
     }
 
