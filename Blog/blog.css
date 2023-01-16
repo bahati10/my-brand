@@ -167,7 +167,7 @@ ul {
 
 /* TO BE CHANGED LATER */
 
-.middle{
+.middle {
     margin-left: 60px;
     margin-top: 40px;
     margin-right: 60px;
@@ -251,12 +251,13 @@ img {
     body {
         min-width: 500px;
     }
+
     .box {
-        margin: auto;
+        margin: 25px auto;
         width: 500px;
     }
 
-    img{
+    img {
         width: 500px;
         height: 400px;
     }
@@ -264,13 +265,14 @@ img {
     .content .content-details {
         font-size: 23px;
         letter-spacing: 0.4px;
-        padding:  0 30px;
+        padding: 0 30px;
         margin: 10px 0;
     }
 
-    .content h5{
+    .content h5 {
         font-size: 24px;
     }
+
     .content span {
         font-size: 13px;
         margin-top: 7px;
@@ -284,8 +286,8 @@ img {
     .add {
         margin-top: 30px;
     }
-    
-    .add a{
+
+    .add a {
         font-size: 16px;
     }
 
@@ -296,7 +298,7 @@ img {
 
 @media (max-width: 1280px) {
     header {
-        padding: 14px 2%;
+        padding: 14px 3%;
         transition: .2s;
     }
 
@@ -343,5 +345,5 @@ img {
         right: 0 !important;
     }
 
-    
+
 }
