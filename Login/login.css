@@ -260,4 +260,24 @@ h5{
     .sign{
         margin-top: 30px;
     }
+
+    label{
+        font-size: 16px;
+    }
+    input{
+        font-size: 16px;
+    }
+
+    h5{
+        font-size: 12px;
+    }
+
+    .sign{
+        font-size: 15px;
+        padding: 12px 18px;
+    }
+
+    h2{
+        font-size: 19px;
+    }
 }
