@@ -253,17 +253,17 @@ img {
     }
 
     .box {
-        margin: 25px 25px;
-        width: 500px;
+        margin: 25px auto;
+        width: 450px;
     }
 
     img {
-        width: 500px;
-        height: 400px;
+        width: 450px;
+        height: 350px;
     }
 
     .content .content-details {
-        font-size: 23px;
+        font-size: 20px;
         letter-spacing: 0.4px;
         padding: 0 30px;
         margin: 10px 0;
