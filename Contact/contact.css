@@ -228,7 +228,7 @@ h2 {
         position: absolute;
         top: 0;
         right: -100% !important;
-        width: 390px;
+        width: 300px;
         height: 50vh;
         background: #0b1824d0;
         display: flex;
@@ -236,7 +236,7 @@ h2 {
         align-items: center;
         justify-content: space-around;
         border-radius: 12px;
-        transition: all 3s .10s ease;
+        transition: all 1s .0s ease;
     }
 
     .navbar a {

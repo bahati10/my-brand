@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="addblog.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="IMG/android-chrome-192x192.png">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/IMG/android-chrome-192x192.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Righteous&family=Roboto&display=swap"
@@ -14,7 +14,7 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Portfolio</title>
+    <title>Profile</title>
 </head>
 
 <body>
@@ -25,23 +25,27 @@
             <li><a href="/About/about.html">About</a></li>
             <li><a href="/Work/work.html">Work</a></li>
             <li><a href="/Skills/skills.html">Skills</a></li>
-            <li><a href="/Blog/blog.html" class="active">Blog</a></li>
+            <li><a href="/Blog/blog.html">Blog</a></li>
             <li><a href="/Contact/contact.html">Contact</a></li>
         </ul>
+        <div class="main">
+            <a href="/Profile/profile.html" class="signup"><i class="fa-solid fa-user"></i> Sign Out</a>
+          <div class="bx bx-menu" id="menu-icon"></div>
     </header>
-    <div class="main-container">
-        <form action="" class="form" autocomplete="on" spellcheck="false">
-            <h2>Add Blog</h2>
-            <label class="name" for="name">Title</label>
-            <input type="name" required autocapitalize="word" maxlength="35"><br>
-            <label class="subtitle" for="subtitle">Sub Title</label>
-            <textarea name="subtitle" id="subtitle" cols="30" rows="2" maxlength="155"></textarea> <br>
-            <label class="message" for="text">Content</label>
-            <textarea name="message" id="" cols="30" rows="8"></textarea> <br>
-            <input type="file" id="myFile" name="filename" value="choose"> 
-            <button class="send" type="submit">Add</button>
-        </form>
-    </div>
+    <main>
+        <div class="profile-photo">
+            <img src="img/avatar.jpg" alt="" id="image">
+            <input type="file" id="file">
+            <label for="file" id="uploadBtn">Choose Image</label>
+        </div>
+        <div class="user-info">
+            <h3>User Info</h3> <br>
+            <h4 class="name">Bahati Yves</h4> <br>
+            <h4 class="email">bahatiyves102gmail.com</h4> <br>
+            <button id="sign"><h4><a href="/Update/update">Update</a></h4></button>
+        </div>
+    </main>
     <script src="/index.js" defer></script>
 </body>
+
 </html>

@@ -1,301 +1,145 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
 :root {
-    --BGCOLOR: #000D11;
-    --FONT-COLOR: #E5EDF0;
-    --FF: 'Poppins', sans-serif;
-    --FF-BRAND: 'Righteous', cursive;
+  --BGCOLOR: #000D11;
+  --FONT-COLOR: #E5EDF0;
+  --FF: 'Poppins', sans-serif;
+  --FF-BRAND: 'Righteous', cursive;
 }
 
 body {
-    min-width: 600px;
-    background: #000D11;
+  min-width: 400px;
+  background: #000D11;
 }
 
 body::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    right: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: transparent;
-    padding: 28px 12%;
-    transition: all .50s ease-in-out;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  padding: 28px 12%;
+  transition: all .50s ease-in-out;
 }
 
 .brand {
-    display: flex;
-    align-items: center;
-    font-family: var(--FF-BRAND);
+  display: flex;
+  align-items: center;
+  font-family: var(--FF-BRAND);
 }
 
 .brand span {
-    color: var(--FONT-COLOR);
-    font-size: 1.4em;
-    letter-spacing: -0.5px;
+  color: var(--FONT-COLOR);
+  font-size: 1.4em;
+  letter-spacing: -0.5px;
 }
 
 .navbar {
-    display: flex;
+  display: flex;
 }
 
 .navbar a {
-    color: var(--FONT-COLOR);
-    font-family: var(--FF);
-    font-size: 13px;
-    padding: 1px 0;
-    margin: 0px 14px;
-    font-weight: 600;
-    transition: all .50s ease;
+  color: var(--FONT-COLOR);
+  font-family: var(--FF);
+  font-size: 13px;
+  padding: 1px 0;
+  margin: 0px 14px;
+  font-weight: 600;
+  transition: all .50s ease;
 }
 
 .navbar a:hover {
-    color: #7C7C7C;
+  color: #7C7C7C;
 }
 
 .navbar a.active {
-    color: #7C7C7C;
+  color: #7C7C7C;
 }
 
 .main {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .signup {
-    letter-spacing: 0.5px;
-    font-size: 0.8em;
-    background: #D9D9D9;
+  letter-spacing: 0.5px;
+  font-size: 0.8em;
+  background: #D9D9D9;
 }
 
 .main a {
-    padding: 10px;
-    border-radius: 7px;
-    color: var(--BGCOLOR);
-    font-weight: 600;
-    font-family: var(--FF);
-    margin-right: 20px;
+  padding: 10px;
+  border-radius: 7px;
+  color: var(--BGCOLOR);
+  font-weight: 600;
+  font-family: var(--FF);
+  margin-right: 20px;
 }
 
 
 #menu-icon {
-    color: #7C7C7C;
-    font-size: 35px;
-    cursor: pointer;
-    z-index: 100001;
-    display: none;
+  color: #7C7C7C;
+  font-size: 35px;
+  cursor: pointer;
+  z-index: 100001;
+  display: none;
 }
 
 
 /* WORK PAGE */
 
-img{
-    border-radius: 6px;
-  }
-  .left{
-    float: left;
-    margin-right: 2.2rem;
-    margin-left: 2rem;
-    margin-top: 20px;
-  }
-  .right{
-    margin-right: 2rem;
-    float: right;
-    margin-left: 2rem;
-  }
-  .clear{
-    clear: both;
-  }
-  .all{
-    font-family: var(--FF);
-    width: 600px;
-    height: 425px;
-    margin: 140px auto 0 auto;
-  }
-  
-  .all a{
-    color: #000D11;
-    text-decoration: none;
-  }
-  
-  .all button{
-    padding: 6px 14px;
-    border-radius: 3px;
-    border: none;
-    font-size: 12px;
-    font-weight: 600;
-    color: #000D11;
-    box-shadow: 3px 3px #35C2FA;
-    transition: 1s;
-  }
-  
-  button:hover{
-    box-shadow: none;
-  }
-  
-  .all span{
-    color: #35C2FA;
-    font-size: 20px;
-    font-weight: bolder;
-  }
-  
-  .one{
-    margin-left: 31px;
-    margin-top: -5px;
-    width: 200px;
-  }
-  
-  .two{
-    width: 400px;
-    margin-left: 200px;
-    margin-top: 60px;
-  }
-  p{
-    letter-spacing: -0.2px;
-    color: #B3C2C7;
-    font-weight: bold;
-    font-size: 14px;
-  }
-  
-  .title{
-    font-size: 24px;
-    color: #E5EDF0;
-    margin-left: 30px;
-    margin-top: -40px;
-  }
-
-
-
-
-
-
-@media (max-width: 1280px) {
-    header {
-        padding: 14px 2%;
-        transition: .2s;
-    }
-
-    .navbar a {
-        padding: 5px 0;
-        margin: 0px 20px;
-    }
-}
-
-@media (max-width: 1090px) {
-    #menu-icon {
-        display: block;
-        position: fixed;
-        right: 1px;
-    }
-
-    .signup {
-        z-index: 1;
-    }
-
-    .navbar {
-        position: absolute;
-        top: 0;
-        right: -100% !important;
-        width: 390px;
-        height: 50vh;
-        background: #0b1824d0;
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        justify-content: space-around;
-        border-radius: 12px;
-        transition: all 3s .10s ease;
-    }
-
-    .navbar a {
-        display: block;
-        margin: 12px 0;
-        padding: 0px 25px;
-    }
-
-    .navbar.open {
-        right: 0 !important;
-    }
-}
-
-
-
-@media (max-width: 1280px) {
-    header {
-        padding: 14px 2%;
-        transition: .2s;
-    }
-
-    .navbar a {
-        padding: 5px 0;
-        margin: 0px 20px;
-    }
-}
-
-@media (max-width: 600px) {
-    .all {
-        margin-top: 50%;
-    }
-}
-
-
-
-
-
-
-
-
-
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
-body {
-
-  font-family: 'Poppins', sans-serif;
-  background: #000D11;
-}
-
-img{
+img {
   border-radius: 6px;
+  display: block;
 }
-.left{
+
+.left {
   float: left;
   margin-right: 2.2rem;
   margin-left: 2rem;
   margin-top: 20px;
 }
-.right{
+
+.right {
   margin-right: 2rem;
   float: right;
   margin-left: 2rem;
 }
-.clear{
+
+.clear {
   clear: both;
 }
-.all{
+
+.all {
+  border-radius: 10px;
+  padding: 20px 0px 50px 0;
+  background: #0B1824;
+  font-family: var(--FF);
   width: 600px;
-  height: 425px;
-  margin: 140px auto 0 auto;
+  height: auto;
+  margin: 100px auto 0 auto;
 }
 
-.all a{
+.all a {
   color: #000D11;
   text-decoration: none;
 }
 
-.all button{
+.all button {
   padding: 6px 14px;
   border-radius: 3px;
   border: none;
@@ -306,37 +150,155 @@ img{
   transition: 1s;
 }
 
-button:hover{
+button:hover {
   box-shadow: none;
 }
 
-.all span{
+.all span {
   color: #35C2FA;
   font-size: 20px;
   font-weight: bolder;
 }
 
-.one{
+.one {
+  text-align: center;
   margin-left: 31px;
   margin-top: -5px;
   width: 200px;
 }
 
-.two{
+.two {
+  text-align: center;
   width: 400px;
   margin-left: 200px;
   margin-top: 60px;
 }
-p{
+
+p {
   letter-spacing: -0.2px;
   color: #B3C2C7;
   font-weight: bold;
   font-size: 14px;
 }
 
-.title{
+.title {
+  font-size: 24px;
   color: #E5EDF0;
   margin-left: 30px;
-  margin-top: -70px;
 }
- */
+
+
+
+
+@media (max-width: 700px) {
+
+  body {
+    min-width: 400px;
+  }
+
+
+  img {
+    width: 100%;
+  }
+
+  .all {
+    margin-top: 90px;
+    margin-bottom: 50px;
+    width: 400px;
+    display: grid;
+  }
+
+
+  .left {
+    transform: translateX(10%);
+    width: 275px;
+    margin-top: 70px;
+  }
+
+  .right {
+    transform: translateX(10%);
+    width: 275px;
+  }
+
+
+  .one {
+    margin-top: 20px;
+    text-align: center;
+    transform: translateX(10%);
+    width: 275px;
+  }
+
+  .two {
+    margin-top: 20px;
+    text-align: center;
+    transform: translateX(-51%);
+    width: 275px;
+  }
+}
+
+
+
+
+
+@media (max-width: 1280px) {
+  header {
+    padding: 14px 2%;
+    transition: .2s;
+  }
+
+  .navbar a {
+    padding: 5px 0;
+    margin: 0px 20px;
+  }
+}
+
+@media (max-width: 1090px) {
+  #menu-icon {
+    display: block;
+    position: fixed;
+    right: 1px;
+  }
+
+  .signup {
+    z-index: 1;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 0;
+    right: -110% !important;
+    width: 260px;
+    height: 40vh;
+    background: #0b1824d0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 12px;
+    transition: all 0.8s .0s ease;
+  }
+
+  .navbar a {
+    display: block;
+    margin: 12px 0;
+    padding: 0px 25px;
+  }
+
+  .navbar.open {
+    right: 0 !important;
+  }
+}
+
+
+
+@media (max-width: 1280px) {
+  header {
+    padding: 14px 2%;
+    transition: .2s;
+  }
+
+  .navbar a {
+    padding: 5px 0;
+    margin: 0px 20px;
+  }
+}
