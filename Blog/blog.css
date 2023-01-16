@@ -253,7 +253,7 @@ img {
     }
 
     .box {
-        margin: 25px auto;
+        margin: 25px 25px;
         width: 500px;
     }
 
