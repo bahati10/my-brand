@@ -126,6 +126,7 @@ main{
 }
 
 img{
+    border: 2px solid #40AEDA;
     margin-top: 33%;
     margin-bottom: 5px;
     border-radius: 50%;
@@ -139,7 +140,7 @@ img{
     padding: 9px 15px;
     margin-top: 15px;
     border: none;
-    border-radius: 7px;
+    border-radius: 3px;
     font-size: 13px;
     font-weight: bolder;
     box-shadow: 5px 5px #40AEDA;
