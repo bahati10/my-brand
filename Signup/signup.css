@@ -305,13 +305,15 @@ span i {
     }
 
     .sign {
+        box-shadow: 5px 5px #40AEDA;
         padding: 13px 22px;
         font-size: 19px;
         margin-top: 60px;
     }
 
     label {
-        font-size: 19px;
+        margin-top: 19px !important;
+        font-size: 17px;
         margin-top: 5px;
     }
 
@@ -328,10 +330,11 @@ span i {
     }
 
     h2 {
-        font-size: 22px;
+        font-size: 21px;
     }
 
     h5 {
-        font-size: 16px;
+        margin-bottom: 20px;
+        font-size: 13px;
     }
 }
