@@ -133,8 +133,9 @@ h5 {
 }
 
 form input {
-    padding: 10px;
+    z-index: 5555;
     border: none;
+    padding: 10px;
     background: transparent;
     border-bottom: 3px solid var(--FONT-COLOR);
     color: #2DC2FD;
@@ -182,7 +183,8 @@ form .name {
 }
 
 label {
-    margin-top: 5px;
+    margin-top: 3px;
+    margin-bottom: 12px;
     z-index: 5;
     font-size: 13px;
     font-weight: bold;
@@ -297,7 +299,7 @@ span i {
 
 @media (max-width: 600px) {
     form {
-        min-width: 500px;
+        min-width: 450px;
         height: auto;
         padding: 40px 40px;
     }
@@ -313,7 +315,15 @@ span i {
         margin-top: 5px;
     }
 
-    input {
+    form span{
+        margin-top: -30px;
+        font-size: 15px;
+    }
+    span i {
+        font-size: 15px;
+    }
+
+    form input {
         font-size: 18px;
     }
 
