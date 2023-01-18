@@ -39,15 +39,15 @@
             <h2>Get Started</h2>
             <h5>Already have an account? <a href="/Login//login.html">Log In</a></h5>
             <label class="name" for="name">Name</label>
-            <input type="name" id="form-name" onkeyup="validateName()" autocomplete="off">
+            <input type="name" id="form-name" onkeyup="validateName()" spellcheck="false" autocomplete="off">
             <span id="name-error"></span> <br>
              
             <label class="email" for="email">Email</label>
-            <input type="email" id="form-email" onkeyup="validateMail()" autocomplete="off">
+            <input type="email" id="form-email" spellcheck="false" onkeyup="validateMail()" autocomplete="off">
             <span id="email-error"></span><br>
 
             <label class="password" for="password">Password</label>
-            <input type="password" id="form-password" onkeyup="validatePassword()">
+            <input type="password" id="form-password" spellcheck="false" onkeyup="validatePassword()">
             <span id="password-error"></span> <br>
 
             <button class="sign" type="submit" onclick="return validateForm()">Sign Up</button>
