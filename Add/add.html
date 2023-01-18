@@ -38,17 +38,22 @@
         <form action="" class="form" autocomplete="on" spellcheck="false">
             <h2>Add Blog</h2>   
             <label class="name" for="name">Title</label>
-            <input type="name" required autocapitalize="word" maxlength="35"><br>
+            <input type="name" maxlength="35" id="form-title" onkeyup="validateTitle()">
+            <span id="title-error"></span>
             <label for="date">Date</label>
-            <input type="date"> <br>
+            <input type="date" id="form-date" onkeyup="validateDate()">
             <label class="subtitle" for="subtitle">Sub Title</label>
-            <textarea name="subtitle" id="subtitle" cols="30" rows="2" maxlength="155"></textarea> <br>
-            <label class="message" for="text">Content</label>
-            <textarea name="message" id="" cols="30" rows="8"></textarea>
+            <textarea name="subtitle" id="form-subtitle" cols="30" rows="2" maxlength="100" onkeyup="validateSubtitle()"></textarea></textarea> 
+            <span id="subtitle-error"></span>
+            <label class="content" for="text">Content</label>
+            <textarea name="content" id="form-content" cols="30" rows="8" maxlength="00" onkeyup="validateContent()"></textarea></textarea>
+            <span id="content-error"></span> <br>
             <input type="file" id="myFile" name="filename" value="choose"> 
-            <button class="send" type="submit">Add</button>
+            <button class="send" type="submit" onclick="return validateForm()">Add</button>
+            <span id="submit-error"></span>
         </form>
     </div>
+    <script src="add.js"></script>
     <script src="/index.js" defer></script>
 </body>
 </html>
