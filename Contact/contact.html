@@ -36,18 +36,23 @@
             <div class="links">
                 <a href="https://github.com/bahati10" target="_blank"><img class="one" src="img/square-github.svg" alt=""></a>
                 <a href="https://twitter.com/Bahati____" target="_blank"><img class="two" src="img/square-twitter.svg" alt=""></a>
-                <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank"><img class="three" src="img/envelope-solid.svg" alt=""></a>
+                <a href="mailto:bahatiyves10@gmail.com" target="_blank"><img class="three" src="img/envelope-solid.svg" alt=""></a>
                 <a href="https://www.linkedin.com/in/bahati-yves-439aab1a2/" target="_blank"><img class="four" src="img/linkedin.svg" alt=""></a>
             </div>
             <label class="name" for="name">Names</label>
-            <input type="name" required autocapitalize="word"><br>
+            <input type="name" id="form-name" autocomplete="off" onkeyup="validateName()">
+            <span id="name-error" class="one1"></span>
             <label class="email" for="email">Email</label>
-            <input type="email" required="" oninvalid="this.setCustomValidity('Please Enter your email')"><br>
+            <input type="email" id="form-email" autocomplete="off" onkeyup="validateMail()">
+            <span id="email-error" class="two2"></span>
             <label class="message" for="text">Message</label>
-            <textarea name="message" id="" cols="30" rows="8"></textarea> <br>
-            <button class="send" type="submit">Send</button>
+            <textarea name="message" id="form-message" cols="30" rows="8" autocomplete="off" onkeyup="validateMessage()"></textarea>
+            <span id="message-error" class="three3"></span>
+            <button class="send" type="submit" onclick="return validateForm()">Send</button>
+            <span id="submit-error"></span>
         </form>
     </div>
+    <script src="contact.js"></script>
     <script src="/index.js" defer></script>
 </body>
 

@@ -14,9 +14,14 @@
 }
 
 body {
+    user-select: none;
     min-width: 400px;
     min-height: 100vh;
     background: #000D11;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 header {
@@ -79,8 +84,8 @@ header {
 }
 
 .main a {
-    padding: 10px;
-    border-radius: 7px;
+    padding: 8px 10px;
+    border-radius: 2px;
     color: var(--BGCOLOR);
     font-weight: 600;
     font-family: var(--FF);
@@ -113,12 +118,16 @@ form {
     background: #0B1824;
     display: flex;
     flex-flow: column;
-    min-width: 40px;
+    min-width: 400px;
     height: auto;
-    padding: 50px 60px;
+    padding: 40px 40px;
     color: var(--FONT-COLOR);
     font-family: var(--FF);
-    border-radius: 7px;
+    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
 }
 
 .links{
@@ -154,10 +163,16 @@ form input,
 textarea {
     padding: 10px;
     color: #010818;
-    border-radius: 6px;
+    border-radius: 3px;
     border: none;
+    margin-top: 5px;
+    margin-bottom: 20px;
     font-weight: 600;
-    letter-spacing: -0.5px;
+    font-size: 12.3px;
+    letter-spacing: -0.3px;
+    font-family: var(--FF);
+    font-size: 12px;
+    font-family: 'Nunito', sans-serif;
 }
 
 form input,
@@ -165,33 +180,26 @@ textarea:focus {
     outline: none;
 }
 
-form a {
-    color: #88DBFB;
-}
-
-form a:hover {
-    text-decoration: underline;
-}
 
 form .name {
-    margin-top: -15%;
+    margin-top: -14%;
 }
 
 .send {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2px;
-    padding: 10px 20px;
-    border-radius: 3px;
+    margin-top: 3px;
+    padding: 8px 20px;
+    border-radius: 2px;
     border: none;
     color: var(--BGCOLOR);
     font-weight: 600;
     font-size: 12px;
     letter-spacing: -0.5px;
-    box-shadow: 3px 3px #40AEDA;
-    transition: 0.5s;
-    margin-bottom: -30px;
+    box-shadow: 6px 6px #40AEDA;
+    transition: 0.6s;
+    margin-bottom: 10px;
 }
 
 .send:hover {
@@ -203,12 +211,35 @@ label {
     font-weight: bold;
 }
 
-h2 {
-    color: #88DBFB;
-    font-size: 15px;
-    margin-top: -30px;
-    margin-bottom: 10px;
-    padding-bottom: 13px;
+
+form span {
+    padding-right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    color: #BF0606;
+    font-weight: 600;
+    font-size: 11px;
+    transform: translate(100%, -260%);
+    width: 50%;
+}
+
+
+form span:last-child{
+    margin-top: 122%;
+    position: absolute;
+    margin-left: -43%;
+    color: #F25F5C;
+}
+
+#password-error{
+    width: 80%;
+    transform: translateX(25.3%);
+}
+
+span i {
+    margin-top: 5px;
+    color: #016D9F;
+    font-size: 14px;
 }
 
 @media (max-width: 1280px) {
@@ -277,7 +308,7 @@ h2 {
 @media (max-width: 600px) {
     form {
         width: 470px;
-        height: 40%;
+        height: auto;
         padding: 70px 40px;
     }
 
