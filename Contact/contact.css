@@ -238,7 +238,7 @@ form span:last-child{
 
 span i {
     margin-top: 5px;
-    color: #016D9F;
+    color: #016C9A;
     font-size: 14px;
 }
 
@@ -309,23 +309,24 @@ span i {
     form {
         width: 470px;
         height: auto;
-        padding: 70px 40px;
+        padding: 60px 40px;
     }
 
     .links img{
         padding: 0.1px;
     }
     input,textarea{
-        padding: 20px 25px;
-        font-size: 20px;
+        padding: 35px 25px;
+        font-size: 18px;
     }
 
     label{
-        font-size: 16px;
+        font-size: 17px;
     }
     
     .send{
-        font-size: 20px;
+        font-size: 19px;
+        padding: 8px 22px;
     }
     .links{
         margin-top: -20px;

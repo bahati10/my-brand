@@ -44,17 +44,18 @@ function validateMessage(){
     var left = required - message.length;
 
     if(left > 0) {
-        messageError.innerHTML = left + " characters left";
+        messageError.innerHTML = left + " characters at least";
         return false;
     }
 
-    messageError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    messageError.innerHTML = '<i class="fa-solid fa-circle-check"></i>'; 
     return true;
 }
 
 function validateForm() {
     if(!validateName() || !validateMail() || !validateMessage()) {
         submitError.innerHTML = "PLease fix above errors";
+        setTimeout(function() {submitError.style.display = "none"}, 2000)
         return false;
     }
 }
