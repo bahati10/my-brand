@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="myabout.css">
+    <link rel="stylesheet" href="comment.css">
     <link rel="icon" type="image/png" sizes="32x32" href="/IMG/android-chrome-192x192.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,7 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <title>About</title>
+    <title>Comment</title>
 </head>
 
 <body>
@@ -21,30 +21,26 @@
         <a href="/index.html" class="brand"><span>bahati.</span></a>
         <ul class="navbar">
             <li><a href="/index.html">Home</a></li>
-            <li><a href="#" class="active">About</a></li>
+            <li><a href="/About/about.html">About</a></li>
             <li><a href="/Work/work.html">Work</a></li>
             <li><a href="/Skills/skills.html">Skills</a></li>
             <li><a href="/Blog/blog.html">Blog</a></li>
-            <li><a href="/Contact/contact.html">Contact</a></li>
+            <li><a href="#" class="active">Contact</a></li>
         </ul>
         <div class="main">
             <a href="/Signup/signup.html" class="signup">Sign Up</a>
             <div class="bx bx-menu" id="menu-icon"></div>
         </div>
     </header>
-    <div class="container">
-        <div class="image">
-            <img src="IMG/profile.png" alt="">
-        </div>
-        <h2 class="title">About</h2>
-        <p class="bio">
-            <span class="heading">I'm Bahati,</span>
-            A dedicated software developer looking to collaborate
-            with others and gain professional skills and experience.
-            Usually looking forward to build my profession in UI/UX
-            design and a Networking enthusiast.<br> <br> <br>
-            <button id="btn"><a href="Resume.pdf" target="_blank">RESUME</a></button>
-        </p>
+    <div class="main-container">
+        <form action="" class="form" autocomplete="on" spellcheck="false">
+            <h2>Add Comment</h2>
+            <label class="message" for="text">Comment</label>
+             <textarea name="message" id="" cols="30" rows="10"></textarea> <br>
+            <button class="send" type="submit">post</button>
+        </form>
     </div>
     <script src="/index.js" defer></script>
 </body>
+
+</html>
