@@ -316,12 +316,12 @@ span i {
         padding: 0.1px;
     }
     input,textarea{
-        padding: 35px 25px;
-        font-size: 18px;
+        padding: 11px !important;
+        font-size: 19px !important;
     }
 
     label{
-        font-size: 17px;
+        font-size: 20px;
     }
     
     .send{
