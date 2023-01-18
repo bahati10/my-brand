@@ -4,8 +4,10 @@ var passwordError = document.getElementById("password-error");
 var submitError = document.getElementById("submit-error");
 
 
+
 function validateName() {
     var name = document.getElementById('form-name').value;
+    localStorage.setItem("name", name)
     if(name.length == 0){
         nameError.innerHTML = 'Name required';
         return false;
@@ -20,6 +22,7 @@ function validateName() {
 
 function validateMail() {
     var email = document.getElementById("form-email").value;
+    localStorage.setItem("email", email)
 
     if(email.length == 0){
         emailError.innerHTML = 'Email Required';
@@ -37,6 +40,7 @@ function validateMail() {
 
 function validatePassword(){
     var password = document.getElementById("form-password").value;
+    localStorage.setItem("password", password)
 
     if(password.length == 0) {
         passwordError.innerHTML = "Password required";
