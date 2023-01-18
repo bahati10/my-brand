@@ -85,7 +85,7 @@ header {
 
 .main a {
     padding: 8px 10px;
-    border-radius: 2px;
+    border-radius: 5px;
     color: var(--BGCOLOR);
     font-weight: 600;
     font-family: var(--FF);
@@ -316,8 +316,8 @@ span i {
         padding: 0.1px;
     }
     input,textarea{
-        padding: 20px;
-        font-size: 18px;
+        padding: 20px 25px;
+        font-size: 20px;
     }
 
     label{
@@ -325,7 +325,7 @@ span i {
     }
     
     .send{
-        font-size: 16px;
+        font-size: 20px;
     }
     .links{
         margin-top: -20px;

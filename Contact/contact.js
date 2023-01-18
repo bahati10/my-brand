@@ -6,6 +6,7 @@ var submitError = document.getElementById("submit-error");
 
 function validateName() {
     var name = document.getElementById('form-name').value;
+    localStorage.setItem("name", name);
     if(name.length == 0){
         nameError.innerHTML = 'Name required';
         return false;
@@ -38,6 +39,7 @@ function validateMail() {
 
 function validateMessage(){
     var message = document.getElementById("form-message").value;
+    localStorage.setItem("message", message);
     var required = 40;
     var left = required - message.length;
 
