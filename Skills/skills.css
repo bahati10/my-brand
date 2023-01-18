@@ -16,8 +16,12 @@
 }
 
 body {
-    min-width: 600px;
+    min-width: 400px;
     background: #000D11;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 header {
@@ -100,18 +104,25 @@ header {
 /* SKILLS */
 
 .container {
-    width: 600px;
-    height: auto;
-    margin-top: 13%;
-    margin-left: 25%;
+    margin-top: 25px;
+    background: #0B1824;
+    user-select: none;
+    width: 500px;
+    padding: 13px 30px; 
+    border-radius: 9px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     color: var(--FONT-COLOR);
-    letter-spacing: -0.5px;
+    letter-spacing: 0.3px;
+    font-weight: 600;
     font-family: 'Poppins', sans-serif;
 }
 
 .container p {
     color: var(--FONT-COLOR);
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .heading {
@@ -120,37 +131,42 @@ header {
     font-weight: 600;
 }
 
-.title {
-    font-size: 25px;
+img{
+    margin-top: 10px;
+    width: 450px;
+    border-radius: 3px;
 }
+
+.title {
+    font-size: 22px;
+}
+
+
+
+@media (max-width: 700px) {
+    .container{
+        width: 330px;
+    }
+
+    .container p {
+        font-size: 13px;
+    }
+
+    img{
+        width: 270px;
+    }
+}
+
 
 @media (max-width: 1280px) {
     header {
-        padding: 14px 2%;
+        padding: 14px 4%;
         transition: .2s;
     }
 
     .navbar a {
         padding: 5px 0;
         margin: 0px 20px;
-    }
-}
-
-@media (max-width: 600px) {
-    .container {
-        margin-top: 80%;
-    }
-
-    .container p {
-        font-size: 16px;
-    }
-
-    .heading {
-        font-size: 18px;
-    }
-
-    .title {
-        font-size: 26px;
     }
 }
 
@@ -168,8 +184,8 @@ header {
     .navbar {
         position: absolute;
         top: 0;
-        right: -100% !important;
-        width: 390px;
+        right: -110% !important;
+        width: 270px;
         height: 50vh;
         background: #0b1824d0;
         display: flex;
@@ -177,16 +193,19 @@ header {
         align-items: center;
         justify-content: space-around;
         border-radius: 12px;
-        transition: all 3s .10s ease;
+        transition: all 0.9s .0s ease;
     }
 
     .navbar a {
         display: block;
         margin: 12px 0;
         padding: 0px 25px;
+        font-size: 14px;
     }
 
     .navbar.open {
         right: 0 !important;
     }
+
+    
 }
