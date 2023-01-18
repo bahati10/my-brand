@@ -61,4 +61,6 @@ function validateForm() {
         setTimeout(function() {submitError.style.display = "none"}, 2000)
         return false;
     }
+
+    alert("User Added Successfully")
 }
