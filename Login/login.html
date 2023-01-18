@@ -14,6 +14,8 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Sign In</title>
 </head>
 
@@ -34,16 +36,20 @@
         </div>
     </header>
     <div class="main-container">
-        <form action="" class="form">
+        <form action="/Add/add" class="form">
             <h2>Welcome Again</h2>
             <label class="email" for="email" class="email">Email</label>
-            <input type="email" required><br>
+            <input type="email" id="form-email" spellcheck="false" autocomplete="off" onkeyup="validateMail()">
+            <span id="email-error"></span> <br>
             <label class="password" for="password">Password</label>
-            <input type="password" required><br>
-            <h5>Already have an account? <a href="/Signup/signup.html">Sign Up</a></h5><br>
-            <button class="sign" type="submit">Sign in</button>
+            <input type="password" id="form-password" spellcheck="false" autocomplete="off" onkeyup="validatePassword()">
+            <span id="password-error"></span> <br>
+            <h5>Already have an account? <a href="/Signup/signup.html">Sign Up</a></h5> <br>
+            <button class="sign" type="submit" onclick="return validateForm()">Sign in</button>
+            <span id="submit-error"></span>
         </form>
     </div>
+    <script src="login.js"></script>
     <script src="/index.js" defer></script>
 </body>
 
