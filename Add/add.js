@@ -4,6 +4,8 @@ var contentError = document.getElementById("content-error");
 var submitError = document.getElementById("submit-error");
 
 
+
+
 function validateTitle() {
     var title = document.getElementById('form-title').value;
     localStorage.setItem("title", title);
