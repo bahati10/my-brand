@@ -147,6 +147,17 @@ form input {
     font-family: 'Nunito', sans-serif;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #0B1824 inset !important;
+}
+
+input:-webkit-autofill{
+    -webkit-text-fill-color: var(--FONT-COLOR) !important;
+}
+
 form input:focus {
     outline: none;
 }
