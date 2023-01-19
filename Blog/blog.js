@@ -1,0 +1,1 @@
+document.getElementById("title").innerHTML = localStorage.getItem("title")
