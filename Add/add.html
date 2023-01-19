@@ -41,19 +41,19 @@
             <input type="name" maxlength="35" id="form-title" autocomplete="off" spellcheck="false" onkeyup="validateTitle()">
             <span id="title-error"></span>
             <label for="date">Date</label>
-            <input type="date" id="form-date" onkeyup="validateDate()">
+            <input type="date" id="form-date" required onkeyup="validateDate()">
             <label class="subtitle" for="subtitle">Sub Title</label>
             <textarea name="subtitle" id="form-subtitle" cols="30" rows="2" maxlength="100" autocomplete="off" spellcheck="false" onkeyup="validateSubtitle()"></textarea></textarea> 
             <span id="subtitle-error"></span>
             <label class="content" for="text">Content</label>
             <textarea name="content" id="form-content" cols="30" rows="8" maxlength="800" autocomplete="off" spellcheck="false" onkeyup="validateContent()"></textarea></textarea>
             <span id="content-error"></span> <br>
-            <input type="file" id="myFile" name="filename" value="choose"> 
+            <input type="file" id="myFile" accept="image/png, image/gif, image/jpeg" name="filename" value="choose" required > 
             <button class="send" type="submit" onclick="return validateForm()">Add</button>
             <span id="submit-error"></span>
         </form>
     </div>
-    <script src="add.js"></script>
+    <script src="add.js" defer></script>
     <script src="/index.js" defer></script>
 </body>
 </html>

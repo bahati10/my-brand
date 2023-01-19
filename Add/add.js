@@ -64,5 +64,5 @@ function validateForm() {
         return false;
     }
 
-    alert("Message sent successfully.")
+    alert(" Blog added successfully.")
 }
