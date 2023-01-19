@@ -48,4 +48,6 @@ function validateForm() {
         setTimeout(function() {submitError.style.display = "none"}, 2000)
         return false;
     }
+
+    alert("Now you are signed in")
 }
