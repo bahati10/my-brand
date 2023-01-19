@@ -16,7 +16,7 @@
 }
 
 body{
-    min-width: 33%; 
+    min-width: 40%; 
     max-height: 100vh;
     background: #000D11;
 }
@@ -113,6 +113,10 @@ main{
     color: var(--FONT-COLOR);
     font-size: 21.5px;
     font-weight: bolder;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .name{
@@ -127,11 +131,9 @@ main{
 
 img{
     border: 2px solid #40AEDA;
-    margin-top: 33%;
-    margin-bottom: 5px;
     border-radius: 50%;
-    max-width: 15%;
-    max-height: 25%;
+    max-width: 114px;
+    max-height: auto;
 }
 
 .resume{
@@ -140,10 +142,10 @@ img{
     padding: 9px 15px;
     margin-top: 15px;
     border: none;
-    border-radius: 3px;
+    border-radius: 2px;
     font-size: 13px;
     font-weight: bolder;
-    box-shadow: 5px 5px #40AEDA;
+    box-shadow: 4px 4px #40AEDA;
     transition: 0.6s;
 }
 
@@ -157,6 +159,7 @@ img{
 }
 
 .title p{
+    min-width: 400px;
     line-height: 1.5;
 }
 
@@ -169,12 +172,6 @@ img{
     .navbar a{
         padding: 5px 0;
         margin: 0px 20px;
-    }
-}
-
-@media (max-width: 600px){
-    .content{
-        margin-top: 30%;
     }
 }
 
