@@ -35,18 +35,18 @@
         </div>
     </header>
     <div class="main-container">
-        <form action="" class="form" autocomplete="on" spellcheck="false">
+        <form action="/Blog/blog.html" class="form" autocomplete="on" spellcheck="false">
             <h2>Add Blog</h2>   
             <label class="name" for="name">Title</label>
-            <input type="name" maxlength="35" id="form-title" onkeyup="validateTitle()">
+            <input type="name" maxlength="35" id="form-title" autocomplete="off" spellcheck="false" onkeyup="validateTitle()">
             <span id="title-error"></span>
             <label for="date">Date</label>
             <input type="date" id="form-date" onkeyup="validateDate()">
             <label class="subtitle" for="subtitle">Sub Title</label>
-            <textarea name="subtitle" id="form-subtitle" cols="30" rows="2" maxlength="100" onkeyup="validateSubtitle()"></textarea></textarea> 
+            <textarea name="subtitle" id="form-subtitle" cols="30" rows="2" maxlength="100" autocomplete="off" spellcheck="false" onkeyup="validateSubtitle()"></textarea></textarea> 
             <span id="subtitle-error"></span>
             <label class="content" for="text">Content</label>
-            <textarea name="content" id="form-content" cols="30" rows="8" maxlength="00" onkeyup="validateContent()"></textarea></textarea>
+            <textarea name="content" id="form-content" cols="30" rows="8" maxlength="800" autocomplete="off" spellcheck="false" onkeyup="validateContent()"></textarea></textarea>
             <span id="content-error"></span> <br>
             <input type="file" id="myFile" name="filename" value="choose"> 
             <button class="send" type="submit" onclick="return validateForm()">Add</button>

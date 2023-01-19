@@ -9,7 +9,7 @@ function validateTitle() {
     localStorage.setItem("title", title);
     
     if(title.length < 30 || title.length < 0){
-        titleError.innerHTML = 'Too short required';
+        titleError.innerHTML = 'Too short';
         return false;
     }
 
