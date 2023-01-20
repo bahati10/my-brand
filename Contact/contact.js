@@ -16,6 +16,7 @@ function validateName() {
         return false;
     }
     nameError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    localStorage.setItem("name", name);
     return true;
 }
 
@@ -33,13 +34,13 @@ function validateMail() {
     }
 
     emailError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    localStorage.setItem("email", email);
     return true;
 }
 
 
 function validateMessage(){
     var message = document.getElementById("form-message").value;
-    localStorage.setItem("message", message);
     var required = 40;
     var left = required - message.length;
 
@@ -49,6 +50,7 @@ function validateMessage(){
     }
 
     messageError.innerHTML = '<i class="fa-solid fa-circle-check"></i>'; 
+    localStorage.setItem("message", message);
     return true;
 }
 
