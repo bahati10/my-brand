@@ -7,7 +7,6 @@ var submitError = document.getElementById("submit-error");
 
 function validateName() {
     var name = document.getElementById('form-name').value;
-    localStorage.setItem("name", name)
     if(name.length == 0){
         nameError.innerHTML = 'Name required';
         return false;
@@ -17,13 +16,12 @@ function validateName() {
         return false;
     }
     nameError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    localStorage.setItem("name", name)
     return true;
 }
 
 function validateMail() {
     var email = document.getElementById("form-email").value;
-    localStorage.setItem("email", email)
-
     if(email.length == 0){
         emailError.innerHTML = 'Email Required';
         return false;
@@ -34,14 +32,13 @@ function validateMail() {
     }
 
     emailError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    localStorage.setItem("email", email)
     return true;
 }
 
 
 function validatePassword(){
     var password = document.getElementById("form-password").value;
-    localStorage.setItem("password", password)
-
     if(password.length == 0) {
         passwordError.innerHTML = "Password required";
         return false;
@@ -52,6 +49,7 @@ function validatePassword(){
     }
 
     passwordError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    localStorage.setItem("password", password)
     return true;
 }
 
