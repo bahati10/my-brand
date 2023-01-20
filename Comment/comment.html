@@ -13,6 +13,7 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Comment</title>
 </head>
 
@@ -33,13 +34,16 @@
         </div>
     </header>
     <div class="main-container">
-        <form action="" class="form" autocomplete="on" spellcheck="false">
+        <form action="/Blog/blog.html" class="form" autocomplete="on" spellcheck="false">
             <h2>Add Comment</h2>
             <label class="message" for="text">Comment</label>
-             <textarea name="message" id="" cols="30" rows="10"></textarea> <br>
-            <button class="send" type="submit">post</button>
+             <textarea name="message" id="form-comment" maxlength="30" cols="30" rows="5" onkeyup="validateComment()"></textarea> <br>
+             <span id="comment-error"></span> <br> <br>
+            <button class="send" type="submit" onclick="return validateForm()">post</button>
+            <span id="submit-error"></span>
         </form>
     </div>
+    <script src="comment.js" defer></script>
     <script src="/index.js" defer></script>
 </body>
 
