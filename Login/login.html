@@ -45,7 +45,7 @@
             <input type="password" id="form-password" spellcheck="false" autocomplete="off" onkeyup="validatePassword()">
             <span id="password-error"></span> <br>
             <h5>Already have an account? <a href="/Signup/signup.html">Sign Up</a></h5> <br>
-            <button class="sign" type="submit" onclick="return validateForm()">Sign in</button>
+            <button class="sign" type="submit" onclick="return validateForm(); validateSign();">Sign in</button>
             <span id="submit-error"></span>
         </form>
     </div>

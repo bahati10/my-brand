@@ -3,10 +3,7 @@ var passwordError = document.getElementById("password-error");
 var submitError = document.getElementById("submit-error");
 var icon = document.getElementsByClassName("icon");
 
-
 document.querySelectorAll("input").addEventListener("click", icon.style.display = "none");
-
-
 
 
 function validateMail() {
@@ -51,3 +48,25 @@ function validateForm() {
 
     alert("Now you are signed in")
 }
+
+
+function validateSign () {
+    e.preventDefault();
+    var enterEmail = document.getElementById("form-email").value;
+    var enterPassword = document.getElementById("form-password").value;
+
+
+    var getEmail = localStorage.getItem("email");
+    var getPassword = localStorage.getItem("password"); 
+
+    if(enterEmail == getEmail) {
+        if(enterPassword == getPassword){
+            alert("Login Successfully")
+        }else{
+            alert("Wrong password")
+        }
+
+    }else{
+        alert("Invalid Credentials")
+    }
+} 
