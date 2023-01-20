@@ -109,13 +109,16 @@ form {
     background: #0B1824;
     display: flex;
     flex-flow: column;
-    margin-top: 8%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     min-width: 40px;
     height: auto;
-    padding: 60px 60px;
+    padding: 30px 50px 50px 50px;
     color: var(--FONT-COLOR);
     font-family: var(--FF);
-    border-radius: 25px;
+    border-radius: 8px;
 }
 
 form h2,
@@ -183,6 +186,36 @@ h2 {
     margin-bottom: 10px;
     padding-bottom: 13px;
 }
+
+
+form span {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -50px;
+    padding-right: 10px;
+    color: red;
+    font-weight: 600;
+    font-size: 11px;
+    transform: translate(100%, 0);
+    width: 50%;
+}
+
+
+form span:last-child{
+    margin-top: 20%;
+    display: flex;
+    margin-left: -70px;
+    text-align: center;
+    color: #F25F5C;
+    font-size: 12px;
+}
+
+span i {
+    margin-top: 5px;
+    color: #016C9A;
+    font-size: 14px;
+}
+
 
 @media (max-width: 1280px) {
     header {
