@@ -238,6 +238,7 @@ form span:last-child {
 }
 
 span i {
+    z-index: 555555;
     margin-top: -1px;
     color: #2DC2FD;
    
