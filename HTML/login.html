@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=0.7, user-scalable=0">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="/CSS/login.css">
     <link rel="icon" type="image/png" sizes="32x32" href="IMG/android-chrome-192x192.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,14 +21,14 @@
 
 <body>
     <header>
-        <a href="/index.html" class="brand"><span>bahati.</span></a>
+        <a href="index.html" class="brand"><span>bahati.</span></a>
         <ul class="navbar">
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/About/about.html">About</a></li>
-            <li><a href="/Work/work.html">Work</a></li>
-            <li><a href="/Skills/skills.html">Skills</a></li>
-            <li><a href="/Blog/blog.html">Blog</a></li>
-            <li><a href="/Contact/contact.html">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="main">
             <a href="#" class="signup">Sign Up</a>
@@ -36,7 +36,7 @@
         </div>
     </header>
     <div class="main-container">
-        <form action="/Add/add" class="form">
+        <form action="add" class="form">
             <h2>Welcome Again</h2>
             <label class="email" for="email" class="email">Email</label>
             <input type="email" id="form-email" spellcheck="false" autocomplete="off" onkeyup="validateMail()">
@@ -44,13 +44,13 @@
             <label class="password" for="password">Password</label>
             <input type="password" id="form-password" spellcheck="false" autocomplete="off" onkeyup="validatePassword()">
             <span id="password-error"></span> <br>
-            <h5>Already have an account? <a href="/Signup/signup.html">Sign Up</a></h5> <br>
+            <h5>Already have an account? <a href="signup.html">Sign Up</a></h5> <br>
             <button class="sign" type="submit" onclick="return validateForm(); validateSign();">Sign in</button>
             <span id="submit-error"></span>
         </form>
     </div>
-    <script src="login.js"></script>
-    <script src="/index.js" defer></script>
+    <script src="/JS/login.js" defer></script>
+    <script src="/JS/index.js" defer></script>
 </body>
 
 </html>
