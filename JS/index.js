@@ -1,9 +1,12 @@
+const divImg = document.querySelector('.profile-photo');   
+const img = document.querySelector('#photo');
+const file = document.querySelector('#file');
+const uploadBtn = document.querySelector('#uploadBtn');
 
+divImg.addEventListener('mouseenter', function () {
+    uploadBtn.style.display = "block"
+}) 
 
-let menu = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
-
-menu.onclick = () => {
-	menu.classList.toggle('bx-x');
-	navbar.classList.toggle('open');
-}
+divImg.addEventListener('mouseleave', function () {
+    uploadBtn.style.display = "none"
+}) 
