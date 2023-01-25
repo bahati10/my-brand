@@ -36,7 +36,7 @@
         </div>
     </header>
     <div class="main-container">
-        <form action="add" class="form">
+        <form class="form">
             <h2>Welcome Again</h2>
             <label class="email" for="email" class="email">Email</label>
             <input type="email" id="form-email" spellcheck="false" autocomplete="off" onkeyup="validateMail()">
@@ -45,9 +45,21 @@
             <input type="password" id="form-password" spellcheck="false" autocomplete="off" onkeyup="validatePassword()">
             <span id="password-error"></span> <br>
             <h5>Already have an account? <a href="signup.html">Sign Up</a></h5> <br>
-            <button class="sign" type="submit" onclick="return validateForm(); validateSign();">Sign in</button>
+            <button class="sign" type="submit" onclick="return validateForm();">Sign in</button>
             <span id="submit-error"></span>
         </form>
+        <id id="success">
+            <div class="modal">
+                <div class="icon"><i id="icon1" class="fa-regular fa-circle-check"></i></div>
+                <h4>Login was<br> Succcessfully</h4>
+            </div>
+        </id>
+        <id id="success2">
+            <div class="modal">
+                <div class="icon"><i id="icon" class="fa-solid fa-circle-xmark"></i></div>
+                <h4>Something went<br> Wrong</h4>
+            </div>
+        </id>
     </div>
     <script src="/JS/login.js" defer></script>
     <script src="/JS/index.js" defer></script>
