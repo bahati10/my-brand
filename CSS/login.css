@@ -316,6 +316,87 @@ span i {
 }
 
 
+#success{
+    z-index: 555555555;
+    background: #D9D9D9;
+    position: absolute;
+    width: 250px;
+    height: 230px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 5px;
+    font-family: var(--FF);
+    display: none;
+}
+
+h4{
+    letter-spacing: -0.1px;
+    margin-top: 50%;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+#icon1{
+    position: absolute;
+    left: 50%;
+    transform: translate(145%, -140%);
+    margin-top: 10px;
+    color: #026D98;
+    font-size: 60px;
+}
+
+
+#btnm{
+    background: #026D98;
+    margin-top: 6px;
+    padding: 6px 13px;
+    border: none;
+    color: white;
+    border-radius: 3px;
+}
+
+#btnm a{
+    color: #D9D9D9;
+    font-weight: 600;
+}
+
+
+#success2{
+    z-index: 555555555;
+    background: #D9D9D9;
+    position: absolute;
+    width: 230px;
+    height: 190px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 5px;
+    font-family: var(--FF);
+    display: none;
+}
+
+
+h4{
+    letter-spacing: -0.1px;
+    margin-top: 50%;
+    font-size: 13px;
+    font-weight: 100;
+    user-select: none;
+}
+
+#icon{
+    position: absolute;
+    left: 50%;
+    transform: translate(140%, -140%);
+    margin-top: 10px;
+    color: #FF1515;
+    font-size: 60px;
+}
+
+
 
 @media (max-width: 1280px) {
     header {
