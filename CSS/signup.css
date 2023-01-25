@@ -112,6 +112,18 @@ header {
     align-items: center;
 }
 
+
+#output {
+    color: #D9D9D9 !important;
+    font-family: var(--FF);
+    top: 98%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    margin: 10px 0;
+}
+
+
 form {
     user-select: none;
     background: #0B1824;
@@ -242,6 +254,86 @@ span i {
     margin-top: -1px;
     color: #2DC2FD;
     font-size: 14px;
+}
+
+
+
+/* MODAL SUCCESS*/
+
+#success{
+    background: #D9D9D9;
+    position: absolute;
+    width: 220px;
+    height: 180px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 5px;
+    font-family: var(--FF);
+    display: none;
+}
+
+h4{
+    letter-spacing: -0.1px;
+    margin-top: 50%;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+#icon1{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -140%);
+    margin-top: 10px;
+    color: #026D98;
+    font-size: 60px;
+}
+
+
+#btnm{
+    background: #026D98;
+    margin-top: 6px;
+    padding: 6px 13px;
+    border: none;
+    color: white;
+    border-radius: 3px;
+}
+
+#btnm a{
+    color: #D9D9D9;
+    font-weight: 600;
+}
+
+
+#success2{
+    background: #D9D9D9;
+    position: absolute;
+    width: 220px;
+    height: 170px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 5px;
+    font-family: var(--FF);
+    display: none;
+}
+
+h4{
+    letter-spacing: -0.1px;
+    margin-top: 50%;
+    font-size: 13px;
+    font-weight: 100;
+}
+
+#icon{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -140%);
+    margin-top: 10px;
+    color: #FF1515;
+    font-size: 60px;
 }
 
 

@@ -1,3 +1,18 @@
+let form = document.querySelector("form");
+let userName = document.getElementById("form-name");
+let email = document.getElementById("form-email");
+let password = document.getElementById("form-password");
+let output  = document.getElementById("output");
+let success = document.getElementById("success");
+let success2 = document.getElementById("success2");
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    validateForm();
+})
+
+
+
 var nameError = document.getElementById("name-error");
 var emailError = document.getElementById("email-error");
 var passwordError = document.getElementById("password-error");
@@ -16,7 +31,7 @@ function validateName() {
         return false;
     }
     nameError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
-    localStorage.setItem("name", name)
+    localStorage.setItem("name", name);
     return true;
 }
 
@@ -32,7 +47,6 @@ function validateMail() {
     }
 
     emailError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
-    localStorage.setItem("email", email)
     return true;
 }
 
@@ -49,7 +63,6 @@ function validatePassword(){
     }
 
     passwordError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
-    localStorage.setItem("password", password)
     return true;
 }
 
@@ -58,7 +71,43 @@ function validateForm() {
         submitError.innerHTML = "PLease fix above errors";
         setTimeout(function() {submitError.style.display = "none"}, 2000)
         return false;
+    } else{
+        success.style.display = "block";
+        setTimeout(function() {success.style.display = "none"}, 900);
+        myData();
     }
+}
 
-    alert("User Added Successfully")
+
+let data = [];
+
+
+let myData = () => {
+    data.push({
+        name: userName.value,
+        email: email.value,
+        password: password.value
+    });
+
+    localStorage.setItem("userData", JSON.stringify(data))
+    resetForm();
+    next();
+};
+
+let next = () => {
+    window.setTimeout(function () {
+        window.location.href = "sign.html";
+
+    }, 1700);
+}
+
+
+let resetForm = () => {
+    userName.value = "";
+    email.value = "";
+    password.value = "";
+    nameError.innerHTML = "";
+    emailError.innerHTML = "";
+    passwordError.innerHTML = "";
+    submitError.innerHTML = ""
 }
