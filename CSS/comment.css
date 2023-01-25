@@ -217,6 +217,52 @@ span i {
 }
 
 
+#success{
+    background: #D9D9D9;
+    position: absolute;
+    width: 220px;
+    height: 190px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 5px;
+    font-family: var(--FF);
+    display: none;
+}
+
+h4{
+    letter-spacing: -0.1px;
+    margin-top: 50%;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+#icon1{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -140%);
+    margin-top: 10px;
+    color: #026D98;
+    font-size: 60px;
+}
+
+
+#btnm{
+    background: #026D98;
+    margin-top: 6px;
+    padding: 6px 13px;
+    border: none;
+    color: white;
+    border-radius: 3px;
+}
+
+#btnm a{
+    color: #D9D9D9;
+    font-weight: 600;
+}
+
+
 @media (max-width: 1280px) {
     header {
         padding: 14px 2%;
