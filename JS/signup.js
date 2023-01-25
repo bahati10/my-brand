@@ -96,7 +96,7 @@ let myData = () => {
 
 let next = () => {
     window.setTimeout(function () {
-        window.location.href = "sign.html";
+        window.location.href = "login.html";
 
     }, 1700);
 }
