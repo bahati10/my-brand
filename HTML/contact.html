@@ -32,7 +32,7 @@
         </div>
     </header>
     <div class="main-container">
-        <form action="" class="form" autocomplete="on" spellcheck="false">
+        <form autocomplete="on" spellcheck="false">
             <div class="links">
                 <a href="https://github.com/bahati10" target="_blank"><img class="one" src="/IMG/square-github.svg" alt=""></a>
                 <a href="https://twitter.com/Bahati____" target="_blank"><img class="two" src="/IMG/square-twitter.svg" alt=""></a>
@@ -48,9 +48,15 @@
             <label class="message" for="text">Message</label>
             <textarea name="message" id="form-message" cols="30" rows="8" autocomplete="off" onkeyup="validateMessage()"></textarea>
             <span id="message-error" class="three3"></span>
-            <button class="send" type="submit" onclick="return validateForm()">Send</button>
+            <button class="send" type="submit">Send</button>
             <span id="submit-error"></span>
         </form>
+        <id id="success">
+            <div class="modal">
+                <div class="icon"><i id="icon1" class="fa-regular fa-circle-check"></i></div>
+                <h4>Message Sent<br> Successfully</h4>
+            </div>
+        </id>
     </div>
     <script src="/JS/contact.js"></script>
     <script src="/JS/index.js" defer></script>
