@@ -1,19 +1,34 @@
+let form = document.querySelector("form");
+let userName = document.getElementById("form-name");
+let email = document.getElementById("form-email");
+let password = document.getElementById("form-password");
+let output = document.getElementById("output");
+let success = document.getElementById("success");
+let success2 = document.getElementById("success2");
+
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    validateForm();
+})
+
+
+
+var nameError = document.getElementById("name-error");
 var emailError = document.getElementById("email-error");
 var passwordError = document.getElementById("password-error");
 var submitError = document.getElementById("submit-error");
-var icon = document.getElementsByClassName("icon");
 
-document.querySelectorAll("input").addEventListener("click", icon.style.display = "none");
 
 
 function validateMail() {
     var email = document.getElementById("form-email").value;
 
-    if(email.length == 0){
+    if (email.length == 0) {
         emailError.innerHTML = 'Email Required';
         return false;
-    } 
-    if(!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{3,4}$/)){
+    }
+    if (!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{3,4}$/)) {
         emailError.innerHTML = "Invalid Email";
         return false;
     }
@@ -23,14 +38,14 @@ function validateMail() {
 }
 
 
-function validatePassword(){
+function validatePassword() {
     var password = document.getElementById("form-password").value;
 
-    if(password.length == 0) {
+    if (password.length == 0) {
         passwordError.innerHTML = "Password required";
         return false;
     }
-    if(password.length <= 8) {
+    if (password.length <= 8) {
         passwordError.innerHTML = "Must be 8 characters or more";
         return false;
     }
@@ -40,33 +55,41 @@ function validatePassword(){
 }
 
 function validateForm() {
-    if(!validateMail() || !validatePassword()) {
+    if (!validateMail() || !validatePassword()) {
         submitError.innerHTML = "PLease fix above errors";
-        setTimeout(function() {submitError.style.display = "none"}, 2000)
+        setTimeout(function () { submitError.style.display = "none" }, 2000)
         return false;
+    } else {
+        compare();
     }
+}
 
-    alert("Now you are signed in")
+let compare = () => {
+    let info = JSON.parse(localStorage.getItem("userData"))
+    if (email.value || password.value == info) {
+        success.style.display = "block";
+        setTimeout(function () { success.style.display = "none" }, 900);
+    } else {
+        success2.style.display = "block"
+        setTimeout(function () { success.style.display = "none" }, 900);
+    }
+    next();
 }
 
 
-function validateSign () {
-    e.preventDefault();
-    var enterEmail = document.getElementById("form-email").value;
-    var enterPassword = document.getElementById("form-password").value;
+let next = () => {
+    window.setTimeout(function () {
+        window.location.href = "blog.html";
 
+    }, 1700);
+}
 
-    var getEmail = localStorage.getItem("email");
-    var getPassword = localStorage.getItem("password"); 
-
-    if(enterEmail == getEmail) {
-        if(enterPassword == getPassword){
-            alert("Login Successfully")
-        }else{
-            alert("Wrong password")
-        }
-
-    }else{
-        alert("Invalid Credentials")
-    }
-} 
+let resetForm = () => {
+    userName.value = "";
+    email.value = "";
+    password.value = "";
+    nameError.innerHTML = "";
+    emailError.innerHTML = "";
+    passwordError.innerHTML = "";
+    submitError.innerHTML = ""
+}
