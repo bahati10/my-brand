@@ -88,26 +88,6 @@ function validateForm() {
         success.style.display = "block";
         setTimeout(function() {success.style.display = "none"}, 900);
         myData();
-    }
-}
-
-
-let data = [];
-
-
-let myData = () => {
-    data.push({
-        name: userName.value,
-        email: email.value,
-        password: password.value
-    });
-
-    localStorage.setItem("userData", JSON.stringify(data))
-    resetForm();
-    next();
-};
-
-
 
 // let next = () => {
 //     window.setTimeout(function () {

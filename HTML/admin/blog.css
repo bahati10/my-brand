@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&family=Righteous&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --BGCOLOR: #000D11;
+    --FONT-COLOR: #EEE5E9;
+    --FF: 'Poppins', sans-serif;
+    --FF-BRAND: 'Righteous', cursive;
+}
+
+body {
+    min-width: 600px;
+    user-select: none;
+    font-family: var(--FF);
+    background: #000D11;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.admin-wrapper{
+    display: flex;
+}
+
+.left-sidebar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px;
+    margin: auto;
+    background: #0B1824;
+    height: auto;
+}
+
+.left-sidebar ul{
+    text-align: center;
+    list-style: none;
+}
+
+.left-sidebar ul li{
+    display: inline;
+}
+
+.left-sidebar ul li a{
+    color: #EEE5E9;
+    padding: 10px 20px;
+    flex-flow: row;
+    transition: 0.8s;
+}
+
+a{
+    color: black;
+}
+
+.left-sidebar ul li a:hover{
+    background: #055864;
+}
+
+.admin-wrapper .admin-content{
+    padding: 10px;
+    background: var(--BGCOLOR);
+    color: #EEE5E9;
+    margin: auto;
+    margin-top: 70px;
+}
+
+.admin-content .page-title{
+    color: #2DC2FD;
+    text-align: center;
+    margin: 1rem 0;
+    font-weight: 700;
+}
+
+table{
+    font-size: 1.1rem;
+    margin: auto;
+}
+
+th{
+    color: #2DC2FD;
+}
+
+th, td{
+    padding: 15px;
+    text-align: left;
+    border: 0.7px solid #055864;
+}
+
+.delete{
+    color: #E21122;
+}
+
+.delete:hover{
+    text-decoration: underline;
+}
+
+.admin-content .buttons .btn{
+    background: #055864;
+    color: #EEE5E9;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+
+.edit{
+    color: green;
+}
+
+.delete{
+    color: #FF061B;
+}
+
+.edit:hover{
+    text-decoration: underline;
+}
+
+.delete:hover{
+    text-decoration: underline;
+}
+
+
+@media (max-width: 980px){
+    table{
+        font-size: 12px;
+    }
+
+    .page-title{
+        font-size: 1.3rem;
+    }
+
+    .left-sidebar ul li a{
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 12px 15px;
+    }
+}
+

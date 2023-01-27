@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=0.6 user-scalable=0">
+    <link rel="stylesheet" href="user.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/IMG/android-chrome-192x192.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <title>Manage Users</title>
+    <script src="signup.js" defer></script>
+    <script src="/index.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="left-sidebar">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="#">Users</a></li>
+                <li><a href="message.html">Messages</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="admin-wrapper">
+        <div class="admin-content">
+            <div class="content">
+                <h2 class="page-title">Manage Users</h2>
+
+                <table>
+                    <thead>
+                        <th style="width: 280px">Names</th>
+                        <th style="width: 280px">Email</th>
+                        <th id="act">Action</th>
+                    </thead>
+
+                    <tbody id="user-container">
+                        <tr>
+                            <td id="name">Bahati Yves</td>
+                            <td id="email">bahati@gmail.com</td>
+                            <td><a href="#"  onClick="deleteMsg(this)"class="delete">Delete</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

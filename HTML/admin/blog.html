@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=0.5 user-scalable=0">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/IMG/android-chrome-192x192.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <title>Manage Blogs</title>
+    <script src="signup.js" defer></script>
+    <script src="/index.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="left-sidebar">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="user.html">Users</a></li>
+                <li><a href="message.html">Messages</a></li>
+            </ul>
+        </div>
+    </header> <br>
+
+    <div class="admin-wrapper">
+        <div class="admin-content">
+            <div class="buttons">
+                <a href="add.html" class="btn btn-big">Add Blog</a>
+            </div> <br>
+            <div class="content">
+                <h2 class="page-title">Manage Blogs</h2>
+
+                <table>
+                    <thead>
+                        <th>N</th>
+                        <th>Titlte</th>
+                        <th style="width: 250px">Author</th>
+                        <th colspan="3" style="width: 300px">Action</th>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>UI/UX Design</td>
+                            <td>Joe Doe</td>
+                            <td><a href="#" class="edit">Edit</a></td>
+                            <td><a href="#" class="delete">Delete</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Responsive Web Design</td>
+                            <td>Jane Doe</td>
+                            <td><a href="#" id="edit" class="edit">Edit</a></td>
+                            <td><a href="#" id="delete" class="delete">Delete</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
