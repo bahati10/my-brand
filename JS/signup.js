@@ -5,7 +5,7 @@ let password = document.getElementById("form-password");
 let output  = document.getElementById("output");
 let success = document.getElementById("success");
 let success2 = document.getElementById("success2");
-let adminP = "Admin";
+let adminP = "Admin12345";
 let adminE = "admin@gmail.com";
 localStorage.setItem("adminP", JSON.stringify(adminP))
 localStorage.setItem("adminE", JSON.stringify(adminE))
@@ -13,7 +13,7 @@ localStorage.setItem("adminE", JSON.stringify(adminE))
 
 let admin = {
     adminMail : "admin@gmail.com",
-    adminPassword: "Admin"
+    adminPassword: "Admin12345"
 };
 
 var n = localStorage.setItem("Administrator", JSON.stringify(admin));
