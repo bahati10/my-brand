@@ -73,6 +73,7 @@ let compare = () => {
         success2.style.display = "block"
         setTimeout(function () { success.style.display = "none" }, 900);
     }
+    check();
     next();
 }
 
@@ -83,6 +84,16 @@ let next = () => {
 
     }, 1700);
 }
+
+
+let check = () => {
+    var adminEm = localStorage.getItem("adminE");
+    var adminPass = localStorage.getItem("adminP");
+    if(adminEm  === email.value || adminPass === password.value){
+        window.location.href = "/admin/blog.html"
+    }
+};
+
 
 let resetForm = () => {
     userName.value = "";
