@@ -5,10 +5,6 @@ let password = document.getElementById("form-password");
 let output  = document.getElementById("output");
 let success = document.getElementById("success");
 let success2 = document.getElementById("success2");
-let adminP = "Admin12345";
-let adminE = "admin@gmail.com";
-localStorage.setItem("adminP", JSON.stringify(adminP))
-localStorage.setItem("adminE", JSON.stringify(adminE))
 
 
 let admin = {
@@ -107,22 +103,12 @@ let myData = () => {
     next();
 };
 
+let next = () => {
+    window.setTimeout(function () {
+        window.location.href = "login.html";
 
-
-let check = () => {
-    var adminEm = localStorage.getItem("adminE");
-    var adminPass = localStorage.getItem("adminP");
-    if(adminEm  === email.value || adminPass === password.value){
-        window.location.href = "/admin/blog.html"
-    }
-};
-
-// let next = () => {
-//     window.setTimeout(function () {
-//         window.location.href = "login.html";
-
-//     }, 1700);
-// }
+    }, 1700);
+}
 
 let resetForm = () => {
     userName.value = "";
