@@ -88,6 +88,34 @@ function validateForm() {
         success.style.display = "block";
         setTimeout(function() {success.style.display = "none"}, 900);
         myData();
+    }
+}
+
+
+let data = [];
+
+
+let myData = () => {
+    data.push({
+        name: userName.value,
+        email: email.value,
+        password: password.value
+    });
+
+    localStorage.setItem("userData", JSON.stringify(data))
+    resetForm();
+    next();
+};
+
+
+
+let check = () => {
+    var adminEm = localStorage.getItem("adminE");
+    var adminPass = localStorage.getItem("adminP");
+    if(adminEm  === email.value || adminPass === password.value){
+        window.location.href = "/admin/blog.html"
+    }
+};
 
 // let next = () => {
 //     window.setTimeout(function () {
