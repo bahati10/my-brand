@@ -6,6 +6,14 @@ let output  = document.getElementById("output");
 let success = document.getElementById("success");
 let success2 = document.getElementById("success2");
 
+let admin = {
+    adminMail : "admin@gmail.com",
+    adminPassword: "Admin"
+};
+
+var n = localStorage.setItem("Administrator", JSON.stringify(admin));
+var g = JSON.parse(localStorage.getItem("Administrator")).admiUserName;
+var p = JSON.parse(localStorage.getItem("Administrator")).adminPassword;
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     validateForm();
@@ -56,6 +64,7 @@ function validatePassword(){
     if(password.length == 0) {
         passwordError.innerHTML = "Password required";
         return false;
+        
     }
     if(password.length <= 8) {
         passwordError.innerHTML = "Must be 8 characters or more";
@@ -94,13 +103,12 @@ let myData = () => {
     next();
 };
 
-let next = () => {
-    window.setTimeout(function () {
-        window.location.href = "login.html";
+// let next = () => {
+//     window.setTimeout(function () {
+//         window.location.href = "login.html";
 
-    }, 1700);
-}
-
+//     }, 1700);
+// }
 
 let resetForm = () => {
     userName.value = "";
