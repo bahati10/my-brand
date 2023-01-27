@@ -79,10 +79,18 @@ let myMessage = () => {
         email: email.value,
         message: message.value
     });
-
     localStorage.setItem("message", JSON.stringify(msg))
+    getMsg()
     resetForm();
+    next();
 };
+
+let next = () => {
+    window.setTimeout(function () {
+        window.location.href = "message.html";
+
+    }, 500);
+}
 
 let resetForm = () => {
     userName.value = "";
