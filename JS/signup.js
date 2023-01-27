@@ -5,6 +5,11 @@ let password = document.getElementById("form-password");
 let output  = document.getElementById("output");
 let success = document.getElementById("success");
 let success2 = document.getElementById("success2");
+let adminP = "Admin";
+let adminE = "admin@gmail.com";
+localStorage.setItem("adminP", JSON.stringify(adminP))
+localStorage.setItem("adminE", JSON.stringify(adminE))
+
 
 let admin = {
     adminMail : "admin@gmail.com",
@@ -12,8 +17,7 @@ let admin = {
 };
 
 var n = localStorage.setItem("Administrator", JSON.stringify(admin));
-var g = JSON.parse(localStorage.getItem("Administrator")).admiUserName;
-var p = JSON.parse(localStorage.getItem("Administrator")).adminPassword;
+var g = JSON.parse(localStorage.setItem("Administrator")).admiUserName;
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     validateForm();
@@ -101,6 +105,16 @@ let myData = () => {
     localStorage.setItem("userData", JSON.stringify(data))
     resetForm();
     next();
+};
+
+
+
+let check = () => {
+    var adminEm = localStorage.getItem("adminE");
+    var adminPass = localStorage.getItem("adminP");
+    if(adminEm  === email.value || adminPass === password.value){
+        window.location.href = "/admin/blog.html"
+    }
 };
 
 // let next = () => {
