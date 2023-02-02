@@ -68,7 +68,7 @@ let compare = () => {
     let info = JSON.parse(localStorage.getItem("userData"))
     success.style.display = "block";
     setTimeout(function() {success.style.display = "none"}, 900);
-    if (email.value === "admin@gmail.com" || password.value === "Admin12345") {
+    if (email.value === "admin@gmail.com" && password.value === "Admin12345") {
         setTimeout(function () { window.location.href = "/HTML/admin/blog.html"; }, 900);
     }else{
         success.style.display = "block";
