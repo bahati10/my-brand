@@ -85,33 +85,31 @@
         </div>
         <div class="box three">
             <button class="like"><i class="fa-solid fa-heart"></i> Like</button>
-            <a href="comment.html" id="comment"><button class="comment"><i class="fa-solid fa-message"></i>
+            <a href="#main-container" id="comment"><button class="comment"><i class="fa-solid fa-message"></i>
                     Comment</button></a>
+        </div> <br>
+        <div class="comment-container">
+
         </div>
-        <div class="box four">
-            <p>
-            <h5>Bahati Yves</h5>
-            I am delighted to see this post about Web responsive it is just overwhelming . Keep it up man 💪🏿 this is
-            <br> awesome.
-            </p>
-        </div>
-        <div class="box five">
-            <p>
-            <h5>Joe Doe</h5>
-            This is the the best thing thing i have ever seen in time.
-            Thanks i can't really thank you enough 🙏🏾 You saved a soul
-            </p>
-        </div>
-        <div class="box six">
-            <p>
-            <h5>Jane Doe</h5>
-            Thanks Bahati for this blog this is really interesting and the way
-            you teach is the best i have ver seen. To the mooon
-            </p>
+        <div class="main-container" id="main-container">
+            <form action="blog.html" class="form" autocomplete="on" spellcheck="false">
+                <h2>Add Comment</h2>
+                <label class="message" for="text">Comment</label>
+                <textarea name="message" id="form-comment" maxlength="30" cols="30" rows="5"
+                    onkeyup="validateComment()"></textarea> <br>
+                <span id="comment-error"></span> <br> <br>
+                <button class="send" type="submit" onclick="return validateForm()">post</button>
+                <span id="submit-error"></span>
+            </form>
+            <id id="success">
+                <div class="modal">
+                    <div class="icon"><i id="icon1" class="fa-regular fa-circle-check"></i></div>
+                    <h4>Comment Added<br> Successfully</h4>
+                </div>
+            </id>
         </div>
     </main>
-
-    <script src="/JS/index.js" defer></script>
+    <script src="/JS/uxd.js" defer></script>
 </body>
 
 </html>

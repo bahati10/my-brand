@@ -45,20 +45,13 @@ let comment = [];
 
 let myComment = () => {
     comment.push({
-        comment: cmnt.value,
+        comment: cmnt.value
     });
 
     localStorage.setItem("userComments", JSON.stringify(comment))
     resetForm();
-    next();
 };
 
-let next = () => {
-    window.setTimeout(function () {
-        window.location.href = "uxd.html";
-
-    }, 1300);
-}
 
 
 let resetForm = () => {
