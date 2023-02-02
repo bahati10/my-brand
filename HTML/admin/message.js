@@ -1,9 +1,5 @@
-
 window.onload = event => {
 
-    let name = document.querySelector(".name");
-    let email = document.querySelector(".email");
-    let message = document.querySelector(".message");
     let output = document.querySelector(".msg-container");
     let table = document.querySelector("table");
 
@@ -34,5 +30,4 @@ let deleteMsg = (e) => {
     e.parentElement.parentElement.remove();
     msg.splice(e.parentElement.parentElement.id, 1)
     localStorage.setItem("message", JSON.stringify(msg))
-    console.log();
 }

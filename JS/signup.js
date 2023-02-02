@@ -7,15 +7,8 @@ let success = document.getElementById("success");
 let success2 = document.getElementById("success2");
 
 
-let admin = {
-    adminMail : "admin@gmail.com",
-    adminPassword: "Admin12345"
-};
-
-var n = localStorage.setItem("Administrator", JSON.stringify(admin));
-var g = JSON.parse(localStorage.setItem("Administrator")).admiUserName;
 form.addEventListener("submit", (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
     validateForm();
 })
 
@@ -100,7 +93,6 @@ let myData = () => {
 
     localStorage.setItem("userData", JSON.stringify(data))
     resetForm();
-    next();
 };
 
 let next = () => {

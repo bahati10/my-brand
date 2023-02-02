@@ -1,16 +1,31 @@
-let name = document.getElementById("name");
-let email = document.getElementById("email");
-let output = document.getElementById("user-container");
-let table = document.querySelector("table");
+window.onload = event => {
 
-output.innerHTML += `
-    <tr>
-    <td id="name">${JSON.parse(localStorage.getItem("userData"))[0].userName}</td>
-    <td id="email">${JSON.parse(localStorage.getItem("userData"))[0].email}</td>
-    <td><a href="#"  onClick="deleteUser(this)"class="delete">Delete</a></td>
-    </tr>`
-;
+    let userOutput = document.querySelector(".user-container");
 
-let deleteUser = (e) => {
+
+    function addU() {
+        var usr = JSON.parse(localStorage.getItem("userData"));
+        let str = '';
+        usr.map(u => {
+            let test = `
+        <tr id="${u}">
+          <td class="name">${u.name}</td>
+          <td class="email">${u.email}</td>
+          <td><a href="#"  onClick="deleteUsr(this)" class="delete">Delete</a></td>
+        </tr> 
+        `
+            str += test;
+        });
+        userOutput.innerHTML = str;
+    }
+
+    addU();
+    
+};
+
+let deleteUsr = (e) => {
+    var usr = JSON.parse(localStorage.getItem("userData"));
     e.parentElement.parentElement.remove();
+    usr.splice(e.parentElement.parentElement.id, 1)
+    localStorage.setItem("userData", JSON.stringify(usr))
 }
