@@ -66,33 +66,23 @@ function validateForm() {
 
 let compare = () => {
     let info = JSON.parse(localStorage.getItem("userData"))
-    if (email.value || password.value == info) {
+    success.style.display = "block";
+    setTimeout(function() {success.style.display = "none"}, 900);
+    if (email.value === "admin@gmail.com" || password.value === "Admin12345") {
+        setTimeout(function () { window.location.href = "/HTML/admin/blog.html"; }, 900);
+    }else{
         success.style.display = "block";
-        setTimeout(function () { success.style.display = "none" }, 900);
-    } else {
-        success2.style.display = "block"
-        setTimeout(function () { success.style.display = "none" }, 900);
+        setTimeout(function() {success.style.display = "none"}, 900);
+        next();
     }
-    check();
-    next();
 }
 
 
 let next = () => {
     window.setTimeout(function () {
         window.location.href = "blog.html";
-
     }, 1700);
 }
-
-
-let check = () => {
-    var adminEm = localStorage.getItem("adminE");
-    var adminPass = localStorage.getItem("adminP");
-    if(adminEm  === email.value || adminPass === password.value){
-        window.location.href = "/admin/blog.html"
-    }
-};
 
 
 let resetForm = () => {
