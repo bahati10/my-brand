@@ -78,19 +78,25 @@ router.get("/messages/:id", async (req, res) => {
 
 router.patch("/messages/:id", async (req, res) => {
 	try {
-		const message = await Message.findOne({ _id: req.params.id })
+		const message = await Message.findById(req.params.id)
 
-		if (req.body.title) {
-			message.title = req.body.title
+		if (req.body.name) {
+			message.name = req.body.name
 		}
 
-		if (req.body.content) {
-			message.content = req.body.content
+		if (req.body.email) {
+			message.email = req.body.email
+		}
+        if (req.body.message) {
+			message.message = req.body.message
 		}
 
 		await message.save()
-		res.send(post)
-	} catch {
+		res.send(message)
+	} catch(err) {
+
+        // throw new Error(err)
+
 		res.status(404)
 		res.send({ error: "Message doesn't exist!" })
 	}
