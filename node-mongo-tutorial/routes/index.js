@@ -2,11 +2,18 @@ const express = require("express")
 const { model } = require("mongoose")
 const Message = require("../models/Contact")
 const User = require("../models/User")
-const Post = require("../models/Post")
+const Blog = require("../models/Blog")
 const MessageController = require("../controllers/messageController")
 const UserController = require("../controllers/userController")
+const BlogController = require("../controllers/blogController")
 const router = new express.Router()
 
+
+
+router.get("/messages", MessageController.getMessages)
+router.get("/messages/:id", MessageController.getSingle)
+router.delete("/messages/:id", MessageController.deleteSingle)
+router.patch("/messages/:id", MessageController.updateSingle)
 
 
 // router.post("/messages", async (req, res) => {
@@ -50,14 +57,16 @@ const router = new express.Router()
 // })
 
 // router.post("/messages", MessageController.addMessage)
-router.get("/messages", MessageController.getMessages)
-router.get("/messages/:id", MessageController.getSingle)
-router.delete("/messages/:id", MessageController.deleteSingle)
-router.patch("/messages/:id", MessageController.updateSingle)
 
 
 
 // USERS
+
+
+router.get("/users", UserController.getUsers)
+router.get("/users/:id", UserController.getSingle)
+router.delete("/users/:id", UserController.deleteSingle)
+router.patch("/users/:id", UserController.updateSingle)
 
 
 
@@ -106,65 +115,37 @@ router.post("/users", async (req, res) => {
 
 
 
-router.get("/users", UserController.getUsers)
-router.get("/users/:id", UserController.getSingle)
-router.delete("/users/:id", UserController.deleteSingle)
-router.patch("/users/:id", UserController.updateSingle)
-
-
-
 
 // POSTS
 
 
+router.get("/blogs", BlogController.getBlogs)
+router.get("/blogs/:id", BlogController.getSingle)
+router.delete("/blogs/:id", BlogController.deleteSingle)
+router.patch("/blogs/:id", BlogController.updateSingle)
 
-router.post("/posts", async (req, res) => {
+
+
+
+router.post("/blogs", async (req, res) => {
     try {
 
         const { title, subtitle, content } = req.body;
-        const express = require("express")
-        const { model } = require("mongoose")
-        const Post = require("../models/Post")
-        const router = new express.Router()
 
-
-        router.post("/posts", async (req, res) => {
-            try {
-
-                const { title, subtitle, content } = req.body;
-
-                if (!title || !subtitle || !content) {
-                    res.status(400).json({ msg: "Please add all required inputs", error: "" })
-                }
-                const _post = new Post({
-                    title,
-                    subtitle,
-                    content,
-                })
-                await _post.save()
-                return res.status(201).json({ msg: "Post added sent successfully", data: _message })
-            } catch (error) {
-                throw new Error(error)
-            }
-        })
         if (!title || !subtitle || !content) {
-            return res.status(400).json({ msg: "Please add all required inputs", error: "" })
+            res.status(400).json({ msg: "Please add all required inputs", error: "" })
         }
-        const _post = new Post({
+        const _blog = new Blog({
             title,
             subtitle,
             content,
         })
-        await _post.save()
-        return res.status(201).json({ msg: "User added successfully", data: _post })
+        await _blog.save()
+        return res.status(201).json({ msg: "Blog added successfully", data: _blog })
     } catch (error) {
-        return res.status(400).json({ msg: "Something went wrong", error })
+        throw new Error(error)
     }
 })
-
-
-
-
 
 
 module.exports = router;
