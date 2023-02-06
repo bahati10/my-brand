@@ -3,9 +3,11 @@ const { model } = require("mongoose")
 const Message = require("../models/Contact")
 const User = require("../models/User")
 const Blog = require("../models/Blog")
+const Comment = require("../models/Comment")
 const MessageController = require("../controllers/messageController")
 const UserController = require("../controllers/userController")
 const BlogController = require("../controllers/blogController")
+const CommentController = require("../controllers/commentController")
 const router = new express.Router()
 
 
@@ -16,47 +18,28 @@ router.delete("/messages/:id", MessageController.deleteSingle)
 router.patch("/messages/:id", MessageController.updateSingle)
 
 
-// router.post("/messages", async (req, res) => {
-//     try {
-//         const { email, message, name } = req.body;
-//         if (!email || !name || !message) {
-//             res.status(400).json({ msg: "Please add all required inputs", error: "" })
-//         }
-//         const _message = new Message({
-//             name,
-//             email,
-//             message,
-//         })
-//         await _message.save()
-//         return res.status(201).json({ msg: "Message sent successfully", data: _message })
-//     } catch (error) {
-//         throw new Error(error)
-//     }
-// })
 
 
+router.post("/messages", async (req, res) => {
+    try {
 
-// router.post("/messages", async (req, res) => {
-//     try {
+        const { email, message, name } = req.body;
 
-//         const { email, message, name } = req.body;
+        if (!email || !name || !message) {
+            res.status(400).json({ msg: "Please add all required inputs", error: "" })
+        }
+        const _message = new Message({
+            name,
+            email,
+            message,
+        })
+        await _message.save()
+        return res.status(201).json({ msg: "Message sent successfully", data: _message })
+    } catch (error) {
+        throw new Error(error)
+    }
+})
 
-//         if (!email || !name || !message) {
-//             res.status(400).json({ msg: "Please add all required inputs", error: "" })
-//         }
-//         const _message = new Message({
-//             name,
-//             email,
-//             message,
-//         })
-//         await _message.save()
-//         return res.status(201).json({ msg: "Message sent successfully", data: _message })
-//     } catch (error) {
-//         throw new Error(error)
-//     }
-// })
-
-// router.post("/messages", MessageController.addMessage)
 
 
 
@@ -73,33 +56,10 @@ router.patch("/users/:id", UserController.updateSingle)
 router.post("/users", async (req, res) => {
     try {
 
-        const { email, names, password } = req.body; const express = require("express")
-        const { model } = require("mongoose")
-        const User = require("../models/User")
-        const router = new express.Router()
+        const { email, names, password } = req.body;
 
-
-        router.post("/users", async (req, res) => {
-            try {
-
-                const { email, names, password } = req.body;
-
-                if (!email || !names || !password) {
-                    res.status(400).json({ msg: "Please add all required inputs", error: "" })
-                }
-                const _user = new User({
-                    names,
-                    email,
-                    password,
-                })
-                await _user.save()
-                return res.status(201).json({ msg: "User added succesfully successfully", data: _user })
-            } catch (error) {
-                throw new Error(error)
-            }
-        })
         if (!email || !names || !password) {
-            return res.status(400).json({ msg: "Please add all required inputs", error: "" })
+            res.status(400).json({ msg: "Please add all required inputs", error: "" })
         }
         const _user = new User({
             names,
@@ -107,12 +67,11 @@ router.post("/users", async (req, res) => {
             password,
         })
         await _user.save()
-        return res.status(201).json({ msg: "User added successfully", data: _user })
+        return res.status(201).json({ msg: "User added succesfully successfully", data: _user })
     } catch (error) {
-        return res.status(400).json({ msg: "Something went wrong", error })
+        throw new Error(error)
     }
 })
-
 
 
 
@@ -142,6 +101,31 @@ router.post("/blogs", async (req, res) => {
         })
         await _blog.save()
         return res.status(201).json({ msg: "Blog added successfully", data: _blog })
+    } catch (error) {
+        throw new Error(error)
+    }
+})
+
+// COMMENTS
+
+
+router.get("/comments", CommentController.getComments)
+router.get("/comments/:id", CommentController.getSingle)
+router.delete("/comments/:id",     CommentController.deleteSingle)
+
+router.post("/comments", async (req, res) => {
+    try {
+
+        const { comment } = req.body;
+
+        if (!comment) {
+            res.status(400).json({ msg: "Please add all required inputs", error: "" })
+        }
+        const _comment = new Comment({
+            comment,
+        })
+        await _comment.save()
+        return res.status(201).json({ msg: "Comment added successfully", data: _comment })
     } catch (error) {
         throw new Error(error)
     }

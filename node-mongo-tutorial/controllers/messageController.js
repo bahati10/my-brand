@@ -27,7 +27,7 @@ class MessageController {
         try {
             const { id } = req.params;
             const m = await MessageService.deleteSingleMessage(id);
-            return res.status(204).json({ msg: "Messsage deleted successfully" })
+            return res.status(200).json({ msg: "Messsage deleted successfully" })
 
         } catch (error) {
             return res.status(400).json({ msg: "Something went wrong", error })
@@ -58,22 +58,6 @@ class MessageController {
         }
     }
 
-    // static async addMessage(req, res) {
-    //     const { email, message, name } = req.body;
-
-    //     if (!email || !name || !message) {
-    //         res.status(400).json({ msg: "Please add all required inputs", error: "" })
-    //     }
-    //     const _message = new Message({
-    //         name,
-    //         email,
-    //         message,
-    //     })
-    //     await MessageService.addSingleMessage();
-    //     return res.status(201).json({ msg: "Message sent successfully", data: _message })
-    // } catch(error) {
-    //     throw new Error(error)
-    // }
 }
 
 

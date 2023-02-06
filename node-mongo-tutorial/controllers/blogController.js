@@ -17,7 +17,7 @@ class BlogController {
             const { id } = req.params;
             const user = await BlogService.getSingleBlog(id);
             if (!user) {
-                return res.status(404).json({ msg: "Message not found", error: "" })
+                return res.status(404).json({ msg: "Blog not found", error: "" })
             }
             return res.status(200).json({ msg: "User retrieved", data: user })
         } catch (error) {
@@ -29,7 +29,7 @@ class BlogController {
         try {
             const { id } = req.params;
             const blog = await BlogService.deleteSingleBlog(id);
-            return res.status(204).json({ msg: "User deleted successfully" })
+            return res.status(200).json({ msg: "User deleted successfully" })
         } catch (error) {
             
         }
