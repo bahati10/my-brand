@@ -10,6 +10,7 @@ class MessageController {
         }
     }
 
+
     static async getSingle(req, res) {
         try {
             const { id } = req.params;
@@ -29,30 +30,6 @@ class MessageController {
             const m = await MessageService.deleteSingleMessage(id);
             return res.status(200).json({ msg: "Messsage deleted successfully" })
 
-        } catch (error) {
-            return res.status(400).json({ msg: "Something went wrong", error })
-
-        }
-    }
-
-    static async updateSingle(req, res) {
-        try {
-            const { id } = req.params;
-            const msg = await MessageService.updateSingleMessage(id)
-            if (req.body.name) {
-                msg.name = req.body.name
-            }
-
-            if (req.body.email) {
-                msg.email = req.body.email
-            }
-
-            if (req.body.message) {
-                msg.message = req.body.message
-            }
-
-            await msg.save()
-            res.send(msg)
         } catch (error) {
             return res.status(400).json({ msg: "Something went wrong", error })
         }

@@ -1,5 +1,7 @@
 const express = require("express")
 const mongoose = require("mongoose")
+const jwt = require('jsonwebtoken');
+const bcrypt = require("bcrypt")
 const routes = require("./routes/index")
 const app = express();
 const dotenv = require("dotenv");

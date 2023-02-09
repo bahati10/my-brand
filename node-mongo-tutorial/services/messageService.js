@@ -30,28 +30,6 @@ class MessageService {
         }
     }
 
-    static async updateSingleMessage(id) {
-        try {
-            const msg = await Message.findById(id)
-            return msg;
-        } catch (error) {
-            throw new Error(error)
-        }
-    }
-
-    // static async addSingleMessage() {
-    //     try {
-
-    //         const _message = new Message({
-    //                 name,
-    //                 email,
-    //                 message,
-    //         })
-    //         return _message;
-    //     } catch (error) {
-    //         throw new Error(error)
-    //     }
-    // }
 }
 
 

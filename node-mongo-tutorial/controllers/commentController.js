@@ -6,10 +6,9 @@ class CommentController {
             const cmnts = await CommentService.getAllComment();
             return res.status(200).json({ msg: "Comments retrieved", data: cmnts })
         } catch (error) {
-            return res.status(400).json({msg: "Something went wrong", error})
+            return res.status(400).json({ msg: "Something went wrong", error })
         }
     }
-
 
     static async getSingle(req, res) {
         try {
@@ -32,7 +31,6 @@ class CommentController {
 
         } catch (error) {
             return res.status(400).json({ msg: "Something went wrong", error })
-
         }
     }
 }

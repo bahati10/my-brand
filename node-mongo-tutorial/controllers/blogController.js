@@ -29,7 +29,7 @@ class BlogController {
         try {
             const { id } = req.params;
             const blog = await BlogService.deleteSingleBlog(id);
-            return res.status(200).json({ msg: "User deleted successfully" })
+            return res.status(200).json({ msg: "Blog deleted successfully" })
         } catch (error) {
             
         }
