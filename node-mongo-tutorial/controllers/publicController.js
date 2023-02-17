@@ -21,7 +21,7 @@ class PublicController {
                 return res.status(400).json({error:"Invalid password"})
             }
         
-            const token = jwt.sign({ id: User.id }, process.env.PUBLIC_SECRET,{expiresIn: 3600})
+            const token = jwt.sign({ id: doesExist._id }, process.env.PUBLIC_SECRET,{expiresIn: 3600})
             return res.status(200).json({ msg: "Logged in succesfully", token })
 
         } catch (error) {

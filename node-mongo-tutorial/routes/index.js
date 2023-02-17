@@ -7,6 +7,7 @@ const Message = require("../models/Contact")
 const User = require("../models/User")
 const Blog = require("../models/Blog")
 const Comment = require("../models/Comment")
+const Like = require("../models/Like")
 const Login = require("../models/Login")
 const Admin = require("../models/Admin")
 const AuthMiddleware = require("../middlewares/AuthMiddleware")
@@ -18,6 +19,7 @@ const CommentController = require("../controllers/commentController")
 const AdminController = require("../controllers/adminController");
 const AuthController = require("../controllers/authController");
 const PublicController = require("../controllers/publicController");
+const { findById } = require("../models/Contact");
 const router = new express.Router()
 dotenv.config();
 
@@ -32,12 +34,8 @@ router.post("/users/admin", async (req, res) => {
         const { email, names, password } = req.body;
         const addedDate = new Date();
 
-        if (!email || !names || !password) {
+        if (!email || !names || !password)
             res.status(400).json({ msg: "Please add all required inputs", error: "" })
-        }
-
-        // if (Admin.length > 1)
-        //     return res.status(400).json({ msg: "Not Allowed" })
         const _admin = new Admin({
             names,
             email,
@@ -45,7 +43,7 @@ router.post("/users/admin", async (req, res) => {
             created_on: addedDate,
         })
         await _admin.save()
-        const token = jwt.sign({ id: Admin.id }, process.env.TOKEN_SECRET , {
+        const token = jwt.sign({ id: Admin.id }, process.env.TOKEN_SECRET, {
             expiresIn: 60
         })
         return res.status(201).json({ msg: "Admin added successfully", data: _admin, token })
@@ -101,7 +99,7 @@ router.post("/users", async (req, res) => {
         const { email, names, password } = req.body;
         const userP = password === req.body.password
         const addedDate = new Date();
-        const doesExist = await  User.findOne({email});
+        const doesExist = await User.findOne({ email });
 
         if (!email || !names || !password) {
             res.status(400).json({ msg: "Please add all required inputs", error: "" })
@@ -155,26 +153,66 @@ router.post("/blogs", AuthMiddleware.checkAuthenticationStatus, async (req, res)
 })
 
 
+
 // COMMENTS
 
 
-router.get("/comments", PublicAuthMiddleware.checkAuthentication, CommentController.getComments)
-router.get("/comments/:id", PublicAuthMiddleware.checkAuthentication, CommentController.getSingle)
-router.delete("/comments/:id", PublicAuthMiddleware.checkAuthentication, CommentController.deleteSingle)
-router.post("/comments", PublicAuthMiddleware.checkAuthentication, async (req, res) => {
+
+router.get("/comments", CommentController.getComments)
+router.get("/comments/:id", CommentController.getSingle)
+router.delete("/comments/:id", AuthMiddleware.checkAuthenticationStatus, CommentController.deleteSingle)
+router.post("/comments/:id", PublicAuthMiddleware.checkAuthentication, async (req, res) => {
     try {
         const addedDate = new Date();
+        const { id } = req.params;
+        const blog = await Blog.findById(id);
         const { comment } = req.body;
 
-        if (!comment) {
-            res.status(400).json({ msg: "Please add all required inputs", error: "" })
-        }
+        if (!blog)
+            return res.status(400).json({ msg: "Blog Not found", error: "" })
+        if (!comment)
+            return res.status(400).json({ msg: "Please add all required inputs", error: "" })
+
         const _comment = new Comment({
             comment,
+            user: req.id,
             created_on: addedDate,
         })
         await _comment.save()
+        blog.comments.push(_comment.id);
+        await blog.save();
+
+        console.log(blog, req.id);
         return res.status(201).json({ msg: "Comment added successfully", data: _comment })
+    } catch (error) {
+        throw new Error(error)
+    }
+})
+
+
+// LIKES //
+
+
+router.post("/likes/:id", PublicAuthMiddleware.checkAuthentication, async (req, res) => {
+    try {
+        const addedDate = new Date();
+        const { id } = req.params;
+        const blog = await Blog.findById(id);
+        const { like } = req.body;
+
+        if (!blog)
+            return res.status(400).json({ msg: "Blog Not found", error: "" })
+
+        const _like = new Like({
+            user: req.id,
+            created_on: addedDate,
+        })
+        await _like.save()
+        blog.likes.push(_like.id);
+        await blog.save();
+
+        console.log(blog, req.id);
+        return res.status(201).json({ msg: "like added successfully", data: _like })
     } catch (error) {
         throw new Error(error)
     }

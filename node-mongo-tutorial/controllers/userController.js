@@ -27,9 +27,6 @@ class UserController {
 
             const { id } = req.params;
             const u = await UserService.deleteSingleUser(id)
-            if (!user) {
-                return res.status(404).json({ msg: "User not found", error: "" })
-            }
             return res.status(200).json({ msg: "User removed successfully"})
         } catch (error) {
             return res.status(400).json({ msg: "Something went wrong", error })

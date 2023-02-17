@@ -1,15 +1,26 @@
+const { model } = require("mongoose");
 const Blog  = require("../models/Blog")
 
 class BlogService {
 
     static async getAllBlogs() {
         try {
-            const blogs = await Blog.find();
+            const blogs = await Blog.find().populate([{
+                path: "comments likes",
+                populate: {
+                    path: "user",
+                    model: "User",
+                  select: "email names"
+                }
+
+            }]);
+            
             return blogs;
         } catch (error) {
             throw new Error(error)
         }
     }
+
 
     static async getSingleBlog(id) {
         try {

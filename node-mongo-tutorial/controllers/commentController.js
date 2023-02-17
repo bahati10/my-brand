@@ -1,4 +1,5 @@
 const CommentService = require("../services/commentService")
+const Blog = require("../models/Blog")
 
 class CommentController {
     static async getComments(req, res) {

@@ -11,7 +11,7 @@ class AdminService {
         }
     }
 
-
+    
     static async deleteAllAdmins(_id) {
         try {
             const admin = await Admin.deleteOne({

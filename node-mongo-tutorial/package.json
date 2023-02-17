@@ -2,9 +2,10 @@
   "name": "mongo-tutorial",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "devStart": "nodemon server.js"
+    "devStart": "nodemon server.js",
+    "test": "nyc mocha --timeout 5000"
   },
   "keywords": [],
   "author": "",
@@ -17,9 +18,14 @@
     "express-validation": "^4.1.0",
     "joi": "^17.7.0",
     "jsonwebtoken": "^9.0.0",
-    "mongoose": "^6.9.0"
+    "mongoose": "^6.9.0",
+    "swagger": "^0.7.5"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
+    "mocha": "^10.2.0",
+    "nodemon": "^2.0.20",
+    "nyc": "^15.1.0"
   }
 }
