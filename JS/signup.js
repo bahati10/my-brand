@@ -74,10 +74,38 @@ function validateForm() {
         setTimeout(function () { submitError.style.display = "none" }, 2000)
     } else {
         success.style.display = "block";
-        setTimeout(function() {success.style.display = "none"}, 900);
-        myData();
+        setTimeout(function () { success.style.display = "none" }, 900)
+        addUser();
     }
 
+}
+
+
+
+
+const addUser = () => {
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    const data = {
+        names: userName.value,
+        email: email.value,
+        password: password.value,
+    };
+
+
+    requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: JSON.stringify(data),
+        redirect: "follow",
+    };
+
+    console.log(data, userName.value);
+    fetch("http://localhost:4000/api/users", requestOptions)
+        .then((response) => response.json())
+        .then((result) => { console.log(result), resetForm() })
+        .catch((error) => console.log(("error", error + "this is it")));
 }
 
 // let second = () => {
@@ -93,19 +121,19 @@ function validateForm() {
 // }
 
 
-let data = [];
+// let data = [];
 
 
-let myData = () => {
-    data.push({
-        name: userName.value,
-        email: email.value,
-        password: password.value
-    });
-    localStorage.setItem("userData", JSON.stringify(data))
-    resetForm();
-    next();
-};
+// let myData = () => {
+//     data.push({
+//         name: userName.value,
+//         email: email.value,
+//         password: password.value
+//     });
+//     localStorage.setItem("userData", JSON.stringify(data))
+//     resetForm();
+//     next();
+// };
 
 
 let next = () => {
@@ -122,5 +150,5 @@ let resetForm = () => {
     nameError.innerHTML = "";
     emailError.innerHTML = "";
     passwordError.innerHTML = "";
-    submitError.innerHTML = ""
+    submitError.innerHTML = "";
 }

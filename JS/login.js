@@ -60,29 +60,53 @@ function validateForm() {
         setTimeout(function () { submitError.style.display = "none" }, 2000)
         return false;
     } else {
-        compare();
+        userLogin();
     }
 }
 
-let compare = () => {
-    let info = JSON.parse(localStorage.getItem("userData"))
-    success.style.display = "block";
-    setTimeout(function() {success.style.display = "none"}, 900);
-    if (email.value === "admin@gmail.com" && password.value === "Admin12345") {
-        setTimeout(function () { window.location.href = "/HTML/admin/blog.html"; }, 900);
-    }else{
-        success.style.display = "block";
-        setTimeout(function() {success.style.display = "none"}, 900);
-        next();
-    }
-}
+const userLogin = () => {
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    const data = {
+        email: email.value,
+        password: password.value,
+    };
 
 
-let next = () => {
-    window.setTimeout(function () {
-        window.location.href = "blog.html";
-    }, 1700);
+    requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: JSON.stringify(data),
+        redirect: "follow",
+    };
+
+    console.log(data, email.value);
+    fetch("http://localhost:4000/api/users/login", requestOptions)
+        .then((response) => response.json())
+        .then((result) => { console.log(result), resetForm() })
+        .catch((error) => console.log("error", error));
 }
+
+// let compare = () => {
+//     let info = JSON.parse(localStorage.getItem("userData"))
+//     success.style.display = "block";
+//     setTimeout(function() {success.style.display = "none"}, 900);
+//     if (email.value === "admin@gmail.com" && password.value === "ADMIN1234") {
+//         setTimeout(function () { window.location.href = "/HTML/admin/blog.html"; }, 900);
+//     }else{
+//         success.style.display = "block";
+//         setTimeout(function() {success.style.display = "none"}, 900);
+//         next();
+//     }
+// }
+
+
+// let next = () => {
+//     window.setTimeout(function () {
+//         window.location.href = "blog.html";
+//     }, 1700);
+// }
 
 
 let resetForm = () => {
