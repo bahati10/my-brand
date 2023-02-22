@@ -69,6 +69,58 @@ function validateForm() {
 }
 
 
+
+
+
+
+
+
+const addBlog = async () => {
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    const data = {
+        email: email.value,
+        password: password.value,
+    };
+
+
+    // requestOptions = {
+    //     method: "POST",
+    //     headers: myHeaders,
+    //     body: JSON.stringify(data),
+    //     redirect: "follow",
+    // };
+
+    const returnedData = await axios.post("http://63.250.40.79:4000/api/users/login/admin", data)
+        .then((result) => { (console.log(result.data.msg), localStorage.setItem("admintoken", JSON.stringify(result.data.token)), nextRoute(), resetForm()) })
+        .catch((error) => { return error.response.data.msg });
+    submitError.innerHTML = `${returnedData}`;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let blogs = [];
 
 
@@ -84,7 +136,6 @@ let myBlog = () => {
     next();
 };
 
-
 // let next = () => {
 //     window.setTimeout(function () {
 //         window.location.href = "blogs.html";
@@ -93,13 +144,13 @@ let myBlog = () => {
 // }
 
 
-let resetForm = () => {
-    content.value = "";
-    title.value = "";
-    subtitle.value = "";
-    image.value = "";
-    titleError.innerHTML = "";
-    subtitleError.innerHTML = "";
-    contentError.innerHTML = "";
-    submitError.innerHTML = ""
-}
+// let resetForm = () => {
+//     content.value = "";
+//     title.value = "";
+//     subtitle.value = "";
+//     image.value = "";
+//     titleError.innerHTML = "";
+//     subtitleError.innerHTML = "";
+//     contentError.innerHTML = "";
+//     submitError.innerHTML = ""
+// }

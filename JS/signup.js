@@ -81,7 +81,7 @@ function validateForm() {
 
 
 
-const addUser = () => {
+const addUser = async () => {
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
@@ -92,25 +92,18 @@ const addUser = () => {
     };
 
 
-    requestOptions = {
-        method: "POST",
-        headers: myHeaders,
-        body: JSON.stringify(data),
-        redirect: "follow",
-    };
+    const returnedUser = await axios.post("http://localhost:4000/api/users", data)
 
-    fetch("http://localhost:4000/api/users", requestOptions)
-
-        .then((result) => {
-            if (result.ok == false) {
-                console.log("Error  ", result, result.data)
+        .then((result) => { if (result.ok == false) {
+                console.log("Error  ", result, result.data.msg)
             } else {
                 success.style.display = "block";
                 setTimeout(function () { success.style.display = "none" }, 900)
-                console.log(result), resetForm()
+                console.log(result), resetForm(), next()
             }
         })
-        .catch((error) => console.log(error));
+        .catch((error) => { return error.response.data.msg });
+        submitError.innerHTML = `${returnedUser}`;
 }
 
 

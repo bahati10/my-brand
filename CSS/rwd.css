@@ -96,6 +96,7 @@ i {
     font-weight: 600;
     font-family: var(--FF);
     margin-right: 20px;
+    visibility: hidden;
 }
 
 

@@ -81,8 +81,8 @@ const userLogin = async () => {
     //     redirect: "follow",
     // };
 
-    const returnedData = await axios.post("http://localhost:4000/api/users/login", data)
-        .then((result) => { (console.log(result.data.msg), localStorage.setItem("usertoken", JSON.stringify(result.data.token)), next(), resetForm()) })
+    const returnedData = await axios.post("http://63.250.40.79:4000/api/users/login/admin", data)
+        .then((result) => { (console.log(result.data.msg), localStorage.setItem("admintoken", JSON.stringify(result.data.token)), nextRoute(), resetForm()) })
         .catch((error) => { return error.response.data.msg });
     submitError.innerHTML = `${returnedData}`;
 
@@ -90,10 +90,9 @@ const userLogin = async () => {
 
 
 
-let next = () => {
-    window.setTimeout(function () {
-        window.location.href = "blog.html";
-    }, 1000);
+
+let nextRoute = () => {
+        window.location.href = "/HTML/admin/blog.html";
 }
 
 
