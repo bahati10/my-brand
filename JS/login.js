@@ -64,7 +64,7 @@ function validateForm() {
     }
 }
 
-const userLogin = () => {
+const userLogin = async () => {
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
@@ -74,18 +74,19 @@ const userLogin = () => {
     };
 
 
-    requestOptions = {
-        method: "POST",
-        headers: myHeaders,
-        body: JSON.stringify(data),
-        redirect: "follow",
-    };
+    // requestOptions = {
+    //     method: "POST",
+    //     headers: myHeaders,
+    //     body: JSON.stringify(data),
+    //     redirect: "follow",
+    // };
 
     console.log(data, email.value);
-    fetch("http://localhost:4000/api/users/login", requestOptions)
-        .then((response) => response.json())
-        .then((result) => { console.log(result), resetForm() })
-        .catch((error) => console.log("error", error));
+    const returnedData = await axios.post("http://localhost:4000/api/users/login", data)
+        // .then((response) => response.json())
+        .then((result) => { (console.log(result),localStorage.setItem("usertoken", JSON.stringify(data.token)), next(), resetForm()) })
+        .catch((error) => { return error.response.data.msg} );
+        submitError.innerHTML = `${returnedData}`;
 }
 
 // let compare = () => {
@@ -102,19 +103,17 @@ const userLogin = () => {
 // }
 
 
-// let next = () => {
-//     window.setTimeout(function () {
-//         window.location.href = "blog.html";
-//     }, 1700);
-// }
+let next = () => {
+    window.setTimeout(function () {
+        window.location.href = "blog.html";
+    }, 1000);
+}
 
 
 let resetForm = () => {
-    userName.value = "";
     email.value = "";
     password.value = "";
-    nameError.innerHTML = "";
     emailError.innerHTML = "";
     passwordError.innerHTML = "";
-    submitError.innerHTML = ""
+    submitError.innerHTML = "";
 }

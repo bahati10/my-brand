@@ -73,8 +73,6 @@ function validateForm() {
         submitError.innerHTML = "PLease fix above errors";
         setTimeout(function () { submitError.style.display = "none" }, 2000)
     } else {
-        success.style.display = "block";
-        setTimeout(function () { success.style.display = "none" }, 900)
         addUser();
     }
 
@@ -101,12 +99,21 @@ const addUser = () => {
         redirect: "follow",
     };
 
-    console.log(data, userName.value);
     fetch("http://localhost:4000/api/users", requestOptions)
-        .then((response) => response.json())
-        .then((result) => { console.log(result), resetForm() })
-        .catch((error) => console.log(("error", error + "this is it")));
+
+        .then((result) => {
+            if (result.ok == false) {
+                console.log("Error  ", result, result.data)
+            } else {
+                success.style.display = "block";
+                setTimeout(function () { success.style.display = "none" }, 900)
+                console.log(result), resetForm()
+            }
+        })
+        .catch((error) => console.log(error));
 }
+
+
 
 // let second = () => {
 //     let info = JSON.parse(localStorage.getItem("userData"))
