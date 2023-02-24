@@ -49,6 +49,10 @@ body::-webkit-scrollbar {
     display: inline;
 }
 
+li .main{
+    background: #055864;
+}
+
 .left-sidebar ul li a{
     color: #EEE5E9;
     padding: 10px 20px;

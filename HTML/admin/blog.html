@@ -16,9 +16,9 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="blog.js" defer></script>
     <title>Manage Blogs</title>
-    <script src="signup.js" defer></script>
-    <script src="/index.js" defer></script>
 </head>
 
 <body>
@@ -27,8 +27,9 @@
         <div class="left-sidebar">
             <ul>
                 <li><a href="/index.html">Home</a></li>
-                <li><a href="#">Blogs</a></li>
+                <li><a class="main" href="#">Blogs</a></li>
                 <li><a href="user.html">Users</a></li>
+                <li><a href="admin.html">Admins</a></li>
                 <li><a href="message.html">Messages</a></li>
             </ul>
         </div>
@@ -50,7 +51,7 @@
                         <th colspan="3" style="width: 300px">Action</th>
                     </thead>
 
-                    <tbody>
+                    <tbody class="blog-container">
                         <tr>
                             <td>1</td>
                             <td>UI/UX Design</td>

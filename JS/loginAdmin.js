@@ -73,16 +73,8 @@ const userLogin = async () => {
         password: password.value,
     };
 
-
-    // requestOptions = {
-    //     method: "POST",
-    //     headers: myHeaders,
-    //     body: JSON.stringify(data),
-    //     redirect: "follow",
-    // };
-
-    const returnedData = await axios.post("http://63.250.40.79:4000/api/users/login/admin", data)
-        .then((result) => { (console.log(result.data.msg), localStorage.setItem("admintoken", JSON.stringify(result.data.token)), nextRoute(), resetForm()) })
+    const returnedData = await axios.post("http://localhost:4000/api/users/login/admin", data)
+        .then((result) => { (console.log(result.data.msg), localStorage.setItem("admintoken", JSON.stringify(result.data.token)), console.log(result) , resetForm(), nextRoute()) })
         .catch((error) => { return error.response.data.msg });
     submitError.innerHTML = `${returnedData}`;
 
@@ -103,3 +95,5 @@ let resetForm = () => {
     passwordError.innerHTML = "";
     submitError.innerHTML = "";
 }
+
+

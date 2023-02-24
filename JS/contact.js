@@ -70,8 +70,8 @@ function validateForm() {
 
 
 
-const sendMsg = () => {
-    var myHeaders = new Headers();
+const sendMsg = async () => {
+    const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
     var data = {
@@ -80,20 +80,17 @@ const sendMsg = () => {
         message: message.value,
     };
 
-
-    var requestOptions = {
-        method: "POST",
-        headers: myHeaders,
-        body: JSON.stringify(data),
-        redirect: "follow",
-    };
-
-
-    fetch("http://localhost:4000/api/messages", requestOptions)
-        .then((response) => response.json())
-        .then((result) => { (console.log("result", result), resetForm()) })
-        .catch((error) => console.log(error));
+    const returnedMsg = await axios.post("http://localhost:4000/api/messages", data)
+        .then((result) => { (console.log(result.data.msg), resetForm()) })
+        .catch((error) => { return error.response.data.msg });;
+        submitError.innerHTML = `${returnedMsg}`;
 }
+
+
+
+
+
+
 
 
 

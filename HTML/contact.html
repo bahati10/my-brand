@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +14,10 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <body>
     <header>
@@ -34,10 +38,14 @@
     <div class="main-container">
         <form autocomplete="on" spellcheck="false">
             <div class="links">
-                <a href="https://github.com/bahati10" target="_blank"><img class="one" src="/IMG/square-github.svg" alt=""></a>
-                <a href="https://twitter.com/Bahati____" target="_blank"><img class="two" src="/IMG/square-twitter.svg" alt=""></a>
-                <a href="mailto:bahatiyves10@gmail.com" target="_blank"><img class="three" src="/IMG/envelope-solid.svg" alt=""></a>
-                <a href="https://www.linkedin.com/in/bahati-yves-439aab1a2/" target="_blank"><img class="four" src="/IMG/linkedin.svg" alt=""></a>
+                <a href="https://github.com/bahati10" target="_blank"><img class="one" src="/IMG/square-github.svg"
+                        alt=""></a>
+                <a href="https://twitter.com/Bahati____" target="_blank"><img class="two" src="/IMG/square-twitter.svg"
+                        alt=""></a>
+                <a href="mailto:bahatiyves10@gmail.com" target="_blank"><img class="three" src="/IMG/envelope-solid.svg"
+                        alt=""></a>
+                <a href="https://www.linkedin.com/in/bahati-yves-439aab1a2/" target="_blank"><img class="four"
+                        src="/IMG/linkedin.svg" alt=""></a>
             </div>
             <label class="name" for="name">Names</label>
             <input type="name" id="form-name" autocomplete="off" onkeyup="validateName()">
@@ -46,7 +54,8 @@
             <input type="email" id="form-email" autocomplete="off" onkeyup="validateMail()">
             <span id="email-error" class="two2"></span>
             <label class="message" for="text">Message</label>
-            <textarea name="message" id="form-message" cols="30" rows="8" autocomplete="off" onkeyup="validateMessage()"></textarea>
+            <textarea name="message" id="form-message" cols="30" rows="8" autocomplete="off"
+                onkeyup="validateMessage()"></textarea>
             <span id="message-error" class="three3"></span>
             <button class="send" type="submit">Send</button>
             <span id="submit-error"></span>

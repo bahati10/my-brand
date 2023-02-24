@@ -17,8 +17,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
     <title>Add Blog</title>
-    <script src="index.js" defer></script>
-    <script src="add.js"></script>
+    <script src="addBlog.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
@@ -29,6 +28,7 @@
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="blog.html">Blogs</a></li>
                 <li><a href="user.html">Users</a></li>
+                <li><a href="admin.html">Admins</a></li>
                 <li><a href="message.html">Messages</a></li>
             </ul>
         </div>
@@ -40,19 +40,20 @@
             <form action="/Blog/blog.html" class="form" autocomplete="on" spellcheck="false">
                 <h2>Add Blog</h2>
                 <label class="name" for="name">Title</label>
-                <input type="name" maxlength="35" id="form-title" autocomplete="off" spellcheck="false"
+                <input type="name" maxlength="36" id="form-title" autocomplete="off" spellcheck="false"
                     onkeyup="validateTitle()">
                 <span id="title-error"></span>
                 <label class="subtitle" for="subtitle">Sub Title</label>
-                <textarea name="subtitle" id="form-subtitle" cols="30" rows="2" maxlength="100" autocomplete="off"
+                <textarea name="subtitle" id="form-subtitle" cols="30" rows="2" maxlength="120" autocomplete="off"
                     spellcheck="false" onkeyup="validateSubtitle()"></textarea></textarea>
                 <span id="subtitle-error"></span>
+                <label class="image" for="name">Image</label>
+                <input type="name" id="myFile" onkeyup="validateURL()">
+                <span id="url-error"></span>
                 <label class="content" for="text">Content</label>
-                <textarea name="content" id="form-content" cols="30" rows="8" maxlength="800" autocomplete="off"
+                <textarea name="content" id="form-content" cols="30" rows="8" maxlength="1700" autocomplete="off"
                     spellcheck="false" onkeyup="validateContent()"></textarea></textarea>
                 <span id="content-error"></span> <br>
-                <input type="file" id="myFile" accept="image/png, image/gif, image/jpeg" name="filename" value="choose"
-                    required>
                 <button class="send" type="submit">Add</button>
                 <span id="submit-error"></span>
             </form>

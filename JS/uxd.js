@@ -1,83 +1,75 @@
-var form = document.querySelector("form");
-var cmnt = document.getElementById("form-comment");
-let success = document.getElementById("success");
-var commentError = document.getElementById("comment-error");
-var submitError = document.getElementById("submit-error");
 var author = document.getElementById("author")
 var theComment = document.querySelector(".comment-container")
 
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    validateForm();
-})
-
-
-function validateComment() {
-    var comment = document.getElementById("form-comment").value;
-    var required = 8;
-    var left = required - comment.length;
-    if (left > 0) {
-        commentError.innerHTML = left + " characters at least";
-        return false;
-    }
-    commentError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
-    return true;
-}
-
-
-
-function validateForm() {
-    if (!validateComment()) {
-        submitError.innerHTML = "PLease fix above error";
-        setTimeout(function () { submitError.style.display = "none" }, 1000)
-    } else {
-        success.style.display = "block";
-        setTimeout(function () { success.style.display = "none" }, 900)
-        myComment();
-    }
-}
-
-
-
-let comment = [];
-
-
-let myComment = () => {
-    comment.push({
-        user_comment: cmnt.value
-    });
-
-    localStorage.setItem("userComments", JSON.stringify(comment));
-    addC();
+window.onload = event => {
+    getContent();
 };
 
 
 
-function addC() {
-    var cmt = JSON.parse(localStorage.getItem("userComments"));
-    console.log(cmt)
-    let str = '';
-    cmt.map(c => {
+const getContent = async () => {
+    axios.get("http://localhost:4000/api/blogs")
+        .catch((error) => {
+            console.log(error)
+        })
+        .then((data) => {
+            let container = document.querySelector(".container");
+            blog = data.data.data;
+            let str = '';
+            test = blog.map(item => {
+                let add = ` 
+            <div class="box one">
+            <div class="content">
+                <h5>${item.title}<span></h5> <br></h5>
+                <p>
+                </p> <br>
+                <p>
+                </p>
 
-        let test = `
-    <div>
-    <div class="box six">
-        <p>
-        <h5>Jane Doe</h5>
-        <p>${c.user_comment}</p>
-        </p>
-    </div> <br>
-</div>`
-        str += test;
-    });
+                <p id="sub">
+                </p> <br> <br>
 
-    theComment.innerHTML = str;
-    resetForm();
-}
+                <p>${item.content}
+                </p>
+            </div>
+        </div>
+        <div class="box two">
+            <div class="image">
+                <img src="${item.image}" alt="${item.title}" width="400" height="330"
+                    title="UI/UX Design">
+            </div>
+        </div>
+        <div class="box three">
+            <button class="like"><i class="fa-solid fa-heart"></i> Like</button>
+            <a href="#main-container" id="comment"><button class="comment"><i class="fa-solid fa-message"></i>
+                    Comment</button></a>
+        </div> <br>
+        <div class="comment-container">
 
-let resetForm = () => {
-    cmnt.value = "";
-    commentError.innerHTML = "";
-    submitError.innerHTML = "";
+        </div>
+        <div class="main-container" id="main-container">
+            <form action="blog.html" class="form" autocomplete="on" spellcheck="false">
+                <h2>Add Comment</h2>
+                <label class="message" for="text">Comment</label>
+                <textarea name="message" id="form-comment" maxlength="30" cols="30" rows="5"
+                    onkeyup="validateComment()"></textarea> <br>
+                <span id="comment-error"></span> <br> <br>
+                <button class="send" type="submit" onclick="return validateForm()">post</button>
+                <span id="submit-error"></span>
+            </form>
+            <id id="success">
+                <div class="modal">
+                    <div class="icon"><i id="icon1" class="fa-regular fa-circle-check"></i></div>
+                    <h4>Comment Added<br> Successfully</h4>
+                </div>
+            </id>
+        </div>
+            
+            `
+                str += add;
+            })
+            container.innerHTML = str;
+        })
+        .catch((error) => error);
 }

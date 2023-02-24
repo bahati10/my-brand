@@ -16,6 +16,7 @@
 }
 
 body {
+    user-select: none;
     min-width: 310px;
     background: #000D11;
 }
@@ -165,9 +166,14 @@ ul {
     background: #0B1824;
 }
 
+.first{
+    margin: 40px 30px 0 30px;
+}
+
 /* TO BE CHANGED LATER */
 
 .middle {
+    
     margin-left: 60px;
     margin-top: 40px;
     margin-right: 60px;

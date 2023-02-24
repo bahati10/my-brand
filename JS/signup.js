@@ -91,7 +91,6 @@ const addUser = async () => {
         password: password.value,
     };
 
-
     const returnedUser = await axios.post("http://localhost:4000/api/users", data)
 
         .then((result) => { if (result.ok == false) {

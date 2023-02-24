@@ -2,19 +2,17 @@ window.onload = event => {
     getUsers();
 };
 
-
 const API = async () => {
     try {
-        const response = await API.get('/blogs');
+        const response = await API.get('/users/admin');
         console.log(response.data);
     } catch (error) {
-        console.log(error.msg);
+        console.log(error.message);
     }
 }
 
 
-const getUsers = () => {
-
+const getUsers = async () => {
     const API = axios.create({ baseURL: 'http://localhost:4000/api' });
 
     API.interceptors.request.use((req) => {
@@ -23,11 +21,7 @@ const getUsers = () => {
         }
         return req;
     });
-
-
-
-    let userIds = [];
-    API.get("/users")
+    API.get("/users/admin")
         .then((data) => {
             console.log(data);
             let userOutput = document.querySelector(".user-container");
@@ -35,30 +29,17 @@ const getUsers = () => {
             let str = '';
             test = msgs.map(item => {
                 let add = `
-                            <tr id="">
+                            <tr id="${item._id}">
                               <td class="name">${item.names}</td>
                               <td class="email">${item.email}</td>
-                              <td><a href="#" class= "delete user_${item._id}">Delete</a></td>
+                              <td><a href="#"  onClick="deleteUsr(this)" class="delete">Delete</a></td>
                             </tr>`
                 str += add;
-                userIds.push(item._id)
             })
             userOutput.innerHTML = str;
-            userIds.map(id => {
-                document.querySelector(`.user_${id}`).addEventListener("click", async () => {
-
-                    await API.delete(`/users/${id}`)
-                        .then((response) => {
-                            if (response.status === 204) {
-                                location.reload();
-                            }
-                        })
-                        .catch((error) => console.log("error", error));
-                });
-
-            })
+            API();
         })
-        .catch((error) => console.log("error", error));
+        .catch((error) => error);
 }
 
 
