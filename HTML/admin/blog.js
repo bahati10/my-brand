@@ -56,7 +56,6 @@ const getBlogs = async () => {
                         })
                         .catch((error) => console.log("error", error));
                 });
-                API();
             })
 
         })

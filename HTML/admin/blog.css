@@ -90,7 +90,7 @@ table{
 
 th{
     color: #2DC2FD;
-}
+}#F55D3E
 
 th, td{
     padding: 15px;
@@ -99,7 +99,7 @@ th, td{
 }
 
 .delete{
-    color: #E21122;
+    color: #F55D3E;
 }
 
 .delete:hover{
@@ -115,11 +115,11 @@ th, td{
 
 
 .edit{
-    color: green;
+    color: #44FF1F;
 }
 
 .delete{
-    color: #FF061B;
+    color: #FF1F1F;
 }
 
 .edit:hover{
