@@ -20,6 +20,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
+
 <body>
     <header>
         <a href="/index.html" class="brand"><span>bahati.</span></a>
@@ -45,14 +46,14 @@
             <label class="password" for="password">Password</label>
             <input type="password" id="form-password" spellcheck="false" autocomplete="off" onkeyup="validatePassword()">
             <span id="password-error"></span> <br>
-            <h5>Don't have an account? <a href="signup.html">Sign Up</a></h5> <br>
-            <button class="sign" type="submit" onclick="return validateForm();">Sign in</button>
+            <h5>New ? <a href="signup.html">Sign Up</a> 0r <a href="loginAdmin.html">Login As Admin</a></h5> <br>
+            <button class="sign" type="submit" onclick="return validateForm();">Sign in</button> <br>
             <span id="submit-error"></span>
         </form>
         <id id="success">
             <div class="modal">
                 <div class="icon"><i id="icon1" class="fa-regular fa-circle-check"></i></div>
-                <h4>Login was<br> Succcessfully</h4>
+                <h4>Login was<br> Successful</h4>
             </div>
         </id>
         <id id="success2">

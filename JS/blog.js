@@ -1,6 +1,21 @@
+const logOut = document.querySelector(".signup");
+
 window.onload = event => {
     getBlog();
 };
+
+logOut.addEventListener("click", () => {
+    localStorage.removeItem("usertoken");
+    next();
+}
+)
+
+
+let next = () => {
+    window.setTimeout(function () {
+        window.location.href = "login.html";
+    }, 1000);
+}
 
 
 const getBlog = async () => {
@@ -9,7 +24,7 @@ const getBlog = async () => {
             console.log(error)
         })
         .then((data) => {
-            let cont = document.querySelector(".blog-container");            
+            let cont = document.querySelector(".blog-container");
             blog = data.data.data;
             let str = '';
             test = blog.map(blog => {

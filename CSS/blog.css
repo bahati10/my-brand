@@ -105,6 +105,12 @@ header {
 }
 
 
+li .home {
+    visibility: hidden;
+    color: red;
+}
+
+
 
 
 /* BLOG */
