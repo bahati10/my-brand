@@ -26,7 +26,6 @@ const getBlogs = async () => {
             test = blogs.map(item => {
                 let add = `
                         <tr class="box first">
-                            <td></td>
                             <td>${item.title}</td>
                             <td>Bahati Yves</td>
                             <td><a href="#" class="edit">Edit</a></td>

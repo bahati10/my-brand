@@ -133,7 +133,7 @@ th, td{
 
 @media (max-width: 980px){
     table{
-        font-size: 12px;
+        font-size: 1.1rem;
     }
 
     .page-title{
