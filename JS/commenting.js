@@ -9,7 +9,7 @@ var theComment = document.querySelector(".comment-container")
 
 
 
-document.querySelector("form").addEventListener("submit", (e) => {
+document.querySelector(".form").addEventListener("submit", (e) => {
     e.preventDefault();
     validateForm();
 })
@@ -71,12 +71,22 @@ const addComment = async () => {
         console.log("done");
     });
 
-    const returnedPost = await API.post("/comments", data)
-        .then((result) => { 
-            (console.log(result), resetForm()) })
+    const returnedPost = await API.get("/blogs", data)
+        .then((result) => {
+            (console.log(result.data.data), resetForm())
+        })
         .catch((error) => { return error.response.data.msg });
     submitError.innerHTML = `${returnedPost}`;
+
+
+    const returnedBlog = await API.post("/comments", data)
+        .then((result) => {
+            (console.log(result), resetForm())
+        })
+        .catch((error) => { return error.response.data.msg });
+    submitError.innerHTML = `${returnedBlog}`;
 }
+
 
 
 let resetForm = () => {
