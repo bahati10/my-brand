@@ -14,7 +14,7 @@ const API = async () => {
 
 const getBlogs = async () => {
     let blogId = [];
-    axios.get("http://localhost:4000/api/blogs")
+    axios.get("https://api.bahatiyves.com/api/blogs")
         .catch((error) => {
             console.log(error)
 
@@ -38,7 +38,7 @@ const getBlogs = async () => {
 
             blogOutput.innerHTML = str;
             blogId.map(id => {
-                const API = axios.create({ baseURL: 'http://localhost:4000/api' });
+                const API = axios.create({ baseURL: 'https://api.bahatiyves.com/api' });
 
                 API.interceptors.request.use((req) => {
                     if (localStorage.getItem('admintoken')) {

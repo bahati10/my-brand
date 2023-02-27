@@ -13,7 +13,7 @@ const API = async () => {
 
 
 const getUsers = async () => {
-    const API = axios.create({ baseURL: 'http://localhost:4000/api' });
+    const API = axios.create({ baseURL: 'https://api.bahatiyves.com/api' });
 
     API.interceptors.request.use((req) => {
         if (localStorage.getItem('admintoken')) {

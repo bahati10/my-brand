@@ -91,7 +91,7 @@ const addUser = async () => {
         password: password.value,
     };
 
-    const returnedUser = await axios.post("http://localhost:4000/api/users", data)
+    const returnedUser = await axios.post("https://api.bahatiyves.com/api/users", data)
 
         .then((result) => { if (result.ok == false) {
                 console.log("Error  ", result, result.data.msg)

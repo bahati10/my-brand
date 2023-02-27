@@ -73,7 +73,7 @@ const userLogin = async () => {
         password: password.value,
     };
 
-    const returnedData = await axios.post("http://localhost:4000/api/users/login/admin", data)
+    const returnedData = await axios.post("https://api.bahatiyves.com/api/users/login/admin", data)
         .then((result) => { (console.log(result.data.msg), localStorage.setItem("admintoken", JSON.stringify(result.data.token)), console.log(result) , resetForm(), nextRoute()) })
         .catch((error) => { return error.response.data.msg });
     submitError.innerHTML = `${returnedData}`;

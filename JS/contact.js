@@ -80,7 +80,7 @@ const sendMsg = async () => {
         message: message.value,
     };
 
-    const returnedMsg = await axios.post("http://localhost:4000/api/messages", data)
+    const returnedMsg = await axios.post("https://api.bahatiyves.com/api/messages", data)
         .then((result) => { (console.log(result.data.msg), resetForm()) })
         .catch((error) => { return error.response.data.msg });;
         submitError.innerHTML = `${returnedMsg}`;

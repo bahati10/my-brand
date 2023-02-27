@@ -21,7 +21,7 @@ let next = () => {
 
 
 const getContent = async () => {
-    axios.get("http://localhost:4000/api/blogs")
+    axios.get("https://api.bahatiyves.com/api/blogs")
         .catch((error) => {
             console.log(error)
         })
