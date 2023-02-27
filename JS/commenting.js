@@ -68,6 +68,7 @@ const addComment = async () => {
             req.headers.Authorization = `Bearer ${JSON.parse(localStorage.getItem('usertoken'))}`;
         }
         return req;
+        console.log("done");
     });
 
     const returnedPost = await API.post("/comments", data)
@@ -83,6 +84,47 @@ let resetForm = () => {
     commentError.innerHTML = "";
     submitError.innerHTML = ""
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

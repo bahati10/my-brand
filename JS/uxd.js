@@ -1,11 +1,23 @@
-var author = document.getElementById("author")
-var theComment = document.querySelector(".comment-container")
-
+const logOut = document.querySelector(".signup");
 
 window.onload = event => {
     getContent();
 };
 
+
+
+logOut.addEventListener("click", () => {
+    localStorage.removeItem("usertoken");
+    next();
+}
+)
+
+
+let next = () => {
+    window.setTimeout(function () {
+        window.location.href = "login.html";
+    }, 1000);
+}
 
 
 const getContent = async () => {
@@ -49,7 +61,7 @@ const getContent = async () => {
 
         </div>
         <div class="main-container" id="main-container">
-            <form action="blog.html" class="form" autocomplete="on" spellcheck="false">
+            <form class="form" autocomplete="on" >
                 <h2>Add Comment</h2>
                 <label class="message" for="text">Comment</label>
                 <textarea name="message" id="form-comment" maxlength="30" cols="30" rows="5"
