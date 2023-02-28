@@ -16,6 +16,7 @@
 }
 
 body{
+    user-select: none;
     min-width: 40%; 
     max-height: 100vh;
     background: #000D11;
@@ -82,11 +83,11 @@ header{
     background: #D9D9D9;
 }
 .main a{
-    padding: 8px;
-    border-radius: 7px;
-    background-color: #D9D9D9;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: #40AEDA;
     color: var(--BGCOLOR);
-    font-weight: 600;
+    font-weight: 800;
     font-family: var(--FF);
     margin-right: 30px;
 }

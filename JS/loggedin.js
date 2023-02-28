@@ -1,6 +1,14 @@
+const logOut = document.querySelector(".signup");
+
 window.onload = event => {
     getBlog();
 };
+
+logOut.addEventListener("click", () => {
+    localStorage.removeItem("usertoken");
+    next();
+}
+)
 
 
 let next = () => {
